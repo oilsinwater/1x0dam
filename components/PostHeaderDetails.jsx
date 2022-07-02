@@ -22,9 +22,9 @@ export const PostHeaderDetails = ({ primary, authors, date }) => {
             display: grid;
             grid:
               "label_authors label_date" auto
-              "header_authors header_date" 26px
+              "header_authors header_date" 32px
               / auto auto;
-            gap: 0 30px;
+            gap: 0 24px;
             justify-content: start;
             align-content: start;
             grid-auto-flow: column;

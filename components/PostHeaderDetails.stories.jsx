@@ -2,7 +2,7 @@ import React from 'react';
 import { PostHeaderDetails } from './PostHeaderDetails.jsx';
 
 export default {
-  title: 'Post/Header/Details',
+  title: 'Post/Header/Text/Details',
   compoment: Text,
 }
 

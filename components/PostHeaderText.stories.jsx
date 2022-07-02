@@ -1,18 +1,18 @@
 import React from "react";
-import { PostHeader } from "./PostHeader";
+import { PostHeaderText } from "./PostHeaderText";
 import { PostHeaderTitle } from "./PostHeaderTitle";
 import { PostHeaderDetails } from "./PostHeaderDetails.jsx";
 
 export default {
-  title: "Post/Header/Header",
-  component: PostHeader,
+  title: "Post/Header/Text",
+  component: PostHeaderText,
 };
 
 export const Primary = (args) => (
   <>
-    <PostHeader {...args}>
+    <PostHeaderText {...args}>
       <PostHeaderTitle />
       <PostHeaderDetails />
-    </PostHeader>
+    </PostHeaderText>
   </>
 );
