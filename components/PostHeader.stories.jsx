@@ -9,10 +9,10 @@ export default {
 };
 
 export const Primary = (args) => (
-<>
-  <PostHeader {...args}>
-    <PostHeaderTitle />
-    <PostHeaderDetails />
-  </PostHeader>
+  <>
+    <PostHeader {...args}>
+      <PostHeaderTitle />
+      <PostHeaderDetails />
+    </PostHeader>
   </>
 );

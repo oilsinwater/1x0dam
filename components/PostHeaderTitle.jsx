@@ -1,13 +1,13 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 export const PostHeaderTitle = ({ primary, title }) => {
   return <h1>{title}</h1>;
 };
 
-PostHeaderTitle.PropTypes = {
-  primary: PropTypes.bool,
-  title: PropTypes.string,
+PostHeaderTitle.propTypes = {
+  primary: propTypes.bool,
+  title: propTypes.string,
 };
 
 PostHeaderTitle.defaultProps = {
