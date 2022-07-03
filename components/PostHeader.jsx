@@ -24,6 +24,7 @@ export const PostHeader = ({ primary }) => {
               width: -webkit-available;
               object-fit: cover;
               min-height: 100vh;
+              padding: 0px 24px;
             }
             .post_header__vid {
               box-sizing: border-box;

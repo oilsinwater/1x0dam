@@ -1,5 +1,20 @@
 {
-    "projects": [],
+    "projects": [
+        "62bd63a47c6c5b3067a313a3"
+    ],
     "styleguides": [],
-    "components": []
+    "components": [
+        {
+            "path": "components/PostHeaderText.jsx",
+            "zeplinIds": [
+                "62c0c013eebbee1b6c562db0"
+            ]
+        },
+        {
+            "path": "components/PostHeader.jsx",
+            "zeplinIds": [
+                "62c0c013567c351725977036"
+            ]
+        }
+    ]
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import propTypes from "prop-types";
+import PropTypes from "prop-types";
 
 export const PostHeaderTitle = ({ primary, title }) => {
   return (
@@ -8,6 +8,7 @@ export const PostHeaderTitle = ({ primary, title }) => {
       <style jsx>{`
         .post_header__title {
           width: auto;
+          max-width: calc(100vw/2);
         }
         .post_header__title h1 {
           padding: 0px;
@@ -30,9 +31,9 @@ export const PostHeaderTitle = ({ primary, title }) => {
   );
 };
 
-PostHeaderTitle.propTypes = {
-  primary: propTypes.bool,
-  title: propTypes.string,
+PostHeaderTitle.PropTypes = {
+  primary: PropTypes.bool,
+  title: PropTypes.string,
 };
 
 PostHeaderTitle.defaultProps = {

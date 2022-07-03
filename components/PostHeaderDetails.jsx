@@ -26,7 +26,7 @@ export const PostHeaderDetails = ({ primary, authors, date }) => {
               "label_authors label_date" auto
               "header_authors header_date" 32px
               / auto auto;
-            gap: 0 24px;
+            gap: 0 auto;
             justify-content: start;
             align-content: start;
             grid-auto-flow: column;
@@ -44,6 +44,7 @@ export const PostHeaderDetails = ({ primary, authors, date }) => {
           }
           .header_text__authors {
             grid-area: header_authors;
+            width: 24ch;
           }
           .header_label__date {
             grid-area: label_date;

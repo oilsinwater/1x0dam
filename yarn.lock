@@ -1675,7 +1675,7 @@
     regenerator-runtime "^0.13.7"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-measure@6.5.9":
+"@storybook/addon-measure@6.5.9", "@storybook/addon-measure@^6.5.9":
   version "6.5.9"
   resolved "https://registry.npmjs.org/@storybook/addon-measure/-/addon-measure-6.5.9.tgz"
   integrity sha512-0aA22wD0CIEUccsEbWkckCOXOwr4VffofMH1ToVCOeqBoyLOMB0gxFubESeprqM54CWsYh2DN1uujgD6508cwA==
