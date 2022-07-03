@@ -3,16 +3,30 @@ import propTypes from "prop-types";
 
 export const PostHeaderTitle = ({ primary, title }) => {
   return (
-    <h1 className="post_header__title">
-      {title}
+    <div className="post_header__title">
+      <h1>{title}</h1>
       <style jsx>{`
-        @media (max-width: 414px) {
-          .post_header__title {
-            font-size: 2.281rem;
+        .post_header__title {
+          width: auto;
+        }
+        .post_header__title h1 {
+          padding: 0px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+        @media (max-width: 768px) {
+          .post_header__title h1 {
+            font-size: 64px;
+            max-width: 14ch;
+          }
+        @media (min-width: 414px) {
+          .post_header__title h1 {
+            font-size: 40px;
+            max-width: 8ch;
           }
         }
       `}</style>
-    </h1>
+    </div>
   );
 };
 

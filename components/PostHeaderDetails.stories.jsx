@@ -3,7 +3,7 @@ import { PostHeaderDetails } from './PostHeaderDetails.jsx';
 
 export default {
   title: 'Post/Header/Text/Details',
-  compoment: Text,
+  component: PostHeaderDetails,
 }
 
 export const Primary = () => <PostHeaderDetails primary></PostHeaderDetails>

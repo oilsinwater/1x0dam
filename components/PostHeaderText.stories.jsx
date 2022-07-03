@@ -4,7 +4,7 @@ import { PostHeaderTitle } from "./PostHeaderTitle";
 import { PostHeaderDetails } from "./PostHeaderDetails.jsx";
 
 export default {
-  title: "Post/Header/Text",
+  title: 'Post/Header/Text',
   component: PostHeaderText,
 };
 

@@ -3,7 +3,7 @@ import { PostHeaderTitle } from './PostHeaderTitle';
 
 export default {
   title: 'Post/Header/Text/Title',
-  compoment: Text,
+  component: PostHeaderTitle,
 }
 
 export const Primary = () => <PostHeaderTitle primary></PostHeaderTitle>

@@ -15,10 +15,12 @@ export const PostHeaderDetails = ({ primary, authors, date }) => {
       </span>
       <span className="header_text__date">{date}</span>
       <style jsx>
-        {` 
+        {`
           .post_header__details {
-            position: relative:
-            width: 400px;
+            position: relative;
+            padding: 0px;
+            margin: 0px;
+            width: 100vw;
             display: grid;
             grid:
               "label_authors label_date" auto
@@ -49,9 +51,21 @@ export const PostHeaderDetails = ({ primary, authors, date }) => {
           .header_text__date {
             grid-area: header_date;
           }
-          @media (min-width: 414px) {
+          @media (max-width: 414px) {
             .post_header__details h1 {
-                font-size: 32px;
+              font-size: 32px;
+            }
+            .post_header__details {
+              display: grid;
+              width: auto;
+              grid:
+                "label_authors" auto
+                "header_authors" auto
+                "label_date" auto
+                "header_date" auto
+                / auto;
+              gap: 16px 0px;
+              grid-auto-flow: column;
             }
           }
           @media (min-width: 320px) {
@@ -65,7 +79,7 @@ export const PostHeaderDetails = ({ primary, authors, date }) => {
   );
 };
 
-PostHeaderDetails.PpopTypes = {
+PostHeaderDetails.PropTypes = {
   primary: PropTypes.bool,
   authors: PropTypes.string,
   date: PropTypes.string,
