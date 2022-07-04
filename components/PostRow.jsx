@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { PostBlock } from "./PostBlock";
-import { NoteBlock } from "./NoteBlock";
+import { NoteText } from "./NoteText";
 
 export const PostRow = ({ primary }) => {
   return (
     <>
       <div className="post_row">
         <PostBlock />
-        <NoteBlock />
+        <NoteText />
         <style jsx>
             {`
             .post_row {
