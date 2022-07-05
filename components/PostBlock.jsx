@@ -3,10 +3,8 @@ import PropTypes from "prop-types";
 
 export const PostBlock = ({ primary, text }) => {
   return (
-    <div className="post_block">
-        <p>
-            {text}
-        </p>
+    <div className='post_block'>
+      <p>{text}</p>
       <style jsx>{`
         .post_block {
           height: auto;
@@ -16,10 +14,10 @@ export const PostBlock = ({ primary, text }) => {
           padding: 0;
         }
         @media (max-width: 767px) {
-            .post_block {
-                width: 24ch;
-                max-width: 300px;
-            }
+          .post_block {
+            width: 24ch;
+            max-width: 300px;
+          }
         }
       `}</style>
     </div>

@@ -3,7 +3,7 @@ import { PostBlock } from './PostBlock';
 import { PostRow } from './PostRow';
 
 export default {
-  title: 'Block/Row',
+  title: 'Post/Row',
   component: PostRow,
 };
 

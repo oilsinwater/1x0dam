@@ -2,7 +2,7 @@ import React from 'react';
 import { PostBlock } from './PostBlock';
 
 export default {
-    title: 'Block/Post',
+    title: 'Post/Block',
     component: PostBlock,
   }
   

@@ -4,14 +4,14 @@ import Image from "next/image";
 
 export const NoteCover = ({ primary, alt, src, width, height }) => {
   return (
-    <div className="NoteCover">
+    <div className='NoteCover'>
       <Image
-        src="https://via.placeholder.com/80x124.png"
+        src='https://via.placeholder.com/80x124.png'
         alt={alt}
         width={width}
         height={height}
-        placeholder="blur"
-        blurDataURL="../public/me.png"
+        placeholder='blur'
+        blurDataURL='../public/me.png'
       />
       <style jsx>
         {`
@@ -29,14 +29,14 @@ export const NoteCover = ({ primary, alt, src, width, height }) => {
 
 export const NoteCoverLarge = ({ secondary, alt, src, width, height }) => {
   return (
-    <div className="NoteCoverLarge">
+    <div className='NoteCoverLarge'>
       <Image
-        src="https://via.placeholder.com/264x184.png"
+        src='https://via.placeholder.com/264x184.png'
         alt={alt}
         width={width}
         height={height}
-        placeholder="blur"
-        blurDataURL="../public/me.png"
+        placeholder='blur'
+        blurDataURL='../public/me.png'
       />
       <style jsx>
         {`

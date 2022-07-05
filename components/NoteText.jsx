@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const NoteText = ({ primary, title, author, date, content }) => {
   return (
-    <div className="NoteText">
+    <div className="NoteText note-text">
         {title}<br/>
         {author}<br/>
         {date}<br/>
@@ -38,8 +38,8 @@ NoteText.PropTypes = {
 
 NoteText.defaultProps = {
     primary: false,
-    title: undefined,
-    author: undefined,
-    date: undefined,
-    content: 'Quis risus sed vulputate odio ut enim blandit volutpat. Lacus sed turpis tincidunt id aliquet risus feugiat. Tincidunt id aliquet risus feugiat in.'
+    title: null,
+    author: null,
+    date: null,
+    content: 'Quis risus sed vulputate odio ut enim blandit volutpat. Lacus sed turpis tincidunt id aliquet risus feugiat.'
 }

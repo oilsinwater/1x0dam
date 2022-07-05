@@ -1,16 +1,17 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { NoteCover, NoteCoverLarge } from "../components/NoteImage";
-
+import { PostHeader} from '../components/PostHeader';
+import { PostRow } from '../components/PostRow';
 
 export default function Home() {
   return (
     <>
     <Head />
       <div className="wrapper">
-      <NoteCover />
+      <PostHeader />
       <br/>
-      <NoteCoverLarge />
+      <PostRow />
+      <PostRow />
         <style jsx>
           {`
             .wrapper {
