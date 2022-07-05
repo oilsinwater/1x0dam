@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Image from "next/image";
-import menuicon from '../public/icons/nav-icon-menu.svg';
+import menuicon from '../public/icons/menu.svg';
 
 export const MenuButton = ({ primary }) => {
   return (
