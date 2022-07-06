@@ -8,7 +8,6 @@ import contact from "../public/icons/contact.svg";
 export const UtilityButtons = ({ primary }) => {
   return (
     <div className='UtilityButtons'>
-      {" "}
       <button>
         <Image alt='Subscrib icon' src={subscribe} width={23} height={23} />
       </button>

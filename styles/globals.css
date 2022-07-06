@@ -25,6 +25,21 @@
   font-stretch: normal;
 }
 
+button {
+  border: 0px;
+  background-color:#f0f2f5;
+  color: #000;
+}
+
+button svg:hover {
+  color: #f0f2f5;
+}
+
+button:hover {
+  background-color: #000;
+  color: #f0f2f5;
+}
+
 h1 {
   font-family: WorkSans;
   font-size: 64px;
