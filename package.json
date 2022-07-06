@@ -9,10 +9,12 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006 -s ./public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token=8328a58f37f2"
   },
   "dependencies": {
     "@storybook/addon-storysource": "^6.5.9",
+    "chromatic": "^6.7.0",
     "next": "latest",
     "react": "17.0.2",
     "react-dom": "^17.0.2"
@@ -33,5 +35,7 @@
     "eslint-config-next": "12.2.0",
     "eslint-plugin-storybook": "^0.5.13",
     "storybook-addon-next": "^1.6.7"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "mady@0.1.0"
 }
