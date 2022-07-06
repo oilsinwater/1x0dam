@@ -24,6 +24,10 @@ export const MenuBar = ({ primary }) => {
   );
 };
 
-MenuBar.PropTypes = {};
+MenuBar.PropTypes = {
+    primary: PropTypes.bool,
+};
 
-MenuBar.defaultProps = {};
+MenuBar.defaultProps = {
+    primary: false,
+};
