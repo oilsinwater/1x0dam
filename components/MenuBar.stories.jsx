@@ -1,5 +1,5 @@
 import React from 'react';
-import { MenuBar } from './MenuBar'
+import { MenuBar, MenuBarFull } from './MenuBar'
 
 export default {
     title: 'Menu/Bar',
@@ -7,3 +7,4 @@ export default {
 }
 
 export const Primary = <MenuBar primary></MenuBar>
+export const Secondary = <MenuBarFull secondary></MenuBarFull>

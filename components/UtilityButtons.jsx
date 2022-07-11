@@ -9,24 +9,29 @@ export const UtilityButtons = ({ primary }) => {
   return (
     <div className='UtilityButtons'>
       <button>
-        <Image alt='Subscrib icon' src={subscribe} width={23} height={23} />
+        <Image src={subscribe} width={43} height={43} />
       </button>
       <button>
-        <Image alt='Contact icon' src={contact} width={23} height={23} />
+        <Image src={contact} width={43} height={43} />
       </button>
       <button>
-        <Image alt='Support icon' src={heart} width={23} height={23} />
+        <Image src={heart} width={43} height={43} />
       </button>
       <style jsx>{`
         .UtilityButtons {
           width: 43px;
+          max-width: 43px;
+          max-height: 129px;
           height: 129px;
-          flex-grow: 0;
+          flex-grow: ;
           display: flex;
           flex-direction: column;
-          justify-content: space-around;
-          align-items: flex-start;
-          padding: 0;
+          justify-content: center;
+          align-items:center;
+          border-top: 1px solid;
+          border-bottom: 1px solid;
+          padding: 0px;
+          margin: 0px;
         }
       `}</style>
     </div>
