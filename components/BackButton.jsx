@@ -9,10 +9,9 @@ export const BackButton = ({ primary }) => {
       <Image src={back} width={43} height={43} />
       <style jsx>{`
         .BackButton {
-          padding: 0px;
           height: 44px;
           max-height: 44px;
-          width: 44px;
+          width: 43px;
           max-width: 44px;
           flex-grow: 0;
           display: flex;

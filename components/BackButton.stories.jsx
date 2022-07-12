@@ -1,5 +1,5 @@
 import React from 'react';
-import { BackButton} from './BackButton';
+import { BackButton } from './BackButton';
 
 
 export default {
@@ -8,4 +8,3 @@ export default {
 }
 
 export const Primary = () => <BackButton primary></BackButton>
-Primary.parameters = { pseudo: { hover: true} }

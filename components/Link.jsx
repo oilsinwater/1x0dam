@@ -13,7 +13,7 @@ export const Link = ({ primary, title }) => {
           align-items: center;
           justify-content: flex-start;
           width: 68px;
-          height: 44px;
+          height: 40px;
           flex: auto;
           flex-grow: 0;
           transform: rotate(-270deg);

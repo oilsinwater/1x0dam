@@ -1,44 +1,52 @@
+import Head from "next/head";
 import { PostHeader } from "../components/PostHeader";
 import { PostRow } from "../components/PostRow";
 import { MenuBar, MenuBarFull } from "../components/MenuBar";
 
-
 export default function Home() {
   return (
     <>
-      <body className='Body'>
-        <nav className='Navigation'>
+      <div className='Body'>
+      <Head />
+        <div className='Navigation'>
           <MenuBarFull />
-        </nav>
-        <section className='Main'>
+        </div>
+        <div className='Main'>
           <PostHeader />
           <br />
           <PostRow />
           <PostRow />
-        </section>
+        </div>
+
         <style jsx>
           {`
             .Body {
-              width: calc(100vw - 44px);
+              position: relative;
               height: 100vh;
-              overflow: hidden;
-              overflow-y: scroll;
+              width: calc(100vw - 44px);
+              overflow-x: hidden;
             }
             .Navigation {
+              grid-area: Navigation;
+              display: flex;
+              flex-direction: column;
               position: fixed;
               top: 0px;
               right: 0px;
               z-index: 100;
-              overflow: hidden;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
+              padding: 0px;
+              max-width: 44px;
+              background-color: white;
+              border-left: 1px solid black;
             }
             .Main {
+              grid-area: Main;
+              display: flex;
+              flex-direction: column;
             }
           `}
         </style>
-      </body>
+      </div>
     </>
   );
 }
