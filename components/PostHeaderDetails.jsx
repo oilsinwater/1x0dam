@@ -20,7 +20,7 @@ export const PostHeaderDetails = ({ primary, authors, date }) => {
             position: relative;
             padding: 0px;
             margin: 0px;
-            width: 100vw;
+            width: auto;
             display: grid;
             grid:
               "label_authors label_date" auto

@@ -14,6 +14,7 @@ export const PostHeaderTitle = ({ primary, title }) => {
           padding: 0px;
           margin-top: 0px;
           margin-bottom: 0px;
+          font-size: 64px;
         }
         @media (max-width: 768px) {
           .post_header__title h1 {

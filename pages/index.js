@@ -1,12 +1,11 @@
-import Head from "next/head";
 import { PostHeader } from "../components/PostHeader";
 import { PostRow } from "../components/PostRow";
 import { MenuBar, MenuBarFull } from "../components/MenuBar";
 
+
 export default function Home() {
   return (
     <>
-      <Head />
       <body className='Body'>
         <nav className='Navigation'>
           <MenuBarFull />
@@ -21,16 +20,21 @@ export default function Home() {
           {`
             .Body {
               width: calc(100vw - 44px);
-              overflow-x: hidden;
               height: 100vh;
+              overflow: hidden;
+              overflow-y: scroll;
             }
             .Navigation {
               position: fixed;
               top: 0px;
               right: 0px;
-              visibility: hidden;
               z-index: 100;
               overflow: hidden;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+            }
+            .Main {
             }
           `}
         </style>

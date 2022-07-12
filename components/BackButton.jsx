@@ -17,10 +17,9 @@ export const BackButton = ({ primary }) => {
           flex-grow: 0;
           display: flex;
           flex-direction: row;
-          justify-content: flex-start;
-          align-items: center;
-          position: absolute;
-          margin-top: auto;
+          position: fixed;
+          bottom: 0;
+          right: 0;
         }
       `}</style>
     </button>

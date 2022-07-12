@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from './Link';
 
-export const MenuBarLinks = ({ primary, title }) => {
+export const MenuBarLinks = ({ primary }) => {
   return (
     <div className='MenuBarLinks'>
-      <a className='Links'>{title}</a>
-      <a className='Links'>{title}</a>
-      <a className='Links'>{title}</a>
-      <a className='Links'>{title}</a>
-      <a className='Links'>{title}</a>
+      <Link />
+      <Link />
+      <Link />
+
       <style jsx>{`
         .MenuBarLinks {
           width: 44px;
@@ -21,28 +21,8 @@ export const MenuBarLinks = ({ primary, title }) => {
           background-color: #fff;
           padding: 8px 0px;
           border-top: 1px solid;
-        }
-        .Links {
-          margin: 16px 16px 24px;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: flex-start;
-          width: 68px;
-          height: 44px;
-          flex: auto;
-          flex-grow: 0;
-          transform: rotate(-270deg);
-          font-family: WorkSans;
-          font-size: 10.4px;
-          font-weight: 300;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: normal;
-          letter-spacing: 0.31px;
-          text-align: left;
-          color: #040404;
-        }        
+          border-bottom: 1px solid;
+        }    
       `}</style>
     </div>
   );
@@ -50,10 +30,8 @@ export const MenuBarLinks = ({ primary, title }) => {
 
 MenuBarLinks.PropTypes = {
   primary: PropTypes.bool,
-  title: PropTypes.string,
 };
 
 MenuBarLinks.defaultProps = {
   primary: false,
-  title: "The ultimate pigeon.",
 };

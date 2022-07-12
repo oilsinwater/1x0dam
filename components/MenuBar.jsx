@@ -8,17 +8,13 @@ import { BackButton } from "./BackButton";
 export const MenuBar = ({ primary }) => {
   return (
     <div className='MenuBar'>
-      <section>
-        <MenuButton />
-      </section>
-      <section>
-        <UtilityButtons />
-      </section>
+      <MenuButton />
+      <UtilityButtons />
       <style jsx>{`
         .MenuBar {
           width: 44px;
           max-width: 44px;
-          height: 100vh;
+          height: 100%;
           display: flex;
           gap: 0px;
           flex-direction: column;
@@ -34,31 +30,20 @@ export const MenuBar = ({ primary }) => {
 export const MenuBarFull = ({ secondary }) => {
   return (
     <div className='MenuBarFull'>
-      <section>
-        <MenuButton />
-      </section>
-      <section>
-        <UtilityButtons />
-      </section>
-      <section>
-        <MenuBarLinks />
-      </section>
-      <section>
-        <BackButton />
-      </section>
+      <MenuButton />
+      <UtilityButtons />
+      <MenuBarLinks />
+      <BackButton />
       <style jsx>{`
         .MenuBarFull {
           width: 44px;
           max-width: 44px;
-          height: 100vh;
-          flex-grow: 0;
+          height: 100%;
           display: flex;
           gap: 0px;
           flex-direction: column;
-          justify-content: flex-start;
-          align-items: flex-start;
           padding: 0;
-          background-color: #fff;
+          background: #fff;
         }
       `}</style>
     </div>

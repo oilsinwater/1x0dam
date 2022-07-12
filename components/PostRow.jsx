@@ -6,15 +6,16 @@ import { NoteText } from "./NoteText";
 export const PostRow = ({ primary }) => {
   return (
     <>
-      <div className="post_row">
+      <div className="PostRow">
         <PostBlock />
         <NoteText />
         <style jsx>
             {`
-            .post_row {
+            .PostRow {
                 display: flex;
                 flex-direction: row;
                 gap: 119px;
+                margin-top: 24px;
                 }
             `}
         </style>
