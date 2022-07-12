@@ -5,36 +5,32 @@ import Image from "next/image";
 
 export const BackButton = ({ primary }) => {
   return (
-    <div className='BackButton'>
-      <Image src={back} width={48} height={48} />
-      <span className='BackButtonText'>Back</span>
+    <button className='BackButton'>
+      <Image src={back} width={43} height={43} />
       <style jsx>{`
         .BackButton {
+          padding: 0px;
+          height: 44px;
+          max-height: 44px;
+          width: 44px;
+          max-width: 44px;
           flex-grow: 0;
           display: flex;
           flex-direction: row;
           justify-content: flex-start;
           align-items: center;
-          padding: 0;
-          height: 43px;
-          width: auto;
-        }
-        .BackButtonText {
-            visibility: hidden;
-        }
-        .BackButtonText:hover {
-            visibility: visible;
-        }
-        .BackButtonText {
-          font-size: 17.7px;
-          font-weight: normal;
-          font-stretch: normal;
-          font-style: normal;
-          line-height: 26.5px;
-          letter-spacing: normal;
-          text-align: center;
+          position: absolute;
+          margin-top: auto;
         }
       `}</style>
-    </div>
+    </button>
   );
+};
+
+BackButton.PropTypes = {
+  primary: PropTypes.bool,
+};
+
+BackButton.defaultProps = {
+  primary: false,
 };

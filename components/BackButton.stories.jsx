@@ -7,4 +7,5 @@ export default {
     component: BackButton,
 }
 
-export const Primary = <BackButton primary></BackButton>
+export const Primary = () => <BackButton primary></BackButton>
+Primary.parameters = { pseudo: { hover: true} }

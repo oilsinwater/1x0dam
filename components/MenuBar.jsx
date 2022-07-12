@@ -3,24 +3,28 @@ import PropTypes from "prop-types";
 import { MenuButton } from "./MenuButton";
 import { UtilityButtons } from "./UtilityButtons";
 import { MenuBarLinks } from "./MenuBarLinks";
+import { BackButton } from "./BackButton";
 
 export const MenuBar = ({ primary }) => {
   return (
     <div className='MenuBar'>
-      <MenuButton />
-      <UtilityButtons />
+      <section>
+        <MenuButton />
+      </section>
+      <section>
+        <UtilityButtons />
+      </section>
       <style jsx>{`
         .MenuBar {
-          width: 43px;
-          height: 1024px;
-          flex-grow: 0;
+          width: 44px;
+          max-width: 44px;
+          height: 100vh;
           display: flex;
           gap: 0px;
           flex-direction: column;
           justify-content: flex-start;
-          align-items: flex-end;
           padding: 0;
-          background
+          background: #fff;
         }
       `}</style>
     </div>
@@ -29,27 +33,37 @@ export const MenuBar = ({ primary }) => {
 
 export const MenuBarFull = ({ secondary }) => {
   return (
-    <div className='MenuBar'>
-      <MenuButton />
-      <UtilityButtons />  
-      <MenuBarLinks />
+    <div className='MenuBarFull'>
+      <section>
+        <MenuButton />
+      </section>
+      <section>
+        <UtilityButtons />
+      </section>
+      <section>
+        <MenuBarLinks />
+      </section>
+      <section>
+        <BackButton />
+      </section>
       <style jsx>{`
         .MenuBarFull {
-          width: 43px;
-          height: 1024px;
+          width: 44px;
+          max-width: 44px;
+          height: 100vh;
           flex-grow: 0;
           display: flex;
           gap: 0px;
           flex-direction: column;
           justify-content: flex-start;
-          align-items: flex-end;
+          align-items: flex-start;
           padding: 0;
+          background-color: #fff;
         }
       `}</style>
     </div>
   );
 };
-
 
 MenuBar.PropTypes = {
   primary: PropTypes.bool,

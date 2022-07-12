@@ -17,7 +17,7 @@ export const MenuButton = ({ primary }) => {
       <style jsx>
         {`
           .MenuButton {
-            width: 43px;
+            width: 44px;
             height: 127px;
             flex-grow: 0;
             display: flex;

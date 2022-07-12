@@ -19,8 +19,8 @@ export const UtilityButtons = ({ primary }) => {
       </button>
       <style jsx>{`
         .UtilityButtons {
-          width: 43px;
-          max-width: 43px;
+          width: 44px;
+          max-width: 44px;
           max-height: 129px;
           height: 129px;
           flex-grow: ;
@@ -29,7 +29,6 @@ export const UtilityButtons = ({ primary }) => {
           justify-content: center;
           align-items:center;
           border-top: 1px solid;
-          border-bottom: 1px solid;
           padding: 0px;
           margin: 0px;
         }

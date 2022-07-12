@@ -9,21 +9,18 @@ export const MenuBarLinks = ({ primary, title }) => {
       <a className='Links'>{title}</a>
       <a className='Links'>{title}</a>
       <a className='Links'>{title}</a>
-      <a className='Links'>{title}</a>
-      <a className='Links'>{title}</a>
-      <a className='Links'>{title}</a>
       <style jsx>{`
         .MenuBarLinks {
-          width: 42px;
-          height: 725px;
+          width: 44px;
+          height: 100%;
           flex-grow: 0;
-          display: flex;
+          display: flex;  
           flex-direction: column;
           justify-content: flex-start;
           align-items: center;
-          border: solid 1px;
           background-color: #fff;
           padding: 8px 0px;
+          border-top: 1px solid;
         }
         .Links {
           margin: 16px 16px 24px;
@@ -32,7 +29,7 @@ export const MenuBarLinks = ({ primary, title }) => {
           align-items: center;
           justify-content: flex-start;
           width: 68px;
-          height: 40px;
+          height: 44px;
           flex: auto;
           flex-grow: 0;
           transform: rotate(-270deg);
@@ -45,8 +42,7 @@ export const MenuBarLinks = ({ primary, title }) => {
           letter-spacing: 0.31px;
           text-align: left;
           color: #040404;
-        }
-        
+        }        
       `}</style>
     </div>
   );

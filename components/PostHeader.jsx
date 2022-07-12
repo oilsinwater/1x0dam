@@ -5,9 +5,9 @@ import { PostHeaderText } from "./PostHeaderText";
 export const PostHeader = ({ primary }) => {
   return (
     <>
-      <div className="post_header">
+      <div className="PostHeader">
         <PostHeaderText />
-        <div className="post_header__vid">
+        <div className="PostHeader__vid">
           <video
             autoplay="autoplay"
             muted="muted"
@@ -19,14 +19,14 @@ export const PostHeader = ({ primary }) => {
         </div>
         <style jsx>
           {`
-            .post_header__vid > video {
+            .PostHeader__vid > video {
               width: -moz-available;
               width: -webkit-available;
               object-fit: cover;
               min-height: 100vh;
               padding: 0px 24px;
             }
-            .post_header__vid {
+            .PostHeader__vid {
               box-sizing: border-box;
               mix-blend-mode: multiply;
               opacity: 1;
@@ -39,7 +39,7 @@ export const PostHeader = ({ primary }) => {
               padding: 0;
               z-index: -1;
             }
-            .post_header {
+            .PostHeader {
               diplay: flex;
               height: 100vh;
               max-height: 60rem;
@@ -52,9 +52,10 @@ export const PostHeader = ({ primary }) => {
               gap: 0px;
               padding: 0px 24px;
               background-color: #a0a0a0;
+              overflow: hidden;
             }
             @media (max-width: 768px) {
-              .post_header {
+              .PostHeader {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
@@ -62,7 +63,7 @@ export const PostHeader = ({ primary }) => {
                 max-height: 300px;
                 padding: 16px;
               }
-              .post_header__vid > video {
+              .PostHeader__vid > video {
                 width: auto;
               }
             }
