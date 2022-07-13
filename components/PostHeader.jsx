@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import { PostHeaderText } from "./PostHeaderText";
 
 export const PostHeader = ({ primary }) => {
@@ -9,11 +9,11 @@ export const PostHeader = ({ primary }) => {
         <PostHeaderText />
         <div className="PostHeader__vid">
           <video
-            autoplay="autoplay"
+            autoPlay="autoPlay"
             muted="muted"
-            disablepictureinpicture="disablePictureInPicture"
+            disablePictureInPicture="disablePictureInPicture"
             loop="loop"
-            playsinline="playsInline"
+            playsInline="playsInline"
             src="../public/vid/title.mp4"
           ></video>
         </div>
@@ -74,8 +74,8 @@ export const PostHeader = ({ primary }) => {
   );
 };
 
-PostHeader.PropTypes = {
-  primary: PropTypes.bool,
+PostHeader.propTypes = {
+  primary: propTypes.bool,
 };
 
 PostHeader.defaultProps = {

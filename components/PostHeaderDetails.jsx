@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 export const PostHeaderDetails = ({ primary, authors, date }) => {
   return (
@@ -80,10 +80,10 @@ export const PostHeaderDetails = ({ primary, authors, date }) => {
   );
 };
 
-PostHeaderDetails.PropTypes = {
-  primary: PropTypes.bool,
-  authors: PropTypes.string,
-  date: PropTypes.string,
+PostHeaderDetails.propTypes = {
+  primary: propTypes.bool,
+  authors: propTypes.string,
+  date: propTypes.string,
 };
 
 PostHeaderDetails.defaultProps = {

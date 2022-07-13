@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import Image from "next/image";
 import menuicon from '../public/icons/menu.svg';
 
@@ -55,7 +55,7 @@ export const MenuButton = ({ primary }) => {
 };
 
 MenuButton.propTypes = {
-  primary: PropTypes.bool,
+  primary: propTypes.bool,
 };
 MenuButton.defaultProps = {
   primary: false,

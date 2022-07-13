@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import { PostBlock } from "./PostBlock";
 import { NoteText } from "./NoteText";
 
@@ -24,8 +24,8 @@ export const PostRow = ({ primary }) => {
   );
 };
 
-PostRow.PropTypes = {
-  primary: PropTypes.bool,
+PostRow.propTypes = {
+  primary: propTypes.bool,
 };
 
 PostRow.defaultProps = {

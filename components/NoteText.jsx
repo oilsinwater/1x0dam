@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 export const NoteText = ({ primary, title, author, date, content }) => {
   return (
@@ -28,12 +28,12 @@ export const NoteText = ({ primary, title, author, date, content }) => {
   );
 };
 
-NoteText.PropTypes = {
-    primary: PropTypes.bool,
-    title: PropTypes.string,
-    author: PropTypes.string,
-    date: PropTypes.string,
-    content: PropTypes.string,
+NoteText.propTypes = {
+    primary: propTypes.bool,
+    title: propTypes.string,
+    author: propTypes.string,
+    date: propTypes.string,
+    content: propTypes.string,
 }
 
 NoteText.defaultProps = {

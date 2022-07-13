@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import back from "../public/icons/back.svg";
 import Image from "next/image";
 
@@ -31,8 +31,8 @@ export const BackButton = ({ primary }) => {
   );
 };
 
-BackButton.PropTypes = {
-  primary: PropTypes.bool,
+BackButton.propTypes = {
+  primary: propTypes.bool,
 };
 
 BackButton.defaultProps = {

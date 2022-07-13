@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import Image from "next/image";
 
 export const NoteCover = ({ primary, alt, src, width, height }) => {
@@ -52,20 +52,20 @@ export const NoteCoverLarge = ({ secondary, alt, src, width, height }) => {
   );
 };
 
-NoteCover.PropTypes = {
-  primary: PropTypes.bool,
-  src: PropTypes.string,
-  alt: PropTypes.string,
-  width: PropTypes.string,
-  height: PropTypes.string,
+NoteCover.propTypes = {
+  primary: propTypes.bool,
+  src: propTypes.string,
+  alt: propTypes.string,
+  width: propTypes.string,
+  height: propTypes.string,
 };
 
-NoteCoverLarge.PropTypes = {
-  seconardy: PropTypes.bool,
-  src: PropTypes.string,
-  alt: PropTypes.string,
-  width: PropTypes.string,
-  height: PropTypes.string,
+NoteCoverLarge.propTypes = {
+  seconardy: propTypes.bool,
+  src: propTypes.string,
+  alt: propTypes.string,
+  width: propTypes.string,
+  height: propTypes.string,
 };
 
 NoteCover.defaultProps = {

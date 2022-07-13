@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import Image from "next/image";
 import heart from "../public/icons/heart.svg";
 import subscribe from "../public/icons/subscribe.svg";
@@ -37,8 +37,8 @@ export const UtilityButtons = ({ primary }) => {
   );
 };
 
-UtilityButtons.PropTypes = {
-  PropTypes: PropTypes.bool,
+UtilityButtons.propTypes = {
+  propTypes: propTypes.bool,
 };
 
 UtilityButtons.defaultProps = {

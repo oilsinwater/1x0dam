@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 export const Flag = ({ primary, title, link, authors, date }) => {
   return (
@@ -77,12 +77,12 @@ export const Flag = ({ primary, title, link, authors, date }) => {
   );
 };
 
-Flag.PropTypes = {
-  primary: PropTypes.bool,
-  title: PropTypes.string,
-  link: PropTypes.string,
-  authors: PropTypes.string,
-  date: PropTypes.string,
+Flag.propTypes = {
+  primary: propTypes.bool,
+  title: propTypes.string,
+  link: propTypes.string,
+  authors: propTypes.string,
+  date: propTypes.string,
 };
 
 Flag.defaultProps = {

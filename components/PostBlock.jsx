@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 export const PostBlock = ({ primary, text }) => {
   return (
@@ -24,9 +24,9 @@ export const PostBlock = ({ primary, text }) => {
   );
 };
 
-PostBlock.PropTypes = {
-  primary: PropTypes.bool,
-  text: PropTypes.string,
+PostBlock.propTypes = {
+  primary: propTypes.bool,
+  text: propTypes.string,
 };
 
 PostBlock.defaultProps = {

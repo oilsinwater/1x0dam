@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import { PostHeaderTitle } from "./PostHeaderTitle";
 import { PostHeaderDetails } from "./PostHeaderDetails";
 
@@ -26,8 +26,8 @@ export const PostHeaderText = ({ primary }) => {
 };
 
 
-PostHeaderText.PropTypes = {
-  primary: PropTypes.bool,
+PostHeaderText.propTypes = {
+  primary: propTypes.bool,
 };
 
 PostHeaderText.defaultProps = {

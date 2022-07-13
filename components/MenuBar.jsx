@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import { MenuButton } from "./MenuButton";
 import { UtilityButtons } from "./UtilityButtons";
 import { MenuBarLinks } from "./MenuBarLinks";
@@ -52,16 +52,16 @@ export const MenuBarFull = ({ secondary }) => {
   );
 };
 
-MenuBar.PropTypes = {
-  primary: PropTypes.bool,
+MenuBar.propTypes = {
+  primary: propTypes.bool,
 };
 
 MenuBar.defaultProps = {
   primary: false,
 };
 
-MenuBarFull.PropTypes = {
-  secondary: PropTypes.bool,
+MenuBarFull.propTypes = {
+  secondary: propTypes.bool,
 };
 
 MenuBarFull.defaultProps = {

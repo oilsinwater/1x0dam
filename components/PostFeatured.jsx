@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 export const PostFeatured = ({
   primary,
@@ -77,11 +77,11 @@ PostFeatured.defaultProps = {
   path: null,
 };
 
-PostFeatured.PropTypes = {
-  primary: PropTypes.bool,
-  title: PropTypes.string,
-  exceprt: PropTypes.string,
-  src: PropTypes.string,
-  category: PropTypes.string,
-  path: PropTypes.string,
+PostFeatured.propTypes = {
+  primary: propTypes.bool,
+  title: propTypes.string,
+  exceprt: propTypes.string,
+  src: propTypes.string,
+  category: propTypes.string,
+  path: propTypes.string,
 };

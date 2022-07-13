@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import { NoteCover, NoteCoverLarge } from "./NoteCover";
 import { NoteText } from "./NoteText";
 
@@ -84,22 +84,22 @@ export const PostNoteLarge = ({ tertiary }) => {
   );
 };
 
-PostNoteOnly.PropTypes = {
-  primary: PropTypes.bool,
+PostNoteOnly.propTypes = {
+  primary: propTypes.bool,
 };
 PostNoteOnly.defaultProps = {
   primary: false,
 };
 
-PostNote.PropTypes = {
-  secondary: PropTypes.bool,
+PostNote.propTypes = {
+  secondary: propTypes.bool,
 };
 PostNote.defaultProps = {
   secondary: false,
 };
 
-PostNoteLarge.PropTypes = {
-  tertiary: PropTypes.bool,
+PostNoteLarge.propTypes = {
+  tertiary: propTypes.bool,
 };
 PostNoteLarge.defaultProps = {
   tertiary: false,

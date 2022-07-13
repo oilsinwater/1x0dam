@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 import { Flag } from './Flag';
 
 export const MenuBarLinks = ({ primary }) => {
@@ -30,8 +30,8 @@ export const MenuBarLinks = ({ primary }) => {
   );
 };
 
-MenuBarLinks.PropTypes = {
-  primary: PropTypes.bool,
+MenuBarLinks.propTypes = {
+  primary: propTypes.bool,
 };
 
 MenuBarLinks.defaultProps = {
