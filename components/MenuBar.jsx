@@ -42,8 +42,10 @@ export const MenuBarFull = ({ secondary }) => {
           display: flex;
           gap: 0px;
           flex-direction: column;
+          justify-content: flex-start;
+          align-content: center;
           padding: 0;
-          background: #fff;
+          background: #f0f2f5;
         }
       `}</style>
     </div>

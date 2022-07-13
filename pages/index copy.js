@@ -20,12 +20,6 @@ export default function Home() {
 
         <style jsx>
           {`
-            .Body {
-              position: relative;
-              height: 100vh;
-              width: calc(100vw - 44px);
-              overflow-x: hidden;
-            }
             .Navigation {
               grid-area: Navigation;
               position: fixed;

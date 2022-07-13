@@ -6,7 +6,9 @@ import Image from "next/image";
 export const BackButton = ({ primary }) => {
   return (
     <button className='BackButton'>
-      <Image src={back} width={43} height={43} />
+      <span>
+        <Image src={back} width={43} height={43} />
+      </span>
       <style jsx>{`
         .BackButton {
           height: 44px;
@@ -19,6 +21,10 @@ export const BackButton = ({ primary }) => {
           position: fixed;
           bottom: 0;
           right: 0;
+          border-top: 1px solid;
+        }
+        .BackButton span img svg{
+          fill: #f0f2f5;
         }
       `}</style>
     </button>

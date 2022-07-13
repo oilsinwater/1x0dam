@@ -1,30 +1,32 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from './Link';
+import { Flag } from './Flag';
 
 export const MenuBarLinks = ({ primary }) => {
   return (
-    <div className='MenuBarLinks'>
-      <Link />
-      <Link />
-      <Link />
-
+    <section className='MenuBarLinks'>
+      <ul>
+        <Flag />
+      </ul>
       <style jsx>{`
         .MenuBarLinks {
           width: 44px;
-          height: 100%;
           flex-grow: 0;
           display: flex;  
           flex-direction: column;
           justify-content: flex-start;
           align-items: center;
-          background-color: #fff;
+          background-color: #f0f2f5;
           padding: 8px 0px;
           border-top: 1px solid;
-          border-bottom: 1px solid;
+          display: flex;
+          height: calc(100vh - (5 * 44px) - 128px);
+        }
+        .MenuBarLinks ul {
+          list-style: none;
         }    
       `}</style>
-    </div>
+    </section>
   );
 };
 

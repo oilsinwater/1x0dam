@@ -15,17 +15,18 @@ export const MenuButton = ({ primary }) => {
       </span>
       <span className='MenuButtonText'>Menu</span>
       <style jsx>
-        {`
+        {` .MenuButton span {
+          margin-top: 4px;
+        }
           .MenuButton {
             width: 43px;
-            height: 127px;
+            height: 120px;
             flex-grow: 0;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            gap: 8px;
-            padding: 8px 0;
+            gap: 32px;
           }
           .MenuButtonText {
             width: 71px;
@@ -34,7 +35,7 @@ export const MenuButton = ({ primary }) => {
             margin: 25px 05px 0px 5px;
             transform: rotate(-270deg);
             font-family: WorkSans;
-            font-size: 17.66px;
+            font-size: 21.44px;
             font-weight: normal;
             font-stretch: normal;
             font-style: normal;

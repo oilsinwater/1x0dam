@@ -8,3 +8,4 @@ export default {
 }
 
 export const Primary = () => <BackButton primary></BackButton>
+    
