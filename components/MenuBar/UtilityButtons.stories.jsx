@@ -6,4 +6,4 @@ export default {
     component: UtilityButtons,
 }
 
-export const Primary = <UtilityButtons primary></UtilityButtons>
+export const Primary = () => <UtilityButtons primary></UtilityButtons>

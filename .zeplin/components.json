@@ -5,13 +5,13 @@
     "styleguides": [],
     "components": [
         {
-            "path": "components/PostHeaderText.jsx",
+            "path": "components/PostHeader/PostHeaderText.jsx",
             "zeplinIds": [
                 "62c0c013eebbee1b6c562db0"
             ]
         },
         {
-            "path": "components/PostHeader.jsx",
+            "path": "components/PostHeader/PostHeader.jsx",
             "zeplinIds": [
                 "62c0c013567c351725977036"
             ]

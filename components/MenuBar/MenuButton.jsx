@@ -1,23 +1,18 @@
 import React from "react";
 import propTypes from "prop-types";
-import Image from "next/image";
-import menuicon from '../public/icons/menu.svg';
+import { MenuIcon } from "./MenuIcon";
 
 export const MenuButton = ({ primary }) => {
   return (
     <button className='MenuButton'>
-      <span className='MenuIcon'>
-        <Image alt="Menu icon"
-          src={menuicon}
-          width={43}
-          height={20}
-        />
+      <span className='MenuIcon'><MenuIcon/>
       </span>
       <span className='MenuButtonText'>Menu</span>
       <style jsx>
-        {` .MenuButton span {
-          margin-top: 4px;
-        }
+        {`
+          .MenuButton span {
+            margin-top: 4px;
+          }
           .MenuButton {
             width: 43px;
             height: 120px;

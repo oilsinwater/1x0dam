@@ -1,20 +1,18 @@
 import React from "react";
 import propTypes from "prop-types";
-import back from "../public/icons/back.svg";
-import Image from "next/image";
+import BackIcon from './BackIcon';
 
 export const BackButton = ({ primary }) => {
   return (
     <button className='BackButton'>
       <span>
-        <Image src={back} width={43} height={43} />
+        <BackIcon />
       </span>
+      <span className="BackButtonText">&nbsp;Back </span>
       <style jsx>{`
         .BackButton {
-          height: 44px;
-          max-height: 44px;
+          height: 43px;
           width: 43px;
-          max-width: 44px;
           flex-grow: 0;
           display: flex;
           flex-direction: row;
@@ -23,8 +21,13 @@ export const BackButton = ({ primary }) => {
           right: 0;
           border-top: 1px solid;
         }
-        .BackButton span img svg{
-          fill: #f0f2f5;
+        span.BackButtonText {
+          display: none;
+          font-size: 11px;
+          color: #fff;
+        }
+        span.BackButtonText:hover {
+          display: inline;
         }
       `}</style>
     </button>

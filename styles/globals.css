@@ -40,6 +40,11 @@ button:hover {
   color: #f0f2f5;
 }
 
+path:hover {
+  stroke: #f0f2f5;
+  fill: #f0f2f5;
+}
+
 h1 {
   font-family: WorkSans;
   font-size: 64px;

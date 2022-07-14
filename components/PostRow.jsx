@@ -17,6 +17,12 @@ export const PostRow = ({ primary }) => {
                 gap: 119px;
                 margin-top: 24px;
                 }
+
+                @media (max-width: 414px) {
+                  .PostRow {
+                    gap: 64px;
+                  }
+                }
             `}
         </style>
       </div>
