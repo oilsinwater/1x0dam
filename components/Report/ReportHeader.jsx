@@ -1,13 +1,13 @@
 import React from "react";
 import propTypes from "prop-types";
-import { PostHeaderText } from "./PostHeaderText";
+import { ReportHeaderText } from "./ReportHeaderText";
 
-export const PostHeader = ({ primary }) => {
+export const ReportHeader = ({ primary }) => {
   return (
     <>
-      <div className="PostHeader">
-        <PostHeaderText />
-        <div className="PostHeader__vid">
+      <div className="ReportHeader">
+        <ReportHeaderText />
+        <div className="ReportHeaderVideo">
           <video
             autoPlay="autoPlay"
             muted="muted"
@@ -19,14 +19,14 @@ export const PostHeader = ({ primary }) => {
         </div>
         <style jsx>
           {`
-            .PostHeader__vid > video {
+            .ReportHeaderVideo > video {
               width: -moz-available;
               width: -webkit-available;
               object-fit: cover;
               min-height: 100vh;
               padding: 0px 24px;
             }
-            .PostHeader__vid {
+            .ReportHeaderVideo {
               box-sizing: border-box;
               mix-blend-mode: multiply;
               opacity: 1;
@@ -39,7 +39,7 @@ export const PostHeader = ({ primary }) => {
               padding: 0;
               z-index: -1;
             }
-            .PostHeader {
+            .ReportHeader {
               diplay: flex;
               height: 100vh;
               max-height: 60rem;
@@ -55,7 +55,7 @@ export const PostHeader = ({ primary }) => {
               overflow: hidden;
             }
             @media (max-width: 768px) {
-              .PostHeader {
+              .ReportHeader {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
@@ -63,7 +63,7 @@ export const PostHeader = ({ primary }) => {
                 max-height: 300px;
                 padding: 16px;
               }
-              .PostHeader__vid > video {
+              .ReportHeaderVideo > video {
                 width: auto;
               }
             }
@@ -74,10 +74,10 @@ export const PostHeader = ({ primary }) => {
   );
 };
 
-PostHeader.propTypes = {
+ReportHeader.propTypes = {
   primary: propTypes.bool,
 };
 
-PostHeader.defaultProps = {
+ReportHeader.defaultProps = {
   primary: true,
 };

@@ -1,13 +1,6 @@
-import Head from "next/head";
+import { HomeScreen } from "../components/Home/HomeScreen";
 
 
 export default function Home() {
-  return (
-    <>
-      <Head />
-      <div className='Body'>
-       <p>Testing</p>
-      </div>
-    </>
-  );
+  return <HomeScreen />
 }

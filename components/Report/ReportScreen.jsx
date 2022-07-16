@@ -1,5 +1,5 @@
-import { PostHeader } from "../PostHeader/PostHeader";
-import { PostRow } from "../PostRow";
+import { ReportHeader } from "./ReportHeader";
+import { ReportRow } from "./ReportRow";
 import { MenuBarFull } from "../MenuBar/MenuBar";
 import propTypes from "prop-types";
 
@@ -11,10 +11,10 @@ export const ReportScreen = ({ primary, title }) => {
           <MenuBarFull />
         </div>
         <div className='Content'>
-          <PostHeader />
+          <ReportHeader />
           <br />
-          <PostRow />
-          <PostRow />
+          <ReportRow />
+          <ReportRow />
         </div>
         <style jsx>
           {`

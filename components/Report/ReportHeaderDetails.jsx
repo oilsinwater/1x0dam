@@ -1,22 +1,22 @@
 import React from "react";
 import propTypes from "prop-types";
 
-export const PostHeaderDetails = ({ primary, authors, date }) => {
+export const ReportHeaderDetails = ({ primary, authors, date }) => {
   return (
-    <div className="post_header__details">
-      <span className="header_label__authors">
+    <div className="ReportHeaderDetails">
+      <span className="HeaderLabelAuthors">
         <caption>author(s)</caption>
       </span>
-      <span className="header_text__authors">
+      <span className="HeaderTextAuthors">
         <a>{authors}</a>
       </span>
-      <span className="header_label__date">
+      <span className="HeaderLabelDate">
         <caption>date</caption>
       </span>
-      <span className="header_text__date">{date}</span>
+      <span className="HeaderTextDate">{date}</span>
       <style jsx>
         {`
-          .post_header__details {
+          .ReportHeaderDetails {
             position: relative;
             padding: 0px;
             margin: 0px;
@@ -33,30 +33,30 @@ export const PostHeaderDetails = ({ primary, authors, date }) => {
             font-family: WorkSans;
             font-size: 17.66px;
           }
-          .post_header__details caption {
+          .ReportHeaderDetails caption {
             text-transform: uppercase;
           }
-          .post_header__details span {
+          .ReportHeaderDetails span {
             text-transform: capitalize;
           }
-          .header_label__authors {
+          .HeaderLabelAuthors {
             grid-area: label_authors;
           }
-          .header_text__authors {
+          .HeaderLabelAuthors {
             grid-area: header_authors;
             width: 24ch;
           }
-          .header_label__date {
+          .HeaderLabelDate {
             grid-area: label_date;
           }
-          .header_text__date {
+          .HeaderLabelDate {
             grid-area: header_date;
           }
           @media (max-width: 414px) {
-            .post_header__details h1 {
+            .ReportHeaderDetails h1 {
               font-size: 32px;
             }
-            .post_header__details {
+            .ReportHeaderDetails {
               display: grid;
               width: auto;
               grid:
@@ -70,7 +70,7 @@ export const PostHeaderDetails = ({ primary, authors, date }) => {
             }
           }
           @media (min-width: 320px) {
-            .post_header__details span {
+            .ReportHeaderDetails span {
               font-size: 14.1px;
             }
           }
@@ -80,13 +80,13 @@ export const PostHeaderDetails = ({ primary, authors, date }) => {
   );
 };
 
-PostHeaderDetails.propTypes = {
+ReportHeaderDetails.propTypes = {
   primary: propTypes.bool,
   authors: propTypes.string,
   date: propTypes.string,
 };
 
-PostHeaderDetails.defaultProps = {
+ReportHeaderDetails.defaultProps = {
   primary: false,
   authors: "Firstname Lastname",
   date: "00 Jan 2022",

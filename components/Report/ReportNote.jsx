@@ -3,12 +3,12 @@ import propTypes from "prop-types";
 import { NoteCover, NoteCoverLarge } from "./NoteCover";
 import { NoteText } from "./NoteText";
 
-export const PostNoteOnly = ({ primary }) => {
+export const ReportNoteOnly = ({ primary }) => {
   return (
-    <div className='PostNoteOnly'>
+    <div className='ReportNoteOnly'>
       <NoteText primary={true} />
       <style jsx>{`
-        .PostNoteOnly {
+        .ReportNoteOnly {
           width: 280px;
           height: 253px;
           flex-grow: 0;
@@ -24,9 +24,9 @@ export const PostNoteOnly = ({ primary }) => {
   );
 };
 
-export const PostNote = ({ secondary }) => {
+export const ReportNote = ({ secondary }) => {
   return (
-    <div className='PostNote'>
+    <div className='ReportNote'>
       <NoteCover />
       <NoteText
         primary={true}
@@ -36,7 +36,7 @@ export const PostNote = ({ secondary }) => {
         content={null}
       />
       <style jsx>{`
-        .PostNote {
+        .ReportNote {
           width: 280px;
           height: 139px;
           flex-grow: 0;
@@ -52,9 +52,9 @@ export const PostNote = ({ secondary }) => {
   );
 };
 
-export const PostNoteLarge = ({ tertiary }) => {
+export const ReportNoteLarge = ({ tertiary }) => {
   return (
-    <div className='PostNoteLarge'>
+    <div className='ReportNoteLarge'>
       <NoteCoverLarge />
       <NoteText
         primary={true}
@@ -65,7 +65,7 @@ export const PostNoteLarge = ({ tertiary }) => {
       />
       <style jsx>
         {`
-          .PostNoteLarge {
+          .ReportNoteLarge {
             width: 280px;
             height: 253px;
             flex-grow: 0;
@@ -84,23 +84,23 @@ export const PostNoteLarge = ({ tertiary }) => {
   );
 };
 
-PostNoteOnly.propTypes = {
+ReportNoteOnly.propTypes = {
   primary: propTypes.bool,
 };
-PostNoteOnly.defaultProps = {
+ReportNoteOnly.defaultProps = {
   primary: false,
 };
 
-PostNote.propTypes = {
+ReportNote.propTypes = {
   secondary: propTypes.bool,
 };
-PostNote.defaultProps = {
+ReportNote.defaultProps = {
   secondary: false,
 };
 
-PostNoteLarge.propTypes = {
+ReportNoteLarge.propTypes = {
   tertiary: propTypes.bool,
 };
-PostNoteLarge.defaultProps = {
+ReportNoteLarge.defaultProps = {
   tertiary: false,
 };

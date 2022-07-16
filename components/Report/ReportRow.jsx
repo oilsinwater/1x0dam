@@ -1,17 +1,17 @@
 import React from "react";
 import propTypes from "prop-types";
-import { PostBlock } from "./PostBlock";
+import { ReportBlock } from "./ReportBlock";
 import { NoteText } from "./NoteText";
 
-export const PostRow = ({ primary }) => {
+export const ReportRow = ({ primary }) => {
   return (
     <>
-      <div className="PostRow">
-        <PostBlock />
+      <div className="ReportRow">
+        <ReportBlock />
         <NoteText />
         <style jsx>
             {`
-            .PostRow {
+            .ReportRow {
                 display: flex;
                 flex-direction: row;
                 gap: 119px;
@@ -19,7 +19,7 @@ export const PostRow = ({ primary }) => {
                 }
 
                 @media (max-width: 414px) {
-                  .PostRow {
+                  .ReportRow {
                     gap: 64px;
                   }
                 }
@@ -30,10 +30,10 @@ export const PostRow = ({ primary }) => {
   );
 };
 
-PostRow.propTypes = {
+ReportRow.propTypes = {
   primary: propTypes.bool,
 };
 
-PostRow.defaultProps = {
+ReportRow.defaultProps = {
   primary: false,
 };

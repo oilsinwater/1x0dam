@@ -1,27 +1,27 @@
 import React from "react";
-import { PostNoteOnly, PostNote, PostNoteLarge } from "./PostNote";
+import { ReportNoteOnly, ReportNote, ReportNoteLarge } from "./ReportNote";
 import { NoteCover, NoteCoverLarge } from "./NoteCover";
 import { NoteText } from "./NoteText";
 
 export default {
-  title: "Post/Note",
-  component: PostNote,
+  title: "Report/Note",
+  component: ReportNote,
   subcomponents: { NoteCover, NoteCoverLarge, NoteText },
 };
 
-const ContentOnly = (args) => <PostNoteOnly {...args} />;
+const ContentOnly = (args) => <ReportNoteOnly {...args} />;
 export const Primary = ContentOnly.bind({});
 ContentOnly.args = {
   primary: true,
 };
 
-const Regular = (args) => <PostNote {...args} />;
+const Regular = (args) => <ReportNote {...args} />;
 export const Secondary = Regular.bind({});
 Regular.args = {
   secondary: true,
 };
 
-const Large = (args) => <PostNoteLarge {...args} />;
+const Large = (args) => <ReportNoteLarge {...args} />;
 export const Tertiary = Large.bind({});
 Large.args = {
   tertiary: true,

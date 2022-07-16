@@ -1,7 +1,7 @@
 import React from "react";
 import propTypes from "prop-types";
 
-export const PostFeatured = ({
+export const HomeReport = ({
   primary,
   title,
   excerpt,
@@ -10,7 +10,7 @@ export const PostFeatured = ({
   path,
 }) => {
   return (
-    <div className='PostFeatured'>
+    <div className='HomeReport'>
       <a href={path} src={src}>
         <span className='note-text'>{category}</span>
         <div className='center'>
@@ -30,7 +30,7 @@ export const PostFeatured = ({
           gap: 0;
           padding: 0;
         }
-        .PostFeatured {
+        .HomeReport {
           width: 867px;
           height: 917px;
           display: flex;
@@ -67,7 +67,7 @@ export const PostFeatured = ({
   );
 };
 
-PostFeatured.defaultProps = {
+HomeReport.defaultProps = {
   primary: false,
   title: "The Title",
   excerpt:
@@ -77,7 +77,7 @@ PostFeatured.defaultProps = {
   path: null,
 };
 
-PostFeatured.propTypes = {
+HomeReport.propTypes = {
   primary: propTypes.bool,
   title: propTypes.string,
   exceprt: propTypes.string,

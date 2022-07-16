@@ -1,17 +1,17 @@
 import React from "react";
 import propTypes from 'prop-types';
-import { PostHeaderTitle } from "./PostHeaderTitle";
-import { PostHeaderDetails } from "./PostHeaderDetails";
+import { ReportHeaderTitle } from "./ReportHeaderTitle";
+import { ReportHeaderDetails } from "./ReportHeaderDetails";
 
-export const PostHeaderText = ({ primary }) => {
+export const ReportHeaderText = ({ primary }) => {
   return (
     <>
-      <div className="post_header__text">
-        <PostHeaderTitle />
-        <PostHeaderDetails />
+      <div className="ReportHeaderText">
+        <ReportHeaderTitle />
+        <ReportHeaderDetails />
         <style jsx>
           {`
-          .post_header__text {
+          .ReportHeaderText {
             display: flex;
             flex-direction: column;
             gap: 16px;
@@ -26,10 +26,10 @@ export const PostHeaderText = ({ primary }) => {
 };
 
 
-PostHeaderText.propTypes = {
+ReportHeaderText.propTypes = {
   primary: propTypes.bool,
 };
 
-PostHeaderText.defaultProps = {
+ReportHeaderText.defaultProps = {
   primary: false,
 };
