@@ -1,0 +1,20 @@
+{
+    "projects": [
+        "62bd63a47c6c5b3067a313a3"
+    ],
+    "styleguides": [],
+    "components": [
+        {
+            "path": "components/Report/ReportHeaderText.jsx",
+            "zeplinIds": [
+                "62c0c013eebbee1b6c562db0"
+            ]
+        },
+        {
+            "path": "components/Report/ReportHeader.jsx",
+            "zeplinIds": [
+                "62c0c013567c351725977036"
+            ]
+        }
+    ]
+}

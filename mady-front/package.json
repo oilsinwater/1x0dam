@@ -1,0 +1,43 @@
+{
+  "name": "mady",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next build && next export",
+    "start": "next start",
+    "lint": "next lint",
+    "storybook": "start-storybook -p 6006 -s ./public",
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --project-token=8328a58f37f2"
+  },
+  "dependencies": {
+    "@storybook/addon-storysource": "^6.5.9",
+    "chromatic": "^6.7.0",
+    "next": "latest",
+    "react": "17.0.2",
+    "react-dom": "^17.0.2",
+    "storybook-addon-pseudo-states": "^1.15.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/addon-measure": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
+    "@svgr/webpack": "^6.2.1",
+    "babel-loader": "^8.2.5",
+    "eslint": "8.18.0",
+    "eslint-config-next": "12.2.0",
+    "eslint-plugin-storybook": "^0.5.13",
+    "storybook-addon-next": "^1.6.7"
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "mady@0.1.0"
+}
