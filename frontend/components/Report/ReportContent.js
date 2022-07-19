@@ -1,5 +1,6 @@
 //parses content block from Sanity to display as html
 import BlockContent from "@sanity/block-content-to-react";
+import { urlFor } from "../../lib/api";
 
 const serializers = {
   types: {
@@ -11,12 +12,19 @@ const serializers = {
         </pre>
       );
     },
+    image: ({node: {asset, alt}}) => {
+        return (
+            <div className="ReportImage">
+                <img src={urlFor(asset.url).height(300).fit(max)} />
+                <div className="ImageAlt">{alt}</div>
+            </div>
+        )
+    }
   },
 };
 
 const ReportContent = ({content}) => (
   <BlockContent
-    imageOptions={{ w: 320, h: 240, fit: "max" }}
     serializers={serializers}
     blocks={content}
   />
