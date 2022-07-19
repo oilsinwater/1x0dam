@@ -11,7 +11,7 @@ export default createSchema({
     {
       name: 'report',
       type: 'document',
-      title: 'Blog',
+      title: 'Report',
       fields: [
         {
           name: 'title',
