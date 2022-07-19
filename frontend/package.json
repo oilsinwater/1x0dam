@@ -39,7 +39,8 @@
     "eslint": "8.18.0",
     "eslint-config-next": "12.2.0",
     "eslint-plugin-storybook": "^0.5.13",
-    "storybook-addon-next": "^1.6.7"
+    "storybook-addon-next": "^1.6.7",
+    "swr": "0.2.2"
   },
   "readme": "ERROR: No README data found!",
   "_id": "mady@0.1.0"
