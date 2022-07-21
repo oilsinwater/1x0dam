@@ -4,19 +4,11 @@ import { urlFor } from "../../lib/api";
 
 const serializers = {
   types: {
-    code: ({ node: { language, code, filename } }) => {
-      return (
-        <pre data-language={language}>
-          <code>{code}</code>
-          <p>{filename}</p>
-        </pre>
-      );
-    },
     image: ({node: {asset, alt}}) => {
         return (
-            <div className="ReportImage">
+            <div>
                 <img src={urlFor(asset).height(300).fit('max').url()} />
-                <div className="ImageAlt">{alt}</div>
+                <div>{alt}</div>
             </div>
         )
     }

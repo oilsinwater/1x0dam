@@ -1,24 +1,28 @@
-=import propTypes from "prop-types";
+
+
+import propTypes from "prop-types";
 
 export const HomeReport = ({
-  primary,
   title,
-  excerpt,
+  tagline,
   category,
-  src,
-  path,
+  slug,
 }) => {
   return (
     <div className='HomeReport'>
-      <a href={path} src={src}>
-        <span className='note-text'>{category}</span>
-        <div className='center'>
-          <h1 className='title'>{title}</h1>
-          <h3 className='excerpt'>{excerpt}</h3>
+      <a href={slug}>
+        <span className='Category'>{category}</span>
+        <div className='Center'>
+          <h1 className='Title'>{title}</h1>
+          <h3 className='Tagline'>{tagline}</h3>
         </div>
       </a>
       <style jsx>{`
-        .center {
+        .Category {
+          font-size: 10.4px;
+          text-decoration: uppercase;
+        }
+        .Center {
           height: 862px;
           align-self: stretch;
           flex-grow: 0;
@@ -39,7 +43,7 @@ export const HomeReport = ({
           padding: 16px 32px;
           background-color: #f2f1f1;
         }
-        .title {
+        .Title {
           font-family: WorkSans;
           font-size: 27.6px;
           font-weight: normal;
@@ -49,7 +53,7 @@ export const HomeReport = ({
           letter-spacing: normal;
           text-align: center;
         }
-        .excerpt {
+        .Tagline {
           font-family: WorkSans;
           position: center;
           font-size: 17.7px;
@@ -67,20 +71,17 @@ export const HomeReport = ({
 };
 
 HomeReport.defaultProps = {
-  primary: false,
   title: "The Title",
-  excerpt:
+  tagline:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultricies volutpat faucibus sollicitudin in malesuada orci ac. Dui morbi dolor, fringilla bibendum molestie vitae. Et amet in facilisi sit cursus odio sed. Eu ac dui pharetra tincidunt ut.",
-  category: "EXPERIMENTS",
-  src: "https://via.placeholder.com/867.png",
-  path: null,
+  category: "REPORT",
+  mainImage: "https://via.placeholder.com/867.png",
+  slug: null,
 };
 
 HomeReport.propTypes = {
-  primary: propTypes.bool,
   title: propTypes.string,
-  exceprt: propTypes.string,
-  src: propTypes.string,
+  tagline: propTypes.string,
   category: propTypes.string,
-  path: propTypes.string,
+  slug: propTypes.string,
 };

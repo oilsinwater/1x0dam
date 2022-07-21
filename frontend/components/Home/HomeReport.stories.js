@@ -5,4 +5,4 @@ export default {
     component: HomeReport,
 }
 
-export const Primary = () => <HomeReport primary></HomeReport>
+export const Default = () => <HomeReport default></HomeReport>
