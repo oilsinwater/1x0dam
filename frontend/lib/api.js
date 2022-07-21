@@ -10,7 +10,7 @@ subtitle,
 date,
 tagline,
 'slug': slug.current,
-coverImage,
+'coverImage': coverImage.asset->url,
 'author': author->{name, 'picture': image.asset->url},
 `
 
