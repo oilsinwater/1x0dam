@@ -1,30 +1,56 @@
-import { useState } from "react";
-import useSWR from 'swr'; 
+import propTypes from "prop-types";
+import { Timeline } from "../components/Home/Timeline";
+import { PageLayout } from "../components/Layouts/PageLayout";
+import { HomeReport } from "../components/Home/HomeReport";
 
 import { getAllReports } from "../lib/api";
-import { useGetReports } from "../actions/index";
 
-const fetcher = url => fetch(url).then(res => res.json())
+const Home = ({ reports }) => {
+  return (
+    <PageLayout>
+      <div className='HomeScreenWrapper'>
+        <div className='TimelineWrapper'>
+          <Timeline />
+        </div>
+        <div className='Highlights'>
+          {reports?.map((report) => { 
+            return (<HomeReport
+              title={report?.title}
+              category={report?.category}
+              tagline={report?.tagline}
+              slug={report?.slug}
+            />);
+          })}
+        </div>
+        <style jsx>{`
+          .HomeScreenWrapper {
+            display: grid;
+            grid: "timelinewrapper hightlights" auto / auto auto;
+            grid-auto-flow: row dense;
+            justify-content: start;
+          }
+          .Highlights {
+            grid-area: highlights,
+            display: flex;
+            flex-direction: column;
+          }
+          .TimelineWrapper {
+            grid-area: timelinewrapper,
+          }
+        `}</style>
+      </div>
+    </PageLayout>
+  );
+};
 
-export default function Home({ reports: initialData }) {
-  const [filter, setFilter] = useState({
-    view: { list: 0 },
-  });
-
-  const { data: reports, error } = useGetReports(initialData);
-
-
-  return <div>{JSON.stringify(reports)}</div>;
-}
-
-// This function is called during build time (not on client side)
-// Provids props to your page
-// It will create a static page
 export async function getStaticProps() {
-  const reports = await getAllReports({offset: 0});
+  console.log("Calling getStaticProps");
+  const reports = await getAllReports();
   return {
     props: {
       reports,
     },
   };
 }
+
+export default Home
