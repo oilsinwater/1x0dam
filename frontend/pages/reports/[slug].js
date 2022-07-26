@@ -1,5 +1,12 @@
+import Head from "next/head";
+import propTypes from "prop-types";
+
+import { MenuBarFull } from "../../components/MenuBar/MenuBar";
+import { ReportHeader } from "../../components/Report/ReportHeader";
+import { ReportRow } from "../../components/Report/ReportRow";
+
 import { getReportWithSlug, getAllReports } from "../../lib/api";
-import ReportContent from "../../components/Report/ReportContent";
+import ReportContent from "../../lib/ReportContent";
 
 // // const ReportDetail = ({ report: initialReport }) => {
 // //   return (
@@ -10,14 +17,54 @@ import ReportContent from "../../components/Report/ReportContent";
 // //   );
 // // };
 
-const ReportDetail = ({ report }) => {
+const ReportDetail = ({ reports, report }) => {
   return (
-    <>
-      <h1>Hello Detail page - {report?.slug}</h1>
-      <h2>{report?.title}</h2>
-      <img src={report.coverImage} height={100} width={100}/>
-      <div>{report.content && <ReportContent content={report.content} />}</div>
-    </>
+    <div>
+      <Head>
+        <title>{report?.title}</title>
+      </Head>
+      <main className='Main'>
+          <MenuBarFull />
+        <section className='Content'>
+          <h1>Hello Detail page - {report?.slug}</h1>
+          <h2>{report?.title}</h2>
+          <img src={report.coverImage} height={100} width={100} />
+          <div>
+            {report.content && <ReportContent content={report.content} />}
+          </div>
+        </section>
+        <style jsx>{`
+          .Main {
+            scrollbar-width: thin;
+            width: calc(100vw - 44px);
+            height: 100vh;
+          }
+          .Content {
+            grid-area: content;
+            display: grid;
+            width: calc(100vw - 44px);
+            position: relative;
+            margin-right: 44px;
+            grid-template: 100% / calc((100vw / 3) - 44px) auto;
+            grid-template-rows: 100%;
+            grid-template-columns: calc(33.3333vw - 44px) auto;
+            grid-template-areas: none;
+            grid-gap: 0;
+            height: 100vh;
+          }
+          .MenuBar {
+            grid-area: menubar;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 44px;
+            height: 100vh;
+            z-index: 99;
+            overflow: hidden;
+          }
+        `}</style>
+      </main>
+    </div>
   );
 };
 

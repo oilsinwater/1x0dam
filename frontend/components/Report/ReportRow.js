@@ -2,11 +2,11 @@ import propTypes from "prop-types";
 import { ReportBlock } from "./ReportBlock";
 import { NoteText } from "./NoteText";
 
-export const ReportRow = ({ primary }) => {
+export const ReportRow = ({ content }) => {
   return (
     <>
       <div className="ReportRow">
-        <ReportBlock />
+        <ReportBlock content={content} />
         <NoteText />
         <style jsx>
             {`

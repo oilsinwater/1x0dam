@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import Link from 'next/link';
 
-export const TimelineRow = ({ report, category, date, title, slug }) => {
+export const TimelineRow = ({ category, date, title, slug }) => {
   return (
     <div className='TimelineRow'>
       <div className='RowWrap'>
@@ -68,6 +68,7 @@ export const TimelineRow = ({ report, category, date, title, slug }) => {
           padding-left: 24px;
         }
         div.TimelineRow {
+          cursor: pointer;
           min-width: 31vw;
           height: auto;
           flex-grow: 0;

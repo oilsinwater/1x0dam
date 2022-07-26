@@ -33,6 +33,7 @@ export const Home = ({ reports, title }) => {
                 return (
                   <HomeReport
                     title={report?.title}
+                    coverImage={report?.coverImage}
                     category={report?.category}
                     tagline={report?.tagline}
                     slug={report?.slug}

@@ -1,16 +1,19 @@
 import propTypes from "prop-types";
+import Link from "next/link";
 
 export const HomeReport = ({ title, tagline, category, slug }) => {
   return (
-    <a href={slug}>
+    <a>
       <div className='Content'>
-        <div className='Container'>
-          <span className='Category'>{category}</span>
-          <div className='Center'>
-            <h1 className='Title'>{title}</h1>
-            <h3 className='Tagline'>{tagline}</h3>
+        <Link target='_blank' href={`/reports/${slug}`}>
+          <div className='Container'>
+            <span className='Category'>{category}</span>
+            <div className='Center'>
+              <h1 className='Title'>{title}</h1>
+              <h3 className='Tagline'>{tagline}</h3>
+            </div>
           </div>
-        </div>
+        </Link>
       </div>
       <style jsx>{`
         .Container {

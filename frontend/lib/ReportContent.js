@@ -1,6 +1,6 @@
 //parses content block from Sanity to display as html
 import BlockContent from "@sanity/block-content-to-react";
-import { urlFor } from "../../lib/api";
+import { urlFor } from "../lib/api";
 
 const serializers = {
   types: {
