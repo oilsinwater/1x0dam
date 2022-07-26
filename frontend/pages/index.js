@@ -1,47 +1,11 @@
+import Head from "next/head";
 import propTypes from "prop-types";
+
+import { MenuBar } from "../components/MenuBar/MenuBar";
 import { Timeline } from "../components/Home/Timeline";
-import { PageLayout } from "../components/Layouts/PageLayout";
 import { HomeReport } from "../components/Home/HomeReport";
 
 import { getAllReports } from "../lib/api";
-
-const Home = ({ reports }) => {
-  return (
-    <PageLayout>
-      <div className='HomeScreenWrapper'>
-        <div className='TimelineWrapper'>
-          <Timeline />
-        </div>
-        <div className='Highlights'>
-          {reports?.map((report) => { 
-            return (<HomeReport
-              title={report?.title}
-              category={report?.category}
-              tagline={report?.tagline}
-              slug={report?.slug}
-            />);
-          })}
-        </div>
-        <style jsx>{`
-          .HomeScreenWrapper {
-            display: grid;
-            grid: "timelinewrapper hightlights" auto / auto auto;
-            grid-auto-flow: row dense;
-            justify-content: start;
-          }
-          .Highlights {
-            grid-area: highlights,
-            display: flex;
-            flex-direction: column;
-          }
-          .TimelineWrapper {
-            grid-area: timelinewrapper,
-          }
-        `}</style>
-      </div>
-    </PageLayout>
-  );
-};
 
 export async function getStaticProps() {
   console.log("Calling getStaticProps");
@@ -53,4 +17,73 @@ export async function getStaticProps() {
   };
 }
 
-export default Home
+export const Home = ({ reports, title }) => {
+  return (
+    <div>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <div className='Layout'>
+        <MenuBar />
+        <main className='Main'>
+          <Timeline reports={reports} />
+          <section className='Content'>
+            <div className='Highlights'>
+              {reports?.map((report) => {
+                return (
+                  <HomeReport
+                    title={report?.title}
+                    category={report?.category}
+                    tagline={report?.tagline}
+                    slug={report?.slug}
+                  />
+                );
+              })}
+            </div>
+          </section>
+        </main>
+        <style jsx>{`
+          .Content {
+            display: flex;
+            flex-direction: column;
+            overflow-y: scroll;
+          }
+          .Layout {
+            scrollbar-width: thin;
+            width: calc(100vw - 44px);
+            height: 100vh;
+          }
+          .Main {
+            grid-area: content;
+            display: grid;
+            width: calc(100vw - 44px);
+            position: relative;
+            margin-right: 44px;
+            grid-template: 100% / calc((100vw / 3) - 44px) auto;
+            grid-gap: 0;
+            height: 100vh;
+          }
+          .Highlights {
+            grid-template-columns: repeat(
+              auto-fill,
+              minmax(calc((100vw / 3) - 44px), 1fr)
+            );
+            grid-auto-rows: minmax(calc(33vw - 44px), 40vh);
+            grid-gap: 0;
+            height: 100vh;
+          }
+        `}</style>
+      </div>
+    </div>
+  );
+};
+
+Home.propTypes = {
+  title: propTypes.string.isRequired,
+};
+
+Home.defaultProps = {
+  title: "The Title",
+};
+
+export default Home;

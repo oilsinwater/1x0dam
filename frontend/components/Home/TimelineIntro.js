@@ -1,41 +1,30 @@
 import propTypes from "prop-types";
 
-export const TimelineIntro = ({ primary }) => {
+export const TimelineIntro = ({ intro }) => {
   return (
     <div className='TimelineIntro'>
+      <span>{intro}</span>
+      <br />
       <span>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt massa
-        arcu ultrices risus aliquam vitae.
-      </span>
-      <br /> 
-      <span>
-        About... <br /> Join newsletter
+        <p>About... </p><p>Join newsletter</p>
       </span>
       <style jsx>
         {`
           .TimelineIntro {
-            width: 443px;
-            height: 175px;
+            height: auto;
             flex-grow: 0;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: flex-start;
             gap: 16px;
-            padding: 0 16px;
           }
           .TimelineIntro span {
-              width: 410px;
-              height: 107px;
-              flex-grow: 0;
-              font-family: WorkSans;
-              font-weight: normal;
-              font-stretch: normal;
-              font-style: normal;
-              line-height: 26.5px;
-              letter-spacing: normal;
-              text-align: left;
-              color: var(--Black);
+            height: 107px;
+            font-family: WorkSans;
+            font-weight: normal;
+            text-align: left;
+            padding-left: 24px;
           }
         `}
       </style>
@@ -44,9 +33,10 @@ export const TimelineIntro = ({ primary }) => {
 };
 
 TimelineIntro.propTypes = {
-  primary: propTypes.bool,
+  intro: propTypes.string,
 };
 
 TimelineIntro.defaultProps = {
-  primary: false,
+  intro:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt massa arcu ultrices risus aliquam vitae.",
 };

@@ -1,5 +1,4 @@
 import { getReportWithSlug, getAllReports } from "../../lib/api";
-
 import ReportContent from "../../components/Report/ReportContent";
 
 // // const ReportDetail = ({ report: initialReport }) => {

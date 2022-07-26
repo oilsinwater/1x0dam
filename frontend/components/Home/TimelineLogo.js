@@ -4,6 +4,7 @@ import Logo from "./Logo";
 export const TimelineLogo = ({ primary }) => {
   return (
     <div className='TimelineLogo'>
+      <br/>
         <Logo />
       <style jsx>{`
         .TimelineLogo {
@@ -12,10 +13,10 @@ export const TimelineLogo = ({ primary }) => {
           flex-grow: 0;
           display: flex;
           flex-direction: row;
-          justify-content: flex-start;
+          justify-content: left;
+          align-content: center;
           align-items: flex-start;
           gap: 4px;
-          padding: 48px 157px 24px 24px;
         }
       `}</style>
     </div>

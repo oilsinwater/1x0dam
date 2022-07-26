@@ -5,4 +5,4 @@ export default {
     component: TimelineIntro,
 }
 
-export const Primary = () => <TimelineIntro primary></TimelineIntro>
+export const Default = () => <TimelineIntro default></TimelineIntro>

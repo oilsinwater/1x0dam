@@ -10,7 +10,7 @@
     "lint": "next lint",
     "storybook": "start-storybook -p 6006 -s ./public",
     "build-storybook": "build-storybook -s public",
-    "chromatic": "npx chromatic --project-token=8328a58f37f2"
+    "chromatic": "npx chromatic --exit-zero-on-changes --project-token=8328a58f37f2"
   },
   "dependencies": {
     "@storybook/addon-storysource": "^6.5.9",

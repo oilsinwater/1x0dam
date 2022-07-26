@@ -4,27 +4,37 @@ import { TimelineLogo } from "./TimelineLogo";
 import { TimelineIntro } from "./TimelineIntro";
 import { TimelineRow } from "./TimelineRow";
 
-export const Timeline = ({}) => {
+export const Timeline = (props) => {
+  const reports = props.reports;
+
   return (
-    <div className='Timeline'>
-      <TimelineLogo/>
-      <TimelineIntro/>
-      <TimelineFilter/>
-      <TimelineRow/>
+    <aside className='Timeline'>
+      <TimelineLogo />
+      <TimelineIntro />
+      <TimelineFilter />
+      {reports?.map((report) => {
+        return (
+          <TimelineRow
+            title={report?.title}
+            category={report?.category}
+            date={report?.date}
+            slug={report?.slug}
+          />
+        );
+      })}
       <style jsx>{`
         .Timeline {
-          width: 443px;
-          height: 1024px;
-          flex-grow: 0;
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
           align-items: flex-start;
           padding: 0;
           background-color: #fafcff;
+          overflow-y: scroll;
+          overflow-x: hidden;
         }
       `}</style>
-    </div>
+    </aside>
   );
 };
 

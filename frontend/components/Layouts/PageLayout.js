@@ -13,17 +13,25 @@ export const PageLayout = ({ title, children }) => {
         <nav className='MenuBar'>
           <MenuBar />
         </nav>
-        <div className='Content'>{children}</div>
+        <section className='Content'>{children}</section>
         <style jsx>{`
           .Main {
-            width: 100vw;
+            scrollbar-width: thin;
+            width: calc(100vw - 44px);
             height: 100vh;
+          }
+          .Content {
+            grid-area: content;
             display: grid;
-            grid:
-              "content menubar" 1fr
-              / auto 44px;
-            grid-auto-flow: row dense;
-            justify-content: start;
+            width: calc(100vw - 44px);
+            position: relative;
+            margin-right: 44px;
+            grid-template: 100% / calc((100vw / 3) - 44px) auto;
+            grid-template-rows: 100%;
+            grid-template-columns: calc(33.3333vw - 44px) auto;
+            grid-template-areas: none;
+            grid-gap: 0;
+            height: 100vh;
           }
           .MenuBar {
             grid-area: menubar;
@@ -33,12 +41,7 @@ export const PageLayout = ({ title, children }) => {
             width: 44px;
             height: 100vh;
             z-index: 99;
-          }
-          .Content {
-            grid-area: content;
-            width: calc(100vw - 44px);
-            position: relative;
-            margin-right: 44px;
+            overflow: hidden;
           }
         `}</style>
       </main>

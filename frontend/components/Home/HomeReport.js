@@ -1,22 +1,17 @@
-
-
 import propTypes from "prop-types";
 
-export const HomeReport = ({
-  title,
-  tagline,
-  category,
-  slug,
-}) => {
+export const HomeReport = ({ title, tagline, category, slug }) => {
   return (
-    <div className='HomeReport'>
-      <a href={slug}>
-        <span className='Category'>{category}</span>
-        <div className='Center'>
-          <h1 className='Title'>{title}</h1>
-          <h3 className='Tagline'>{tagline}</h3>
+    <a href={slug}>
+      <div className='Content'>
+        <div className='Container'>
+          <span className='Category'>{category}</span>
+          <div className='Center'>
+            <h1 className='Title'>{title}</h1>
+            <h3 className='Tagline'>{tagline}</h3>
+          </div>
         </div>
-      </a>
+      </div>
       <style jsx>{`
         .Category {
           font-size: 10.4px;
@@ -30,18 +25,9 @@ export const HomeReport = ({
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          align-content: center;
           gap: 0;
           padding: 0;
-        }
-        .HomeReport {
-          width: 867px;
-          height: 917px;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: stretch;
-          padding: 16px 32px;
-          background-color: #f2f1f1;
         }
         .Title {
           font-family: WorkSans;
@@ -66,7 +52,7 @@ export const HomeReport = ({
           padding: 0px 88px;
         }
       `}</style>
-    </div>
+    </a>
   );
 };
 

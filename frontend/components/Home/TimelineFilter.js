@@ -4,18 +4,15 @@ export const TimelineFilter = ({}) => {
     <div className='TimelineFilter'>
       <div className='FilterWrapper'>
         <div className='FilterHeader'>Index</div>
-        <div className='FilterLabels'>
+        <div className='Labels'>
           <TimelineButton category='ALL' />
-          <TimelineButton category='REPORT' />
         </div>
       </div>
-
       <style jsx>
         {`
           .FilterHeader {
-            width: 229px;
+            max-width: 443px;
             height: 41px;
-            flex-grow: 0;
             font-size: 27.6px;
             font-weight: 500;
             font-weight: 500;
@@ -25,16 +22,12 @@ export const TimelineFilter = ({}) => {
             letter-spacing: normal;
             text-align: left;
           }
-           .FilterLabels {
-            width: 117px;
-            height: 30px;
-            flex-grow: 0;
+           .Labels {
+            width: 410px;
+            height: auto;
             display: flex;
             flex-direction: row;
-            justify-content: flex-start;
-            align-items: flex-start;
-            gap: 16px;
-            padding: 0 0 8px;
+            gap: 8px;
           }
           .FilterWrapper {
             width: 410px;
@@ -47,7 +40,7 @@ export const TimelineFilter = ({}) => {
             padding: 0;
           }
           .TimelineFilter {
-            width: 443px;
+            width: 410px;
             height: auto;
             flex-grow: 0;
             display: flex;

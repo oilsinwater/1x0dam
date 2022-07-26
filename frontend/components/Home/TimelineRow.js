@@ -1,19 +1,18 @@
 import PropTypes from "prop-types";
+import Link from 'next/link';
 
-export const TimelineRow = ({ category, date, title }) => {
+export const TimelineRow = ({ report, category, date, title, slug }) => {
   return (
     <div className='TimelineRow'>
       <div className='RowWrap'>
         <div className='col'>
           <span className='Category'>{category}</span>
-          <span className='Title'>{title}</span>
+          <span className='Title'><Link target="_blank" href={`/reports/${slug}`}>{title}</Link></span>
         </div>
         <span className='Date'>{date}</span>
       </div>
-      <></>
       <style jsx>{`
         span.Date {
-          width: 74px;
           max-width: 12ch;
           height: 17px;
           flex-grow: 0;
@@ -55,6 +54,7 @@ export const TimelineRow = ({ category, date, title }) => {
           letter-spacing: normal;
           text-align: center;
           color: #4f4d4d;
+          padding: 0px;
         }
         div.col {
           width: 338px;
@@ -65,15 +65,15 @@ export const TimelineRow = ({ category, date, title }) => {
           justify-content: center;
           align-items: flex-start;
           gap: 8px;
-          padding: 0;
+          padding-left: 24px;
         }
         div.TimelineRow {
-          width: 443px;
+          min-width: 31vw;
           height: auto;
           flex-grow: 0;
           display: flex;
           flex-direction: row;
-          justify-content: center;
+          justify-content: left;
           align-items: center;
           gap: 8px;
           padding: 16px 0px;
@@ -81,7 +81,6 @@ export const TimelineRow = ({ category, date, title }) => {
           border-bottom: solid 1px;
         }
         div.RowWrap {
-          width: 420px;
           height: auto;
           flex-grow: 0;
           display: flex;
