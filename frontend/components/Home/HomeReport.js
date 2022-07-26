@@ -13,6 +13,9 @@ export const HomeReport = ({ title, tagline, category, slug }) => {
         </div>
       </div>
       <style jsx>{`
+        .Container {
+          padding: 24px;
+        }
         .Category {
           font-size: 10.4px;
           text-decoration: uppercase;

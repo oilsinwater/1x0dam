@@ -78,7 +78,6 @@ export const TimelineRow = ({ report, category, date, title, slug }) => {
           gap: 8px;
           padding: 16px 0px;
           border-top: solid 1px;
-          border-bottom: solid 1px;
         }
         div.RowWrap {
           height: auto;
