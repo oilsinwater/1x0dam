@@ -17,7 +17,7 @@ import ReportContent from "../../lib/ReportContent";
 // //   );
 // // };
 
-const ReportDetail = ({ reports, report }) => {
+const ReportDetail = ({ report }) => {
   return (
     <div>
       <Head>

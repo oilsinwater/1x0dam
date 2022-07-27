@@ -4,7 +4,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Philliph Drummond <pcdrummond@icloud.com>",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
@@ -30,6 +29,6 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/oilsinwater/mady.git"
+    "url": "https://github.com/oilsinwater/1x0dam.git"
   }
 }
