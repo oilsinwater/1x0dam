@@ -9,52 +9,23 @@
  *  }
  */
 import React from "react";
-import { LinkIcon } from "@sanity/icons";
-
-const FootnoteRender = ({ children }) => (
-  <span
-    style={{
-      textDecoration: "underline",
-      fontWeight: "bold",
-      color: "#2276fc",
-    }}
-  >
-    {children}<sup>#</sup>
-  </span>
-);
-
-const InternalLinkRender = ({ children }) => (
-  <span
-    style={{
-      textDecoration: "underline",
-      fontWeight: "bold",
-      color: "#2276fc",
-    }}
-  >
-    {children}
-  </span>
-);
-
-const LinkRender = ({ children }) => (
-  <span
-    style={{
-      textDecoration: "underline",
-      fontWeight: "bold",
-      color: "#2276fc",
-    }}
-  >
-    {children} 🌍
-  </span>
-);
 
 const highlightIcon = () => <span style={{ fontWeight: "bold" }}>H</span>;
 const highlightRender = (props) => (
   <span style={{ backgroundColor: "yellow" }}>{props.children}</span>
 );
 
+const InternalLinkRender = ({ children }) => (
+  <span style={{ textDecoration: "underline", fontWeight: "bold", color: "#2276fc" }}>
+    {children} 🔗
+  </span>
+);
+
+const LinkRender = ({ children }) => <span style={{ textDecoration: "underline", fontWeight: "bold", color: "#2276fc" }}>{children} 🌍</span>;
+
 export default {
-  title: "Block Content",
-  name: "blockContent",
+  title: "Portable Text",
+  name: "portableText",
   type: "array",
   of: [
     {
@@ -97,42 +68,11 @@ export default {
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
           {
-            name: "footnote",
-            type: "object",
-            title: "Footnote",
-            description: "Add a footnote to the selected text.",
-            fields: [
-              {
-                name: "footnote",
-                type: "reference",
-                title: "Footnote",
-                to: [
-                  { type: "footnote" },
-                  // other types you may want to link to
-                ],
-              },
-            ],
-            blockEditor: {
-              render: FootnoteRender,
-            },
-          },
-          {
+            title: "Internal link to another document",
             name: "internalLink",
-            type: "object",
-            title: "Internal link",
+            type: "reference",
             description: "Locate a document you want to link to",
-            fields: [
-              {
-                name: "internalLink",
-                type: "reference",
-                title: "Internal Link",
-                to: [
-                  { type: "report" },
-                  { type: "page" },
-                  // other types you may want to link to
-                ],
-              },
-            ],
+            to: [{ type: "page" }, { type: "report" }],
             blockEditor: {
               icon: () => "🔗",
               render: InternalLinkRender,

@@ -6,21 +6,38 @@ export default {
   title: "Report",
   icon: DocumentIcon,
   type: "document",
+  fieldsets: [
+    {
+      title: "SEO & Metadata",
+      name: "metadata",
+    },{
+      title: "Details",
+      name: "details",
+    },
+    {
+      title: "Content",
+      name: "content",
+    }
+  ],
   fields: [
     {
       name: "title",
       title: "Title",
       type: "string",
+      fieldset: "details",
     },
     {
       name: "subtitle",
       title: "Subtitle",
       type: "string",
+      fieldset: "details",
+
     },
     {
       name: "slug",
       title: "Slug",
       type: "slug",
+      fieldset: "details",
       options: {
         source: "title",
         maxLength: 96,
@@ -28,31 +45,40 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
-      name: "author",
-      title: "Author",
-      type: "reference",
-      to: { type: "author" },
+      name: "date",
+      title: "Published",
+      type: "string",
+      fieldset: "details",
+      validation: (Rule) => Rule.required(),
     },
-    {
-      name: 'tagline',
-      title: "Tagline",
-      type: 'string',
-      options: {
-        maxLength: 250,
-      } 
-    },
+    // {
+    //   name: "description",
+    //   type: "string",
+    //   title: "Description",
+    //   description: "This description populates meta-tags on the webpage",
+    //   fieldset: "metadata",
+    // },
+    // {
+    //   name: "openGraphImage",
+    //   type: "image",
+    //   title: "Open Graph Image",
+    //   description: "Image for sharing previews on Facebook, Twitter etc.",
+    //   fieldset: "metadata",
+    // },
     {
       name: "coverImage",
       title: "Cover Image",
       type: "image",
+      fieldset: "content",
       options: {
         hotspot: true,
       },
       fields: [
         {
-          type: "text",
+          type: "string",
           name: "alt",
-          title: "Description",
+          title: "Alternative text for cover image",
+          description: 'Important for SEO and accessiblity.',
           options: {
             isHighlighted: true,
           },
@@ -60,36 +86,35 @@ export default {
       ],
     },
     {
+      name: "editor",
+      title: "Editor",
+      type: "blockContent",
+      fieldset: "content",
+    },
+    {
+      name: 'tagline',
+      title: "Tagline",
+      type: 'string',
+      fieldset: "content",
+      description: 'An excerpt of the content.',
+      options: {
+        maxLength: 250,
+      } 
+    },
+    {
       name: "category",
       title: "Category",
       type: "array",
+      fieldset: "details",
       of: [{ type: "reference", to: { type: "category" } }],
       validation: (Rule) => Rule.required(),
-    },
-    {
-      name: "date",
-      title: "Published at",
-      type: "datetime",
-      validation: (Rule) => Rule.required(),
-    },
-    {
-      name: "content",
-      title: "Content",
-      type: "blockContent",
     },
   ],
 
   preview: {
     select: {
       title: "title",
-      author: "author.name",
       media: "coverImage",
-    },
-    prepare(selection) {
-      const { author } = selection;
-      return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`,
-      });
     },
   },
 };

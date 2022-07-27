@@ -4,17 +4,12 @@ export default {
   name: 'category',
   title: 'Category',
   icon: TagIcon,
-  type: 'document',
+  type: 'object',
   fields: [
     {
       name: 'title',
       title: 'Title',
       type: 'string'
-    },
-    {
-      name: 'description',
-      title: 'Description',
-      type: 'text'
     }
   ]
 }
