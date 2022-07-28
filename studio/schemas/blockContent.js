@@ -15,8 +15,9 @@ const FootnoteRender = ({ children }) => (
   <span
     style={{
       textDecoration: "underline",
-      fontWeight: "bold",
-      color: "#2276fc",
+      fontStyle: "italic",
+      backgroundColor: "##f4f4f4",
+      color: "#c508ec",
     }}
   >
     {children}<sup>#</sup>

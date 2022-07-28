@@ -11,7 +11,7 @@ export default {
       title: "Label",
       type: "string",
       description:
-        "A human-readable label assigning relationship to a report; e.g. Fn-Mayday-1",
+        "A human-readable label assigning relationship to a report.",
       options: {
         maxLength: 42,
       },
@@ -21,7 +21,6 @@ export default {
       name: "note",
       title: "Note",
       type: "simpleBlockContent",
-      validation: (Rule) => Rule.required(),
     },
     {
       name: "URL",
@@ -46,12 +45,31 @@ export default {
     {
       name: "date",
       title: "Published at",
-      type: "date",
+      type: "string",
     },
     {
       name: "image",
       title: "Image",
       type: "image",
+      fields: [
+        {
+          title: "Caption",
+          name: "caption",
+          type: "string",
+          options: {
+            isHighlighted: true,
+          },
+        },
+        {
+          name: "alt",
+          type: "string",
+          title: "Alternative text",
+          description: "Important for SEO and accessiblity.",
+          options: {
+            isHighlighted: true,
+          },
+        },
+      ],
     },
   ],
 
