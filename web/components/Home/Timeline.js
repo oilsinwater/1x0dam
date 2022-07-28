@@ -14,12 +14,14 @@ export const Timeline = (props) => {
       <TimelineFilter />
       {reports?.map((report) => {
         return (
-          <TimelineRow
-            title={report?.title}
-            category={report?.category}
-            date={report?.date}
-            slug={report?.slug}
-          />
+          <div key={report?.slug}>
+            <TimelineRow
+              title={report?.title}
+              category={report?.category}
+              date={report?.date}
+              slug={report?.slug}
+            />
+          </div>
         );
       })}
       <style jsx>{`

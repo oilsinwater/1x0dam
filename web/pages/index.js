@@ -29,8 +29,10 @@ export const Home = ({ reports, title }) => {
           <Timeline reports={reports} />
           <section className='Content'>
             <div className='Highlights'>
+            {JSON.stringify(reports)}
               {reports?.map((report) => {
                 return (
+                  <div key={report?.slug}>
                   <HomeReport
                     title={report?.title}
                     coverImage={report?.coverImage}
@@ -38,6 +40,7 @@ export const Home = ({ reports, title }) => {
                     tagline={report?.tagline}
                     slug={report?.slug}
                   />
+                  </div>
                 );
               })}
             </div>
