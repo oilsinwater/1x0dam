@@ -154,6 +154,11 @@ export default {
                     scheme: ["https", "http", "mailto", "tel"],
                   }),
               },
+              {
+                title: "image",
+                name: "image",
+                type: "image",
+              }
             ],
             blockEditor: {
               icon: () => "🌍",

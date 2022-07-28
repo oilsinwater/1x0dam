@@ -8,8 +8,11 @@ title,
 subtitle,
 date,
 tagline,
+tags,
+'footnote': footnote->name,
 'slug': slug.current,
 'coverImage': coverImage.asset->url,
+editor,
 `;
 
 //to simplify urlFor below

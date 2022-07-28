@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export const HomeReport = ({ title, tagline, category, slug }) => {
   return (
+    <Link target='_blank' href={`/reports/${slug}`}>
     <a>
       <div className='Content'>
-        <Link target='_blank' href={`/reports/${slug}`}>
           <div className='Container'>
             <span className='Category'>{category}</span>
             <div className='Center'>
@@ -13,7 +13,7 @@ export const HomeReport = ({ title, tagline, category, slug }) => {
               <h3 className='Tagline'>{tagline}</h3>
             </div>
           </div>
-        </Link>
+
       </div>
       <style jsx>{`
         .Container {
@@ -59,6 +59,7 @@ export const HomeReport = ({ title, tagline, category, slug }) => {
         }
       `}</style>
     </a>
+    </Link>
   );
 };
 

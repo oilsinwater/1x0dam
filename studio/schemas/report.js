@@ -102,12 +102,12 @@ export default {
       } 
     },
     {
-      name: "category",
-      title: "Category",
+      name: "tags",
+      title: "Tags",
       type: "array",
       fieldset: "details",
-      of: [{ type: "reference", to: { type: "category" } }],
-      validation: (Rule) => Rule.required(),
+      of: [{ type: "string" }],
+      options: { layout: "tags"},
     },
   ],
 
