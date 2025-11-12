@@ -1,0 +1,4323 @@
+Directory structure:
+└── oilsinwater-1x0dam/
+    ├── README.md
+    ├── studio/
+    │   ├── README.md
+    │   ├── package.json
+    │   ├── sanity.json
+    │   ├── tsconfig.json
+    │   ├── .eslintrc
+    │   ├── config/
+    │   │   ├── .checksums
+    │   │   └── @sanity/
+    │   │       ├── data-aspects.json
+    │   │       ├── default-layout.json
+    │   │       ├── default-login.json
+    │   │       ├── form-builder.json
+    │   │       └── vision.json
+    │   ├── plugins/
+    │   │   ├── .gitkeep
+    │   │   └── sanity-plugin-tutorial/
+    │   │       ├── CustomDefaultLayout.js
+    │   │       ├── GetStartedTutorial.js
+    │   │       ├── GetStartedTutorialIcon.js
+    │   │       ├── index.js
+    │   │       └── sanity.json
+    │   ├── schemas/
+    │   │   ├── blockContent.js
+    │   │   ├── embedHTML.js
+    │   │   ├── figure.js
+    │   │   ├── footnote.js
+    │   │   ├── page.js
+    │   │   ├── report.js
+    │   │   ├── schema.js
+    │   │   ├── simpleBlockContent.js
+    │   │   └── objects/
+    │   │       └── portableText.js
+    │   └── static/
+    │       └── .gitkeep
+    └── web/
+        ├── next.config.js
+        ├── package.json
+        ├── .eslintrc.json
+        ├── actions/
+        │   └── index.js
+        ├── components/
+        │   ├── Home/
+        │   │   ├── HomeReport.js
+        │   │   ├── HomeReport.stories.js
+        │   │   ├── HomeScreen.js
+        │   │   ├── HomeScreen.stories.js
+        │   │   ├── Logo.js
+        │   │   ├── Timeline.js
+        │   │   ├── Timeline.stories.js
+        │   │   ├── TimelineButton.js
+        │   │   ├── TimelineButton.stories.js
+        │   │   ├── TimelineFilter.js
+        │   │   ├── TimelineFilter.stories.js
+        │   │   ├── TimelineIntro.js
+        │   │   ├── TimelineIntro.stories.js
+        │   │   ├── TimelineLogo.js
+        │   │   ├── TimelineLogo.stories.js
+        │   │   ├── TimelineRow.js
+        │   │   └── TimelineRow.stories.js
+        │   ├── Layouts/
+        │   │   ├── PageLayout.js
+        │   │   └── PageLayout.stories.js
+        │   ├── MenuBar/
+        │   │   ├── BackButton.js
+        │   │   ├── BackButton.stories.js
+        │   │   ├── BackIcon.js
+        │   │   ├── ContactIcon.js
+        │   │   ├── Flag.js
+        │   │   ├── Flag.stories.js
+        │   │   ├── HeartIcon.js
+        │   │   ├── MenuBar.js
+        │   │   ├── MenuBar.stories.js
+        │   │   ├── MenuBarLinks.js
+        │   │   ├── MenuBarLinks.stories.js
+        │   │   ├── MenuButton.js
+        │   │   ├── MenuButton.stories.js
+        │   │   ├── MenuIcon.js
+        │   │   ├── SubscribeIcon.js
+        │   │   ├── UtilityButtons.js
+        │   │   └── UtilityButtons.stories.js
+        │   └── Report/
+        │       ├── NoteCover.js
+        │       ├── NoteCover.stories.js
+        │       ├── NoteText.js
+        │       ├── NoteText.stories.js
+        │       ├── ReportBlock.js
+        │       ├── ReportBlock.stories.js
+        │       ├── ReportHeader.js
+        │       ├── ReportHeader.stories.js
+        │       ├── ReportHeaderDetails.js
+        │       ├── ReportHeaderDetails.stories.js
+        │       ├── ReportHeaderText.js
+        │       ├── ReportHeaderText.stories.js
+        │       ├── ReportHeaderTitle.js
+        │       ├── ReportHeaderTitle.stories.js
+        │       ├── ReportNote.js
+        │       ├── ReportNote.stories.js
+        │       ├── ReportRow.js
+        │       ├── ReportRow.stories.js
+        │       ├── ReportScreen.js
+        │       └── ReportScreen.stories.js
+        ├── lib/
+        │   ├── api.js
+        │   ├── ReportContent.js
+        │   └── sanity.js
+        ├── pages/
+        │   ├── _app.js
+        │   ├── _document.js
+        │   ├── about.js
+        │   ├── ethics.js
+        │   ├── index.js
+        │   ├── api/
+        │   │   ├── hello.js
+        │   │   └── reports.js
+        │   └── reports/
+        │       ├── [slug].js
+        │       └── report.js
+        ├── styles/
+        │   ├── globals.css
+        │   └── Home.module.css
+        ├── .storybook/
+        │   ├── main.js
+        │   └── preview.js
+        └── .zeplin/
+            └── components.json
+
+
+Files Content:
+
+================================================
+FILE: README.md
+================================================
+================================================
+\backend
+
+- sanity start
+
+
+================================================
+\frontend
+
+- yarn 
+- yarn storybook
+- yarn dev
+
+
+
+
+================================================
+FILE: studio/README.md
+================================================
+# Sanity Clean Content Studio
+
+Congratulations, you have now installed the Sanity Content Studio, an open source real-time content editing environment connected to the Sanity backend.
+
+Now you can do the following things:
+
+- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
+- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
+- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+
+
+
+================================================
+FILE: studio/package.json
+================================================
+{
+  "name": "1x0dam",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "sanity start",
+    "build": "sanity build"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/base": "^2.30.1",
+    "@sanity/core": "^2.30.2",
+    "@sanity/default-layout": "^2.30.1",
+    "@sanity/default-login": "^2.30.1",
+    "@sanity/desk-tool": "^2.30.1",
+    "@sanity/eslint-config-studio": "^2.0.0",
+    "@sanity/vision": "^2.30.1",
+    "eslint": "^8.6.0",
+    "prop-types": "^15.7",
+    "react": "^17.0",
+    "react-dom": "^17.0",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oilsinwater/1x0dam.git"
+  }
+}
+
+
+
+================================================
+FILE: studio/sanity.json
+================================================
+{
+  "root": true,
+  "project": {
+    "name": "1x0dam-backend"
+  },
+  "api": {
+    "projectId": "mabo5ysy",
+    "dataset": "production"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "implements": "part:@sanity/base/root",
+      "path": "plugins/sanity-plugin-tutorial/CustomDefaultLayout"
+    }
+  ]
+}
+
+
+
+================================================
+FILE: studio/tsconfig.json
+================================================
+{
+  // Note: This config is only used to help editors like VS Code understand/resolve
+  // parts, the actual transpilation is done by babel. Any compiler configuration in
+  // here will be ignored.
+  "include": ["./node_modules/@sanity/base/types/**/*.ts", "./**/*.ts", "./**/*.tsx"]
+}
+
+
+
+================================================
+FILE: studio/.eslintrc
+================================================
+{
+  "extends": "@sanity/eslint-config-studio"
+}
+
+
+
+================================================
+FILE: studio/config/.checksums
+================================================
+{
+  "#": "Used by Sanity to keep track of configuration file checksums, do not delete or modify!",
+  "@sanity/default-layout": "bb034f391ba508a6ca8cd971967cbedeb131c4d19b17b28a0895f32db5d568ea",
+  "@sanity/default-login": "e2ed4e51e97331c0699ba7cf9f67cbf76f1c6a5f806d6eabf8259b2bcb5f1002",
+  "@sanity/form-builder": "b38478227ba5e22c91981da4b53436df22e48ff25238a55a973ed620be5068aa",
+  "@sanity/data-aspects": "d199e2c199b3e26cd28b68dc84d7fc01c9186bf5089580f2e2446994d36b3cb6",
+  "@sanity/vision": "da5b6ed712703ecd04bf4df560570c668aa95252c6bc1c41d6df1bda9b8b8f60"
+}
+
+
+
+================================================
+FILE: studio/config/@sanity/data-aspects.json
+================================================
+{
+  "listOptions": {}
+}
+
+
+
+================================================
+FILE: studio/config/@sanity/default-layout.json
+================================================
+{
+  "toolSwitcher": {
+    "order": [],
+    "hidden": []
+  }
+}
+
+
+
+================================================
+FILE: studio/config/@sanity/default-login.json
+================================================
+{
+  "providers": {
+    "mode": "append",
+    "redirectOnSingle": false,
+    "entries": []
+  },
+  "loginMethod": "dual"
+}
+
+
+
+================================================
+FILE: studio/config/@sanity/form-builder.json
+================================================
+{
+  "images": {
+    "directUploads": true
+  }
+}
+
+
+
+================================================
+FILE: studio/config/@sanity/vision.json
+================================================
+{
+  "defaultApiVersion": "2021-10-21"
+}
+
+
+
+================================================
+FILE: studio/plugins/.gitkeep
+================================================
+User-specific packages can be placed here
+
+
+
+================================================
+FILE: studio/plugins/sanity-plugin-tutorial/CustomDefaultLayout.js
+================================================
+import React from 'react'
+import StudioRoot from 'part:@sanity/default-layout/root'
+import {useCurrentUser} from '@sanity/base/hooks'
+import GetStartedTutorial from './GetStartedTutorial'
+
+export default function CustomDefaultLayout() {
+  const {value} = useCurrentUser()
+
+  const showTutorial = (value?.roles || []).length > 0
+
+  return (
+    <>
+      {showTutorial && <GetStartedTutorial />}
+      <StudioRoot />
+    </>
+  )
+}
+
+
+
+================================================
+FILE: studio/plugins/sanity-plugin-tutorial/GetStartedTutorial.js
+================================================
+import React, {useState} from 'react'
+import {
+  Card,
+  Container,
+  Button,
+  Flex,
+  Label,
+  Heading,
+  Text,
+  Stack,
+  useElementRect,
+  useTheme,
+} from '@sanity/ui'
+import {CloseIcon} from '@sanity/icons'
+import styled, {css} from 'styled-components'
+
+const BlueColor = css`
+  color: ${({theme}) => theme.sanity.color.muted.primary.enabled.fg};
+`
+
+const LabelContainer = styled(Label)`
+  ${BlueColor}
+`
+
+const TextContainer = styled(Text)`
+  ${BlueColor}
+`
+
+export const GetStartedTutorial = () => {
+  const [hideTutorial, setShowTutorial] = useState(
+    window.localStorage.getItem('getstarted_closedTutorial') !== null
+  )
+
+  const {sanity} = useTheme()
+  const [rootElement, setRootElement] = useState()
+  const rect = useElementRect(rootElement)
+  const isSmallScreen = rect?.width < sanity.media[1]
+  const isProdEnv = process.env.NODE_ENV !== 'development'
+
+  const onClose = () => {
+    window.localStorage.setItem('getstarted_closedTutorial', 'true')
+    setShowTutorial(true)
+  }
+
+  if (hideTutorial || isProdEnv) {
+    return null
+  }
+
+  return (
+    <div ref={setRootElement}>
+      <Card tone="primary" padding={isSmallScreen ? 3 : 5} paddingBottom={isSmallScreen ? 4 : 6}>
+        <Flex justify={isSmallScreen ? 'space-between' : 'flex-end'} align="center">
+          {isSmallScreen && (
+            <LabelContainer forwardedAs="p">Your Sanity Studio is all set up!</LabelContainer>
+          )}
+
+          <Button
+            aria-label="Close dialog"
+            icon={CloseIcon}
+            mode="bleed"
+            onClick={onClose}
+            padding={isSmallScreen ? undefined : 3}
+          />
+        </Flex>
+        <Stack space={5}>
+          {!isSmallScreen && (
+            <>
+              <LabelContainer forwardedAs="p" align="center">
+                Get started with sanity
+              </LabelContainer>
+
+              <Heading as="h1" size={4} align="center">
+                Your Sanity Studio is all set up!
+              </Heading>
+            </>
+          )}
+
+          <Container width={1}>
+            <TextContainer
+              forwardedAs="p"
+              size={isSmallScreen ? 1 : undefined}
+              align={isSmallScreen ? 'start' : 'center'}
+            >
+              Next, our docs will guide you through building schemas, adding content, and connecting
+              a frontend. You’ll see updates reflected in your Studio below.
+            </TextContainer>
+          </Container>
+
+          <Flex justify={isSmallScreen ? 'start' : 'center'}>
+            <Button
+              as="a"
+              href="https://www.sanity.io/docs/create-a-schema-and-configure-sanity-studio"
+              target="_blank"
+              padding={isSmallScreen ? undefined : 4}
+              tone="primary"
+              text="Build a schema"
+            />
+          </Flex>
+        </Stack>
+      </Card>
+    </div>
+  )
+}
+
+export default GetStartedTutorial
+
+
+
+================================================
+FILE: studio/plugins/sanity-plugin-tutorial/GetStartedTutorialIcon.js
+================================================
+import React from 'react'
+
+/**
+ * Couple of things to note:
+ * - width and height is set to 1em
+ * - fill is `currentColor` - this will ensure that the icon looks uniform and
+ *   that the hover/active state works. You can of course render anything you
+ *   would like here, but for plugins that are to be used in more than one
+ *   studio, we suggest these rules are followed
+ **/
+export default () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 250 250">
+    <path fill="none" stroke="currentColor" strokeWidth="40" d="M5 5h240v240H5z" />
+  </svg>
+)
+
+
+
+================================================
+FILE: studio/plugins/sanity-plugin-tutorial/index.js
+================================================
+import GetStartedTutorial from './GetStartedTutorial'
+import GetStartedTutorialIcon from './GetStartedTutorialIcon'
+
+export default {
+  title: 'GetStartedTutorial',
+  name: 'GetStartedtutorial',
+  icon: GetStartedTutorialIcon,
+  component: GetStartedTutorial,
+}
+
+
+
+================================================
+FILE: studio/plugins/sanity-plugin-tutorial/sanity.json
+================================================
+{
+  "parts": [
+    {
+      "implements": "part:@sanity/base/tool",
+      "path": "./index.js"
+    }
+  ]
+}
+
+
+
+================================================
+FILE: studio/schemas/blockContent.js
+================================================
+/**
+ * This is the schema definition for the rich text fields used for
+ * for this blog studio. When you import it in schemas.js it can be
+ * reused in other parts of the studio with:
+ *  {
+ *    name: 'someName',
+ *    title: 'Some title',
+ *    type: 'blockContent'
+ *  }
+ */
+import React from "react";
+import { LinkIcon } from "@sanity/icons";
+
+const FootnoteRender = ({ children }) => (
+  <span
+    style={{
+      textDecoration: "underline",
+      fontStyle: "italic",
+      backgroundColor: "##f4f4f4",
+      color: "#c508ec",
+    }}
+  >
+    {children}<sup>#</sup>
+  </span>
+);
+
+const InternalLinkRender = ({ children }) => (
+  <span
+    style={{
+      textDecoration: "underline",
+      fontWeight: "bold",
+      color: "#2276fc",
+    }}
+  >
+    {children}
+  </span>
+);
+
+const LinkRender = ({ children }) => (
+  <span
+    style={{
+      textDecoration: "underline",
+      fontWeight: "bold",
+      color: "#2276fc",
+    }}
+  >
+    {children} 🌍
+  </span>
+);
+
+const highlightIcon = () => <span style={{ fontWeight: "bold" }}>H</span>;
+const highlightRender = (props) => (
+  <span style={{ backgroundColor: "yellow" }}>{props.children}</span>
+);
+
+export default {
+  title: "Block Content",
+  name: "blockContent",
+  type: "array",
+  of: [
+    {
+      title: "Block",
+      type: "block",
+      // Styles let you set what your user can mark up blocks with. These
+      // correspond with HTML tags, but you can set any title or value
+      // you want and decide how you want to deal with it where you want to
+      // use your content.
+      styles: [
+        { title: "Normal", value: "normal" },
+        { title: "H1", value: "h1" },
+        { title: "H2", value: "h2" },
+        { title: "H3", value: "h3" },
+        { title: "H4", value: "h4" },
+        { title: "Quote", value: "blockquote" },
+        { title: "Hidden", value: "blockComment" },
+      ],
+      lists: [
+        { title: "Bullet", value: "bullet" },
+        { title: "Numbered", value: "number" },
+      ],
+      // Marks let you mark up inline text in the block editor.
+      marks: {
+        // Decorators usually describe a single property – e.g. a typographic
+        // preference or highlighting by editors.
+        decorators: [
+          { title: "Strong", value: "strong" },
+          { title: "Emphasis", value: "em" },
+          { title: "Code", value: "code" },
+          {
+            title: "Highlight",
+            value: "highlight",
+            blockEditor: {
+              icon: highlightIcon,
+              render: highlightRender,
+            },
+          },
+        ],
+        // Annotations can be any object structure – e.g. a link or a footnote.
+        annotations: [
+          {
+            name: "footnote",
+            type: "object",
+            title: "Footnote",
+            description: "Add a footnote to the selected text.",
+            fields: [
+              {
+                name: "footnote",
+                type: "reference",
+                title: "Footnote",
+                to: [
+                  { type: "footnote" },
+                  // other types you may want to link to
+                ],
+              },
+            ],
+            blockEditor: {
+              render: FootnoteRender,
+            },
+          },
+          {
+            name: "internalLink",
+            type: "object",
+            title: "Internal link",
+            description: "Locate a document you want to link to",
+            fields: [
+              {
+                name: "internalLink",
+                type: "reference",
+                title: "Internal Link",
+                to: [
+                  { type: "report" },
+                  { type: "page" },
+                  // other types you may want to link to
+                ],
+              },
+            ],
+            blockEditor: {
+              icon: () => "🔗",
+              render: InternalLinkRender,
+            },
+          },
+          {
+            title: "URL",
+            name: "link",
+            type: "object",
+            fields: [
+              {
+                title: "URL",
+                name: "href",
+                type: "url",
+                validation: (Rule) =>
+                  Rule.uri({
+                    allowRelative: true,
+                    scheme: ["https", "http", "mailto", "tel"],
+                  }),
+              },
+              {
+                title: "image",
+                name: "image",
+                type: "image",
+              }
+            ],
+            blockEditor: {
+              icon: () => "🌍",
+              render: LinkRender,
+            },
+          },
+        ],
+      },
+    },
+    // You can add additional types here. Note that you can't use
+    // primitive types such as 'string' and 'number' in the same array
+    // as a block type.
+    {
+      type: "figure",
+    },
+    {
+      type: "embedHTML",
+    },
+  ],
+};
+
+
+
+================================================
+FILE: studio/schemas/embedHTML.js
+================================================
+import React from 'react';
+
+const HTMLpreview = ({ value }) => (
+  // eslint-disable-next-line
+  <div dangerouslySetInnerHTML={{ __html: value.html }} />
+);
+
+export default {
+  name: 'embedHTML',
+  title: 'Embed HTML',
+  type: 'object',
+  fields: [
+    {
+      name: 'html',
+      title: 'HTML',
+      type: 'text',
+      description:
+        'You usually want to avoid storing freeform HTML, but for embed codes it can be useful.',
+      options: {
+        language: 'html',
+      },
+    },
+  ],
+  preview: {
+    select: {
+      html: 'html',
+    },
+    component: HTMLpreview,
+  },
+};
+
+
+================================================
+FILE: studio/schemas/figure.js
+================================================
+export default {
+    name: 'figure',
+    title: 'Image',
+    type: 'image',
+    options: {
+      hotspot: true,
+    },
+    fields: [
+      {
+        title: 'Caption',
+        name: 'caption',
+        type: 'string',
+        options: {
+          isHighlighted: true,
+        },
+      },
+      {
+        name: 'alt',
+        type: 'string',
+        title: 'Alternative text',
+        description: 'Important for SEO and accessiblity.',
+        options: {
+          isHighlighted: true,
+        },
+      },
+    ],
+    preview: {
+      select: {
+        imageUrl: 'asset.url',
+        title: 'caption',
+      },
+    },
+  };
+
+
+================================================
+FILE: studio/schemas/footnote.js
+================================================
+import { LinkIcon } from "@sanity/icons";
+
+export default {
+  name: "footnote",
+  type: "document",
+  title: "Footnote",
+  icon: LinkIcon,
+  fields: [
+    {
+      name: "title",
+      title: "Label",
+      type: "string",
+      description:
+        "A human-readable label assigning relationship to a report.",
+      options: {
+        maxLength: 42,
+      },
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "note",
+      title: "Note",
+      type: "simpleBlockContent",
+    },
+    {
+      name: "URL",
+      title: "URL",
+      type: "url",
+      validation: (Rule) =>
+        Rule.uri({
+          allowRelative: true,
+          scheme: ["https", "http"],
+        }),
+    },
+    {
+      name: "author",
+      title: "Author(s)",
+      type: "string",
+    },
+    {
+      name: "publisher",
+      title: "Publisher",
+      type: "string",
+    },
+    {
+      name: "date",
+      title: "Published at",
+      type: "string",
+    },
+    {
+      name: "image",
+      title: "Image",
+      type: "image",
+      fields: [
+        {
+          title: "Caption",
+          name: "caption",
+          type: "string",
+          options: {
+            isHighlighted: true,
+          },
+        },
+        {
+          name: "alt",
+          type: "string",
+          title: "Alternative text",
+          description: "Important for SEO and accessiblity.",
+          options: {
+            isHighlighted: true,
+          },
+        },
+      ],
+    },
+  ],
+
+  preview: {
+    select: {
+      title: "title",
+      media: "openGraphImage",
+    },
+  },
+};
+
+
+
+================================================
+FILE: studio/schemas/page.js
+================================================
+import { MasterDetailIcon } from "@sanity/icons";
+
+export default {
+  name: "page",
+  type: "document",
+  title: "Page",
+  icon: MasterDetailIcon,
+  fieldsets: [
+    {
+      title: "SEO & metadata",
+      name: "metadata",
+    },
+  ],
+  fields: [
+    {
+      name: "title",
+      title: "Title",
+      type: "string",
+    },
+    {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      options: {
+        source: "title",
+        maxLength: 96,
+      },
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "date",
+      title: "Published at",
+      type: "datetime",
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "description",
+      type: "text",
+      title: "Description",
+      description: "This description populates meta-tags on the webpage",
+      fieldset: "metadata",
+    },
+    {
+      name: "openGraphImage",
+      type: "image",
+      title: "Open Graph Image",
+      description: "Image for sharing previews on Facebook, Twitter etc.",
+      fieldset: "metadata",
+    },
+    {
+      name: "body",
+      title: "Body",
+      type: "blockContent",
+    },
+  ],
+
+  preview: {
+    select: {
+      title: "title",
+      media: "openGraphImage",
+    },
+  },
+};
+
+
+
+================================================
+FILE: studio/schemas/report.js
+================================================
+import { DocumentIcon } from "@sanity/icons";
+import { array } from "prop-types";
+
+export default {
+  name: "report",
+  title: "Report",
+  icon: DocumentIcon,
+  type: "document",
+  fieldsets: [
+    {
+      title: "SEO & Metadata",
+      name: "metadata",
+    },{
+      title: "Details",
+      name: "details",
+    },
+    {
+      title: "Content",
+      name: "content",
+    }
+  ],
+  fields: [
+    {
+      name: "title",
+      title: "Title",
+      type: "string",
+      fieldset: "details",
+    },
+    {
+      name: "subtitle",
+      title: "Subtitle",
+      type: "string",
+      fieldset: "details",
+
+    },
+    {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      fieldset: "details",
+      options: {
+        source: "title",
+        maxLength: 96,
+      },
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "date",
+      title: "Published",
+      type: "string",
+      fieldset: "details",
+      validation: (Rule) => Rule.required(),
+    },
+    // {
+    //   name: "description",
+    //   type: "string",
+    //   title: "Description",
+    //   description: "This description populates meta-tags on the webpage",
+    //   fieldset: "metadata",
+    // },
+    // {
+    //   name: "openGraphImage",
+    //   type: "image",
+    //   title: "Open Graph Image",
+    //   description: "Image for sharing previews on Facebook, Twitter etc.",
+    //   fieldset: "metadata",
+    // },
+    {
+      name: "coverImage",
+      title: "Cover Image",
+      type: "image",
+      fieldset: "content",
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          type: "string",
+          name: "alt",
+          title: "Alternative text for cover image",
+          description: 'Important for SEO and accessiblity.',
+          options: {
+            isHighlighted: true,
+          },
+        },
+      ],
+    },
+    {
+      name: "editor",
+      title: "Editor",
+      type: "blockContent",
+      fieldset: "content",
+    },
+    {
+      name: 'tagline',
+      title: "Tagline",
+      type: 'string',
+      fieldset: "content",
+      description: 'An excerpt of the content.',
+      options: {
+        maxLength: 250,
+      } 
+    },
+    {
+      name: "tags",
+      title: "Tags",
+      type: "array",
+      fieldset: "details",
+      of: [{ type: "string" }],
+      options: { layout: "tags"},
+    },
+  ],
+
+  preview: {
+    select: {
+      title: "title",
+      media: "coverImage",
+    },
+  },
+};
+
+
+
+================================================
+FILE: studio/schemas/schema.js
+================================================
+// First, we must import the schema creator
+import createSchema from 'part:@sanity/base/schema-creator'
+
+// Then import schema types from any plugins that might expose them
+import schemaTypes from 'all:part:@sanity/base/schema-type'
+
+// We import object and document schemas
+import blockContent from './blockContent'
+import simpleBlockContent from './simpleBlockContent'
+import footnote from './footnote'
+import report from './report'
+import page from './page'
+import figure from './figure'
+import embedHTML from './embedHTML'
+
+// Then we give our schema to the builder and provide the result to Sanity
+export default createSchema({
+  // We name our schema
+  name: 'default',
+  // Then proceed to concatenate our document type
+  // to the ones provided by any plugins that are installed
+  types: schemaTypes.concat([
+    // The following are document types which will appear
+    // in the studio.
+    page,
+    report,
+    footnote,
+    // When added to this list, object types can be used as
+    // { type: 'typename' } in other document schemas
+    blockContent,
+    simpleBlockContent,
+    embedHTML,
+    figure,
+  ])
+})
+
+
+================================================
+FILE: studio/schemas/simpleBlockContent.js
+================================================
+import React from "react";
+
+const LinkRender = ({ children }) => (
+  <span
+    style={{
+      textDecoration: "underline",
+      fontWeight: "bold",
+      color: "#2276fc",
+    }}
+  >
+    {children} 🌍
+  </span>
+);
+
+export default {
+  title: "Simple Block Content",
+  name: "simpleBlockContent",
+  type: "array",
+  of: [
+    {
+      title: "Block",
+      type: "block",
+      styles: [],
+      lists: [
+        { title: "Bullet", value: "bullet" },
+        { title: "Numbered", value: "number" },
+      ],
+      marks: {
+        decorators: [
+          { title: "Strong", value: "strong" },
+          { title: "Emphasis", value: "em" },
+        ],
+        annotations: [
+          {
+            title: "URL",
+            name: "link",
+            type: "object",
+            fields: [
+              {
+                title: "URL",
+                name: "href",
+                type: "url",
+                validation: (Rule) =>
+                  Rule.uri({
+                    allowRelative: true,
+                    scheme: ["https", "http", "mailto", "tel"],
+                  }),
+              },
+            ],
+            blockEditor: {
+              icon: () => "🌍",
+              render: LinkRender,
+            },
+          },
+        ],
+      },
+    },
+  ],
+};
+
+
+
+================================================
+FILE: studio/schemas/objects/portableText.js
+================================================
+/**
+ * This is the schema definition for the rich text fields used for
+ * for this blog studio. When you import it in schemas.js it can be
+ * reused in other parts of the studio with:
+ *  {
+ *    name: 'someName',
+ *    title: 'Some title',
+ *    type: 'blockContent'
+ *  }
+ */
+import React from "react";
+
+const highlightIcon = () => <span style={{ fontWeight: "bold" }}>H</span>;
+const highlightRender = (props) => (
+  <span style={{ backgroundColor: "yellow" }}>{props.children}</span>
+);
+
+const InternalLinkRender = ({ children }) => (
+  <span style={{ textDecoration: "underline", fontWeight: "bold", color: "#2276fc" }}>
+    {children} 🔗
+  </span>
+);
+
+const LinkRender = ({ children }) => <span style={{ textDecoration: "underline", fontWeight: "bold", color: "#2276fc" }}>{children} 🌍</span>;
+
+export default {
+  title: "Portable Text",
+  name: "portableText",
+  type: "array",
+  of: [
+    {
+      title: "Block",
+      type: "block",
+      // Styles let you set what your user can mark up blocks with. These
+      // correspond with HTML tags, but you can set any title or value
+      // you want and decide how you want to deal with it where you want to
+      // use your content.
+      styles: [
+        { title: "Normal", value: "normal" },
+        { title: "H1", value: "h1" },
+        { title: "H2", value: "h2" },
+        { title: "H3", value: "h3" },
+        { title: "H4", value: "h4" },
+        { title: "Quote", value: "blockquote" },
+        { title: "Hidden", value: "blockComment" },
+      ],
+      lists: [
+        { title: "Bullet", value: "bullet" },
+        { title: "Numbered", value: "number" },
+      ],
+      // Marks let you mark up inline text in the block editor.
+      marks: {
+        // Decorators usually describe a single property – e.g. a typographic
+        // preference or highlighting by editors.
+        decorators: [
+          { title: "Strong", value: "strong" },
+          { title: "Emphasis", value: "em" },
+          { title: "Code", value: "code" },
+          {
+            title: "Highlight",
+            value: "highlight",
+            blockEditor: {
+              icon: highlightIcon,
+              render: highlightRender,
+            },
+          },
+        ],
+        // Annotations can be any object structure – e.g. a link or a footnote.
+        annotations: [
+          {
+            title: "Internal link to another document",
+            name: "internalLink",
+            type: "reference",
+            description: "Locate a document you want to link to",
+            to: [{ type: "page" }, { type: "report" }],
+            blockEditor: {
+              icon: () => "🔗",
+              render: InternalLinkRender,
+            },
+          },
+          {
+            title: "URL",
+            name: "link",
+            type: "object",
+            fields: [
+              {
+                title: "URL",
+                name: "href",
+                type: "url",
+                validation: (Rule) =>
+                  Rule.uri({
+                    allowRelative: true,
+                    scheme: ["https", "http", "mailto", "tel"],
+                  }),
+              },
+            ],
+            blockEditor: {
+              icon: () => "🌍",
+              render: LinkRender,
+            },
+          },
+        ],
+      },
+    },
+    // You can add additional types here. Note that you can't use
+    // primitive types such as 'string' and 'number' in the same array
+    // as a block type.
+    {
+      type: "figure",
+    },
+    {
+      type: "embedHTML",
+    },
+  ],
+};
+
+
+
+================================================
+FILE: studio/static/.gitkeep
+================================================
+Files placed here will be served by the Sanity server under the `/static`-prefix
+
+
+
+================================================
+FILE: web/next.config.js
+================================================
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  env: {
+    SANITY_DATASET_NAME: process.env.SANITY_DATASET_NAME,
+    SANITY_PROJECT_ID: process.env.SANITY_PROJECT_ID,
+  },
+  reactStrictMode: true,
+  images: {
+    domains: ['via.placeholder.com'],
+  },
+}
+
+module.exports = nextConfig
+
+
+
+================================================
+FILE: web/package.json
+================================================
+{
+  "name": "mady",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next build && next export",
+    "start": "next start",
+    "lint": "next lint",
+    "storybook": "start-storybook -p 6006 -s ./public",
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "npx chromatic --exit-zero-on-changes --project-token=8328a58f37f2"
+  },
+  "dependencies": {
+    "@storybook/addon-storysource": "^6.5.9",
+    "chromatic": "^6.7.0",
+    "next": "latest",
+    "react": "17.0.2",
+    "react-dom": "^17.0.2",
+    "storybook-addon-pseudo-states": "^1.15.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@sanity/block-content-to-react": "^3.0.0",
+    "@sanity/client": "^3.3.2",
+    "@sanity/image-url": "^1.0.1",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/addon-measure": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
+    "@svgr/webpack": "^6.2.1",
+    "babel-loader": "^8.2.5",
+    "eslint": "8.18.0",
+    "eslint-config-next": "12.2.0",
+    "eslint-plugin-storybook": "^0.5.13",
+    "storybook-addon-next": "^1.6.7",
+    "swr": "0.2.2"
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "mady@0.1.0"
+}
+
+
+
+================================================
+FILE: web/.eslintrc.json
+================================================
+{
+  "extends": "next/core-web-vitals"
+}
+
+
+
+================================================
+FILE: web/actions/index.js
+================================================
+import useSWR from 'swr';
+
+const fetcher = url => fetch(url).then(res => res.json())
+
+// export const useGetHello = () => useSWR('../pages/api/hello', fetcher);
+
+export const useGetReports = (initialData) => {
+    return useSWR(`/api/reports`, fetcher, {initialData})
+}
+
+
+================================================
+FILE: web/components/Home/HomeReport.js
+================================================
+import propTypes from "prop-types";
+import Link from "next/link";
+
+export const HomeReport = ({ title, tagline, category, slug }) => {
+  return (
+    <Link target='_blank' href={`/reports/${slug}`}>
+    <a>
+      <div className='Content'>
+          <div className='Container'>
+            <span className='Category'>{category}</span>
+            <div className='Center'>
+              <h1 className='Title'>{title}</h1>
+              <h3 className='Tagline'>{tagline}</h3>
+            </div>
+          </div>
+
+      </div>
+      <style jsx>{`
+        .Container {
+          padding: 24px;
+        }
+        .Category {
+          font-size: 10.4px;
+          text-decoration: uppercase;
+        }
+        .Center {
+          height: 862px;
+          align-self: stretch;
+          flex-grow: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          gap: 0;
+          padding: 0;
+        }
+        .Title {
+          font-family: WorkSans;
+          font-size: 27.6px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 41.4px;
+          letter-spacing: normal;
+          text-align: center;
+        }
+        .Tagline {
+          font-family: WorkSans;
+          position: center;
+          font-size: 17.7px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 26.5px;
+          letter-spacing: normal;
+          text-align: center;
+          padding: 0px 88px;
+        }
+      `}</style>
+    </a>
+    </Link>
+  );
+};
+
+HomeReport.defaultProps = {
+  title: "The Title",
+  tagline:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultricies volutpat faucibus sollicitudin in malesuada orci ac. Dui morbi dolor, fringilla bibendum molestie vitae. Et amet in facilisi sit cursus odio sed. Eu ac dui pharetra tincidunt ut.",
+  category: "REPORT",
+  mainImage: "https://via.placeholder.com/867.png",
+  slug: null,
+};
+
+HomeReport.propTypes = {
+  title: propTypes.string,
+  tagline: propTypes.string,
+  category: propTypes.string,
+  slug: propTypes.string,
+};
+
+
+
+================================================
+FILE: web/components/Home/HomeReport.stories.js
+================================================
+import { HomeReport } from './HomeReport';
+
+export default {
+    title: 'Home/Report',
+    component: HomeReport,
+}
+
+export const Default = () => <HomeReport default></HomeReport>
+
+
+================================================
+FILE: web/components/Home/HomeScreen.js
+================================================
+import PropTypes from "prop-types";
+import Head from "next/head";
+import { Timeline } from "./Timeline";
+import { MenuBar } from "../MenuBar/MenuBar";
+import { HomeReport } from "./HomeReport";
+
+export const HomeScreen = ({}) => {
+  return (
+    <>
+      <Head>
+        <title>Home page</title>
+      </Head>
+      <main className='Main'>
+        <nav className='Menu'>
+          <MenuBar />
+        </nav>
+        <div className='Content'>
+          <HomeReport />
+        </div>
+        <aside className='Timeline'>
+          <Timeline />
+        </aside>
+        <style jsx>{`
+          .Main {
+          }
+          .Menu {
+          }
+          .Content {
+          }
+          .Timeline {
+          }
+        `}</style>
+      </main>
+    </>
+  );
+};
+
+HomeScreen.propTypes = {};
+
+
+
+================================================
+FILE: web/components/Home/HomeScreen.stories.js
+================================================
+import { HomeScreen } from './HomeScreen';
+
+export default {
+  title: 'Home/Screen',
+  component: HomeScreen,
+}
+
+export const Default = () => <HomeScreen default></HomeScreen>
+
+
+
+================================================
+FILE: web/components/Home/Logo.js
+================================================
+import React from "react";
+
+function Logo() {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='80'
+      height='80'
+      fill='none'
+      viewBox='0 0 50 50'
+    >
+      <path
+        fill='#000'
+        d='M27.53 40.14c.046-4.59-1.118-8.322-2.598-8.336-1.48-.015-2.716 3.694-2.76 8.283-.046 4.59 1.118 8.321 2.598 8.336 1.48.014 2.716-3.694 2.76-8.284zM18.947 39.097c2.52-3.836 3.558-7.605 2.321-8.417-1.237-.813-4.282 1.639-6.801 5.475-2.52 3.837-3.559 7.605-2.321 8.418 1.237.812 4.282-1.64 6.801-5.476zM12.28 33.593c4.193-1.865 7.104-4.474 6.503-5.826-.602-1.352-4.489-.937-8.682.929-4.194 1.865-7.105 4.473-6.504 5.826.602 1.352 4.489.936 8.682-.929zM18.28 23.974c.225-1.462-3.27-3.214-7.806-3.913-4.536-.698-8.396-.078-8.621 1.385-.225 1.463 3.27 3.215 7.805 3.913 4.537.698 8.396.078 8.621-1.385zM19.908 20.49c.98-1.11-1.013-4.472-4.452-7.512-3.439-3.039-7.021-4.604-8.001-3.495-.98 1.11 1.013 4.472 4.452 7.512 3.438 3.039 7.02 4.604 8.001 3.494zM23.151 18.453c1.425-.403 1.566-4.31.317-8.726-1.25-4.416-3.418-7.67-4.842-7.266-1.424.403-1.566 4.31-.316 8.726 1.25 4.415 3.417 7.669 4.841 7.266zM31.958 11.324c1.337-4.39 1.273-8.3-.143-8.73-1.417-.431-3.648 2.778-4.984 7.169-1.337 4.39-1.272 8.3.144 8.73 1.416.431 3.647-2.778 4.983-7.17zM38.251 17.256c3.498-2.971 5.557-6.294 4.598-7.422-.958-1.128-4.57.366-8.068 3.338-3.498 2.971-5.556 6.294-4.598 7.422.959 1.128 4.57-.366 8.068-3.338zM40.332 25.652c4.55-.609 8.078-2.291 7.881-3.758-.196-1.467-4.043-2.163-8.592-1.555-4.549.609-8.077 2.291-7.88 3.759.195 1.466 4.042 2.163 8.591 1.554zM46.2 34.941c.628-1.34-2.231-4.006-6.387-5.953-4.156-1.948-8.034-2.44-8.662-1.1-.628 1.34 2.232 4.006 6.387 5.953 4.156 1.948 8.034 2.44 8.662 1.1zM37.459 44.83c1.253-.788.288-4.576-2.155-8.462-2.443-3.885-5.439-6.396-6.692-5.608-1.253.788-.288 4.576 2.155 8.461 2.443 3.886 5.439 6.397 6.692 5.609z'
+        className='ccustom'
+      ></path>
+      <style jsx>
+        {`
+          svg {
+            padding: 24px 24px;
+          }
+        `}
+      </style>
+    </svg>
+  );
+}
+
+export default Logo;
+
+
+
+================================================
+FILE: web/components/Home/Timeline.js
+================================================
+import PropTypes from "prop-types";
+import { TimelineFilter } from "./TimelineFilter";
+import { TimelineLogo } from "./TimelineLogo";
+import { TimelineIntro } from "./TimelineIntro";
+import { TimelineRow } from "./TimelineRow";
+
+export const Timeline = (props) => {
+  const reports = props.reports;
+
+  return (
+    <aside className='Timeline'>
+      <TimelineLogo />
+      <TimelineIntro />
+      <TimelineFilter />
+      {reports?.map((report) => {
+        return (
+          <div key={report?.slug}>
+            <TimelineRow
+              title={report?.title}
+              category={report?.category}
+              date={report?.date}
+              slug={report?.slug}
+            />
+          </div>
+        );
+      })}
+      <style jsx>{`
+        .Timeline {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          padding: 0;
+          background-color: #fafcff;
+          overflow-y: scroll;
+          overflow-x: hidden;
+        }
+      `}</style>
+    </aside>
+  );
+};
+
+Timeline.propTypes = {};
+
+
+
+================================================
+FILE: web/components/Home/Timeline.stories.js
+================================================
+import { Timeline } from './Timeline';
+
+export default {
+  title: 'Home/Timeline',
+  component: Timeline,
+}
+
+export const Default = () => <Timeline default></Timeline>
+
+
+================================================
+FILE: web/components/Home/TimelineButton.js
+================================================
+import PropTypes from "prop-types";
+
+export const TimelineButton = ({ category }) => {
+  return (
+    <button className='TimelineButton' aria-label={category}><label of="button">{category}</label>
+      <style jsx>{`
+        .TimelineButton {
+          border: 1px solid;
+          width: auto;
+          height: 4vh;
+          flex-grow: 0;
+          display: block;
+          padding: 4px 8px;
+        }
+        label.mirco {
+          font-size: 10.4px;
+          {/* text-decoration: uppercase; */}
+        }
+      `}</style>
+    </button>
+  );
+};
+
+TimelineButton.propTypes = {
+  category: PropTypes.string,
+};
+
+TimelineButton.defaultProps = {
+  category: "CATEGORY",
+};
+
+
+
+================================================
+FILE: web/components/Home/TimelineButton.stories.js
+================================================
+import { TimelineButton } from './TimelineButton';
+
+export default {
+  title: 'Home/Timeline/Button',
+  component: TimelineButton,
+}
+
+export const Default = () => <TimelineButton default></TimelineButton>
+
+
+
+
+================================================
+FILE: web/components/Home/TimelineFilter.js
+================================================
+import { TimelineButton } from "./TimelineButton";
+export const TimelineFilter = ({}) => {
+  return (
+    <div className='TimelineFilter'>
+      <div className='FilterWrapper'>
+        <div className='FilterHeader'>Index</div>
+        <div className='Labels'>
+          <TimelineButton category='ALL' />
+        </div>
+      </div>
+      <style jsx>
+        {`
+          .FilterHeader {
+            max-width: 443px;
+            height: 41px;
+            font-size: 27.6px;
+            font-weight: 500;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 41.4px;
+            letter-spacing: normal;
+            text-align: left;
+          }
+           .Labels {
+            width: 410px;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+          }
+          .FilterWrapper {
+            width: 410px;
+            height: 71px;
+            flex-grow: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 0;
+          }
+          .TimelineFilter {
+            width: 410px;
+            height: auto;
+            flex-grow: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: left;
+            padding: 16px;
+          }
+        `}
+      </style>
+    </div>
+  );
+};
+
+
+
+================================================
+FILE: web/components/Home/TimelineFilter.stories.js
+================================================
+import { TimelineFilter } from "./TimelineFilter";
+
+export default {
+    title: 'Home/Timeline/Filter',
+    component: TimelineFilter,
+}
+
+export const Default = () => <TimelineFilter default></TimelineFilter>
+
+
+
+
+
+================================================
+FILE: web/components/Home/TimelineIntro.js
+================================================
+import propTypes from "prop-types";
+
+export const TimelineIntro = ({ intro }) => {
+  return (
+    <div className='TimelineIntro'>
+      <span>{intro}</span>
+      <br />
+      <span>
+        <p>About... </p><p>Join newsletter</p>
+      </span>
+      <style jsx>
+        {`
+          .TimelineIntro {
+            height: auto;
+            flex-grow: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 16px;
+          }
+          .TimelineIntro span {
+            height: 107px;
+            font-family: WorkSans;
+            font-weight: normal;
+            text-align: left;
+            padding-left: 24px;
+          }
+        `}
+      </style>
+    </div>
+  );
+};
+
+TimelineIntro.propTypes = {
+  intro: propTypes.string,
+};
+
+TimelineIntro.defaultProps = {
+  intro:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt massa arcu ultrices risus aliquam vitae.",
+};
+
+
+
+================================================
+FILE: web/components/Home/TimelineIntro.stories.js
+================================================
+import { TimelineIntro } from './TimelineIntro';
+
+export default {
+    title: 'Home/Timeline/Intro',
+    component: TimelineIntro,
+}
+
+export const Default = () => <TimelineIntro default></TimelineIntro>
+
+
+================================================
+FILE: web/components/Home/TimelineLogo.js
+================================================
+import propTypes from "prop-types";
+import Logo from "./Logo";
+
+export const TimelineLogo = ({ primary }) => {
+  return (
+    <div className='TimelineLogo'>
+      <br/>
+        <Logo />
+      <style jsx>{`
+        .TimelineLogo {
+          width: 443px;
+          height: 127px;
+          flex-grow: 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: left;
+          align-content: center;
+          align-items: flex-start;
+          gap: 4px;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+TimelineLogo.propTypes = {
+  primary: propTypes.bool,
+};
+
+TimelineLogo.defaultProps = {
+  primary: false,
+};
+
+
+
+================================================
+FILE: web/components/Home/TimelineLogo.stories.js
+================================================
+import { TimelineLogo } from './TimelineLogo';
+
+export default {
+    title: 'Home/Timeline/Logo',
+    component: TimelineLogo,
+}
+
+export const Primary = () => <TimelineLogo primary></TimelineLogo>
+
+
+================================================
+FILE: web/components/Home/TimelineRow.js
+================================================
+import PropTypes from "prop-types";
+import Link from 'next/link';
+
+export const TimelineRow = ({ category, date, title, slug }) => {
+  return (
+    <div className='TimelineRow'>
+      <div className='RowWrap'>
+        <div className='col'>
+          <span className='Category'>{category}</span>
+          <span className='Title'><Link target="_blank" href={`/reports/${slug}`}>{title}</Link></span>
+        </div>
+        <span className='Date'>{date}</span>
+      </div>
+      <style jsx>{`
+        span.Date {
+          max-width: 12ch;
+          height: 17px;
+          flex-grow: 0;
+          font-family: WorkSans;
+          font-size: 11.3px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 17px;
+          letter-spacing: normal;
+          text-align: right;
+          color: #4f4d4d;
+        }
+        span.Category {
+          width: auto;
+          max-width: 28ch;
+          height: 17px;
+          flex-grow: 0;
+          font-family: WorkSans;
+          font-size: 11.3px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 17px;
+          letter-spacing: normal;
+          text-align: center;
+          color: #4f4d4d;
+        }
+        span.Title {
+          width: 114px;
+          height: auto;
+          flex-grow: 0;
+          font-family: WorkSans;
+          font-size: 11.3px;
+          font-weight: normal;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 17px;
+          letter-spacing: normal;
+          text-align: center;
+          color: #4f4d4d;
+          padding: 0px;
+        }
+        div.col {
+          width: 338px;
+          height: 43px;
+          flex-grow: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 8px;
+          padding-left: 24px;
+        }
+        div.TimelineRow {
+          cursor: pointer;
+          min-width: 31vw;
+          height: auto;
+          flex-grow: 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: left;
+          align-items: center;
+          gap: 8px;
+          padding: 16px 0px;
+          border-top: solid 1px;
+        }
+        div.RowWrap {
+          height: auto;
+          flex-grow: 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: flex-end;
+          gap: 8px;
+          padding: 0;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+TimelineRow.propTypes = {
+  category: PropTypes.string,
+  title: PropTypes.string,
+  date: PropTypes.string,
+};
+
+TimelineRow.defaultProps = {
+  category: "[ Category ]",
+  title: "The Publication Title",
+  date: "00 Jan 2022",
+};
+
+
+
+================================================
+FILE: web/components/Home/TimelineRow.stories.js
+================================================
+import { TimelineRow } from './TimelineRow';
+
+export default {
+  title: 'Home/Timeline/Row',
+  component: TimelineRow,
+}
+export const Default = () => <TimelineRow default></TimelineRow>;
+
+
+
+
+================================================
+FILE: web/components/Layouts/PageLayout.js
+================================================
+import Head from "next/head";
+import { MenuBar } from "../MenuBar/MenuBar";
+import { HomeReport } from "../Home/HomeReport";
+import propTypes from "prop-types";
+
+export const PageLayout = ({ title, children }) => {
+  return (
+    <div>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <main className='Main'>
+        <nav className='MenuBar'>
+          <MenuBar />
+        </nav>
+        <section className='Content'>{children}</section>
+        <style jsx>{`
+          .Main {
+            scrollbar-width: thin;
+            width: calc(100vw - 44px);
+            height: 100vh;
+          }
+          .Content {
+            grid-area: content;
+            display: grid;
+            width: calc(100vw - 44px);
+            position: relative;
+            margin-right: 44px;
+            grid-template: 100% / calc((100vw / 3) - 44px) auto;
+            grid-template-rows: 100%;
+            grid-template-columns: calc(33.3333vw - 44px) auto;
+            grid-template-areas: none;
+            grid-gap: 0;
+            height: 100vh;
+          }
+          .MenuBar {
+            grid-area: menubar;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 44px;
+            height: 100vh;
+            z-index: 99;
+            overflow: hidden;
+          }
+        `}</style>
+      </main>
+    </div>
+  );
+};
+
+PageLayout.propTypes = {
+  title: propTypes.string.isRequired,
+  children: propTypes.element.isRequired,
+};
+
+PageLayout.defaultProps = {
+  title: "The Title",
+  children: <HomeReport />,
+};
+
+
+
+================================================
+FILE: web/components/Layouts/PageLayout.stories.js
+================================================
+import { PageLayout } from "./PageLayout";
+
+export default {
+    title: 'Layout/Page',
+    component: PageLayout,
+}
+
+export const Default = () => <PageLayout default></PageLayout>
+
+
+================================================
+FILE: web/components/MenuBar/BackButton.js
+================================================
+import propTypes from "prop-types";
+import BackIcon from './BackIcon';
+
+export const BackButton = ({ primary }) => {
+  return (
+    <button className='BackButton'>
+      <span>
+        <BackIcon />
+      </span>
+      <span className="BackButtonText">&nbsp;Back </span>
+      <style jsx>{`
+        .BackButton {
+          height: 43px;
+          width: 43px;
+          flex-grow: 0;
+          display: flex;
+          flex-direction: row;
+          position: fixed;
+          bottom: 0;
+          right: 0;
+          border-top: 1px solid;
+        }
+        span.BackButtonText {
+          display: none;
+          font-size: 11px;
+          color: #fff;
+        }
+        span.BackButtonText:hover {
+          display: inline;
+        }
+      `}</style>
+    </button>
+  );
+};
+
+BackButton.propTypes = {
+  primary: propTypes.bool,
+};
+
+BackButton.defaultProps = {
+  primary: false,
+};
+
+
+
+================================================
+FILE: web/components/MenuBar/BackButton.stories.js
+================================================
+import { BackButton } from './BackButton';
+
+
+export default {
+    title: 'Menu/Button/Back',
+    component: BackButton,
+}
+
+export const Primary = () => <BackButton primary></BackButton>
+    
+
+
+================================================
+FILE: web/components/MenuBar/BackIcon.js
+================================================
+import * as React from "react"
+
+function BackIcon(props) {
+  return (
+    <svg
+      width={43}
+      height={43}
+      viewBox="6 0 43 43"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M16.151 21.81l11.267 8.614c.243.189.582.005.582-.31v-2.27c0-.493-.224-.962-.605-1.253l-6.66-5.09 6.66-5.09c.38-.29.605-.755.605-1.254v-2.27c0-.314-.339-.498-.582-.314l-11.267 8.613a.378.378 0 00-.111.137.402.402 0 00.111.488z"
+        fill="#333"
+      />
+    </svg>
+  )
+}
+
+export default BackIcon
+
+
+
+================================================
+FILE: web/components/MenuBar/ContactIcon.js
+================================================
+import * as React from "react"
+
+function ContactIcon(props) {
+  return (
+    <svg
+      width={44}
+      height={44}
+      viewBox="0 0 44 44"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M34.071 12H9.93a.918.918 0 00-.929.91v18.18c0 .504.415.91.929.91H34.07a.918.918 0 00.929-.91V12.91a.918.918 0 00-.929-.91zm-1.16 3.148v14.806H11.089V15.149l-.8-.611 1.14-1.435 1.242.946h18.661l1.242-.946 1.14 1.435-.803.61zm-1.579-1.102L22 21.148l-9.332-7.102-1.242-.947-1.14 1.435.8.61L21 22.69a1.647 1.647 0 001.993 0l9.919-7.542.8-.611-1.14-1.435-1.239.944z"
+        fill="#000"
+      />
+    </svg>
+  )
+}
+
+export default ContactIcon
+
+
+
+================================================
+FILE: web/components/MenuBar/Flag.js
+================================================
+import propTypes from "prop-types";
+
+export const Flag = ({ primary, title, link, authors, date }) => {
+  return (
+    <li>
+      <a href={link} className='Flag'>
+        <p>
+          <span>{title}</span>
+        </p>
+        <span>{authors}</span>
+        <br />
+        <date>{date}</date>
+      </a>
+      <a href={link} className='Label'>
+        {title}
+      </a>
+      <style jsx>{`
+        li {
+          position: relative;
+          padding: 4px 1px;
+          display: flex;
+          flex-basis: 100%;
+          flex: 1 1 auto;
+          flex-basis: auto;
+          min-height: 0px;
+          padding-top: 4px;
+        }
+        .Label {
+          min-height: 0px;
+          overflow: hidden;
+          width: 40px;
+          display: block;
+          line-height: 1.1;
+          writing-mode: tb-rl;
+          font-family: WorkSans;
+          font-size: 10.4px;
+          font-weight: 300;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: normal;
+          letter-spacing: 0.31px;
+          text-align: left;
+          color: #040404;
+        }
+        li a.Flag {
+          margin-left: 6px;
+          display: none;
+          position: absolute;
+          width: 300px;
+          min-height: 100%;
+          height: auto;
+          z-index: 20;
+          left: -260px;
+          bottom: 0;
+          padding: 12px;
+          background-blend-mode: multiply;
+          background-size: cover;
+          background: #545454;
+          text-decoration: none;
+          color: white;
+        }
+        li a.Flag p span {
+          font-size: 17.66px;
+        }
+        li a.Flag span, li a.Flag date {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 11.302px;
+          line-height: 150%;
+        }
+        li:hover .Flag {
+          display: block;
+        }
+      `}</style>
+    </li>
+  );
+};
+
+Flag.propTypes = {
+  primary: propTypes.bool,
+  title: propTypes.string,
+  link: propTypes.string,
+  authors: propTypes.string,
+  date: propTypes.string,
+};
+
+Flag.defaultProps = {
+  primary: false,
+  title: "The Pigeon Flies",
+  link: "/",
+  authors: "Firstname Lastname",
+  date: "00 Jan 2000",
+};
+
+
+
+================================================
+FILE: web/components/MenuBar/Flag.stories.js
+================================================
+import { Flag } from "./Flag";
+
+export default {
+    title: 'Menu/Flag',
+    component: Flag,
+}
+
+export const Primary = () => <Flag primary></Flag>
+
+
+================================================
+FILE: web/components/MenuBar/HeartIcon.js
+================================================
+import * as React from "react"
+
+function HeartIcon(props) {
+  return (
+    <svg
+      width={44}
+      height={44}
+      viewBox="0 0 44 44"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M22 11.69c7.212-7.603 25.243 5.702 0 22.81-25.243-17.107-7.212-30.413 0-22.81z"
+        fill="#000"
+      />
+    </svg>
+  )
+}
+
+export default HeartIcon
+
+
+
+================================================
+FILE: web/components/MenuBar/MenuBar.js
+================================================
+import propTypes from "prop-types";
+import { MenuButton } from "./MenuButton";
+import { UtilityButtons } from "./UtilityButtons";
+import { MenuBarLinks } from "./MenuBarLinks";
+import { BackButton } from "./BackButton";
+
+export const MenuBar = ({ primary }) => {
+  return (
+    <nav className='MenuBar'>
+      <MenuButton />
+      <UtilityButtons />
+      <style jsx>{`
+        .MenuBar {
+          cursor: pointer;
+          width: 44px;
+          max-width: 44px;
+          height: 100vh;
+          display: flex;
+          gap: 0px;
+          flex-direction: column;
+          justify-content: flex-start;
+          background: #f0f2f5;
+          position: fixed;
+          top: 0;
+          right: 0;
+          z-index: 100;
+          border-left: 1px solid black;
+        }
+      `}</style>
+    </nav>
+  );
+};
+
+// for report pages
+export const MenuBarFull = ({ secondary }) => {
+  return (
+    <nav className='MenuBarFull'>
+      <MenuButton />
+      <UtilityButtons />
+      <MenuBarLinks />
+      <BackButton />
+      <style jsx>{`
+        .MenuBarFull {
+          cursor: pointer;
+          width: 44px;
+          max-width: 44px;
+          height: 100%;
+          display: flex;
+          gap: 0px;
+          flex-direction: column;
+          justify-content: flex-start;
+          background-color: #f0f2f5;
+          position: fixed;
+          top: 0;
+          right: 0;
+          z-index: 100;
+          border-left: 1px solid black;
+        }
+      `}</style>
+    </nav>
+  );
+};
+
+MenuBar.propTypes = {
+  primary: propTypes.bool,
+};
+
+MenuBar.defaultProps = {
+  primary: false,
+};
+
+MenuBarFull.propTypes = {
+  secondary: propTypes.bool,
+};
+
+MenuBarFull.defaultProps = {
+  secondary: false,
+};
+
+
+
+================================================
+FILE: web/components/MenuBar/MenuBar.stories.js
+================================================
+import { MenuBar, MenuBarFull } from './MenuBar';
+
+export default {
+    title: 'Menu/Bar',
+    component: MenuBar,
+}
+
+export const Primary = () => <MenuBar primary></MenuBar>
+export const Secondary = () => <MenuBarFull secondary></MenuBarFull>
+
+
+================================================
+FILE: web/components/MenuBar/MenuBarLinks.js
+================================================
+import propTypes from "prop-types";
+import { Flag } from './Flag';
+
+export const MenuBarLinks = ({ primary }) => {
+  return (
+    <section className='MenuBarLinks'>
+      <ul>
+        <Flag />
+      </ul>
+      <style jsx>{`
+        .MenuBarLinks {
+          width: 44px;
+          flex-grow: 0;
+          display: flex;  
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          background-color: #f0f2f5;
+          padding: 8px 0px;
+          border-top: 1px solid;
+          display: flex;
+          height: calc(100vh - (5 * 44px) - 128px);
+        }
+        .MenuBarLinks ul {
+          list-style: none;
+        }    
+      `}</style>
+    </section>
+  );
+};
+
+MenuBarLinks.propTypes = {
+  primary: propTypes.bool,
+};
+
+MenuBarLinks.defaultProps = {
+  primary: false,
+};
+
+
+
+================================================
+FILE: web/components/MenuBar/MenuBarLinks.stories.js
+================================================
+import { MenuBarLinks } from './MenuBarLinks';
+
+export default {
+    title: 'Menu/Links',
+    component: MenuBarLinks,
+}
+
+export const Primary = () => <MenuBarLinks primary></MenuBarLinks>
+
+
+================================================
+FILE: web/components/MenuBar/MenuButton.js
+================================================
+import propTypes from "prop-types";
+import { MenuIcon } from "./MenuIcon";
+
+export const MenuButton = ({ primary }) => {
+  return (
+    <button className='MenuButton'>
+      <span className='MenuIcon'><MenuIcon/>
+      </span>
+      <span className='MenuButtonText'>Menu</span>
+      <style jsx>
+        {`
+          .MenuButton span {
+            margin-top: 4px;
+          }
+          .MenuButton {
+            width: 43px;
+            height: 120px;
+            flex-grow: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 32px;
+          }
+          .MenuButtonText {
+            width: 71px;
+            height: 19px;
+            padding: 0px;
+            margin: 25px 05px 0px 5px;
+            transform: rotate(-270deg);
+            font-family: WorkSans;
+            font-size: 21.44px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 33.1px;
+            letter-spacing: normal;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+          }
+        `}
+      </style>
+    </button>
+  );
+};
+
+MenuButton.propTypes = {
+  primary: propTypes.bool,
+};
+MenuButton.defaultProps = {
+  primary: false,
+};
+
+
+
+================================================
+FILE: web/components/MenuBar/MenuButton.stories.js
+================================================
+import { MenuButton } from './MenuButton';
+
+export default {
+    title: 'Menu/Button',
+    component: MenuButton,
+}
+
+export const Primary = <MenuButton primary></MenuButton>
+
+
+================================================
+FILE: web/components/MenuBar/MenuIcon.js
+================================================
+import * as React from "react"
+
+export const MenuIcon = ({props}) => {
+  return (
+    <svg
+      width={18}
+      height={14}
+      viewBox="0 0 18 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path stroke="#000" strokeWidth={2} d="M.5 1h17m-8 12h8m-12-6h12" />
+    </svg>
+  )
+}
+
+
+
+
+
+================================================
+FILE: web/components/MenuBar/SubscribeIcon.js
+================================================
+import * as React from "react"
+
+function SubscribeIcon(props) {
+  return (
+    <svg
+      width={44}
+      height={44}
+      viewBox="0 0 44 44"
+      stroke="#000"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M10.444 19.715c8.765-.46 14.3 5.076 13.84 13.841M11.888 33.556a1.444 1.444 0 100-2.889 1.444 1.444 0 000 2.89zM10.444 10.488c14.609-.765 23.835 8.46 23.068 23.068"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+export default SubscribeIcon
+
+
+
+================================================
+FILE: web/components/MenuBar/UtilityButtons.js
+================================================
+import propTypes from "prop-types";
+import HeartIcon from './HeartIcon';
+import SubscribeIcon from './SubscribeIcon';
+import ContactIcon from './ContactIcon';
+
+export const UtilityButtons = ({ primary }) => {
+  return (
+    <div className='UtilityButtons'>
+      <button>
+        <SubscribeIcon />
+      </button>
+      <button>
+        <ContactIcon/>
+      </button>
+      <button>
+        <HeartIcon/>
+      </button>
+      <style jsx>{`
+        .UtilityButtons {
+          width: 44px;
+          max-width: 43px;
+          max-height: 129px;
+          height: 129px;
+          flex-grow: ;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items:center;
+          border-top: 1px solid;
+          padding: 0px;
+          margin: 0px;
+          display: flex;
+        }
+        button {
+          width: 43px;
+          height: 43px;
+          display: flex;
+          align-items: center;
+        }
+        svg:hover {
+          fill: #fff;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+UtilityButtons.propTypes = {
+  propTypes: propTypes.bool,
+};
+
+UtilityButtons.defaultProps = {
+  primary: false,
+};
+
+
+
+================================================
+FILE: web/components/MenuBar/UtilityButtons.stories.js
+================================================
+import { UtilityButtons } from './UtilityButtons'
+
+export default {
+    title: 'Menu/UtilityButtons',
+    component: UtilityButtons,
+}
+
+export const Primary = () => <UtilityButtons primary></UtilityButtons>
+
+
+
+================================================
+FILE: web/components/Report/NoteCover.js
+================================================
+import propTypes from "prop-types";
+import Image from "next/image";
+
+export const NoteCover = ({ primary, alt, src, width, height }) => {
+  return (
+    <div className='NoteCover'>
+      <Image
+        src='https://via.placeholder.com/80x124.png'
+        alt={alt}
+        width={width}
+        height={height}
+        placeholder='blur'
+        blurDataURL='../public/me.png'
+      />
+      <style jsx>
+        {`
+            .NoteCover {
+                max-width: 80px
+                max-height: 124px;
+                width: 80px;
+                height: 124px;
+            }
+        `}
+      </style>
+    </div>
+  );
+};
+
+export const NoteCoverLarge = ({ secondary, alt, src, width, height }) => {
+  return (
+    <div className='NoteCoverLarge'>
+      <Image
+        src='https://via.placeholder.com/264x184.png'
+        alt={alt}
+        width={width}
+        height={height}
+        placeholder='blur'
+        blurDataURL='../public/me.png'
+      />
+      <style jsx>
+        {`
+          .NoteCoverLarge {
+            max-width: 264px;
+            max-height: 184px;
+            width: 264px;
+            height: 184px;
+          }
+        `}
+      </style>
+    </div>
+  );
+};
+
+NoteCover.propTypes = {
+  primary: propTypes.bool,
+  src: propTypes.string,
+  alt: propTypes.string,
+  width: propTypes.string,
+  height: propTypes.string,
+};
+
+NoteCoverLarge.propTypes = {
+  seconardy: propTypes.bool,
+  src: propTypes.string,
+  alt: propTypes.string,
+  width: propTypes.string,
+  height: propTypes.string,
+};
+
+NoteCover.defaultProps = {
+  primary: false,
+  src: "https://via.placeholder.com/80x124.png",
+  alt: undefined,
+  width: "80px",
+  height: "124px",
+};
+
+NoteCoverLarge.defaultProps = {
+  seconardy: false,
+  src: "https://via.placeholder.com/80x124.png",
+  alt: undefined,
+  width: "264px",
+  height: "184px",
+};
+
+
+
+================================================
+FILE: web/components/Report/NoteCover.stories.js
+================================================
+import { NoteCover, NoteCoverLarge } from './NoteCover';
+
+export default {
+  title: 'Note/Cover',
+  component: NoteCover,
+};
+
+const Template = args => <NoteCover {...args} />;
+const TemplateB = args => <NoteCoverLarge {...args} />;
+
+export const Primary = Template.bind({});
+Primary.args = {
+  primary: true,
+}
+
+export const Secondary = TemplateB.bind({});
+Secondary.arg = {
+  secondary: true,
+}
+
+
+
+================================================
+FILE: web/components/Report/NoteText.js
+================================================
+import propTypes from "prop-types";
+
+export const NoteText = ({ primary, title, author, date, content }) => {
+  return (
+    <div className="NoteText note-text">
+        {title}<br/>
+        {author}<br/>
+        {date}<br/>
+        {content}<br/>
+      <style jsx>
+        {`
+          .NoteText {
+            max-width: 264px;
+            width: 100%;
+            height: auto;
+            flex-grow: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 4px;
+            padding: 0;
+          }
+        `}
+      </style>
+    </div>
+  );
+};
+
+NoteText.propTypes = {
+    primary: propTypes.bool,
+    title: propTypes.string,
+    author: propTypes.string,
+    date: propTypes.string,
+    content: propTypes.string,
+}
+
+NoteText.defaultProps = {
+    primary: false,
+    title: null,
+    author: null,
+    date: null,
+    content: 'Quis risus sed vulputate odio ut enim blandit volutpat. Lacus sed turpis tincidunt id aliquet risus feugiat.'
+}
+
+
+
+================================================
+FILE: web/components/Report/NoteText.stories.js
+================================================
+import { NoteText } from './NoteText';
+
+export default {
+  title: 'Note/Text',
+  component: NoteText,
+};
+
+export const Primary = () => <NoteText primary></NoteText>
+
+
+
+
+================================================
+FILE: web/components/Report/ReportBlock.js
+================================================
+import propTypes from "prop-types";
+
+export const ReportBlock = ({ primary, content }) => {
+  return (
+    <div className='ReportBlock'>
+      <p>{content}</p>
+      <style jsx>{`
+        .ReportBlock {
+          height: auto;
+          width: 70ch;
+          max-width: 658px;
+          padding: 0;
+        }
+        @media (max-width: 321px) {
+          .ReportBlock p {
+            font-size: 14px;
+          }
+          .ReportBlock {
+            min-width: 24ch;
+          }
+        }
+        @media (max-width: 767px) {
+          .ReportBlock {
+            width: 75vw;
+          }
+        }
+      `}</style>
+    </div>
+  );
+};
+
+ReportBlock.propTypes = {
+  primary: propTypes.bool,
+  content: propTypes.any,
+};
+
+ReportBlock.defaultProps = {
+  primary: false,
+  content: "Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Sed euismod nisi porta lorem mollis aliquam ut porttitor leo. Quis risus sed vulputate odio ut enim blandit volutpat. Lacus sed turpis tincidunt id aliquet risus feugiat. Tincidunt id aliquet risus feugiat in. Lectus urna duis convallis convallis. Morbi tempus iaculis urna id volutpat lacus laoreet. In fermentum posuere urna nec tincidunt praesent. Urna et pharetra pharetra massa massa ultricies mi. Id faucibus nisl tincidunt eget nullam non nisi est sit. Amet venenatis urna cursus eget. A diam sollicitudin tempor id. Montes nascetur ridiculus mus mauris vitae ultricies leo integer malesuada. Parturient montes nascetur ridiculus mus mauris vitae ultricies. Nisi quis eleifend quam adipiscing vitae proin sagittis nisl.",
+};
+
+
+
+================================================
+FILE: web/components/Report/ReportBlock.stories.js
+================================================
+import React from 'react';
+import { ReportBlock } from './ReportBlock';
+
+export default {
+    title: 'Report/Block',
+    component: ReportBlock,
+  }
+  
+  export const Primary = () => <ReportBlock primary></ReportBlock>
+
+
+================================================
+FILE: web/components/Report/ReportHeader.js
+================================================
+import propTypes from "prop-types";
+import { ReportHeaderText } from "./ReportHeaderText";
+
+export const ReportHeader = ({ primary }) => {
+  return (
+    <>
+      <div className="ReportHeader">
+        <ReportHeaderText />
+        <div className="ReportHeaderVideo">
+          <video
+            autoPlay="autoPlay"
+            muted="muted"
+            disablePictureInPicture="disablePictureInPicture"
+            loop="loop"
+            playsInline="playsInline"
+            src="../public/vid/title.mp4"
+          ></video>
+        </div>
+        <style jsx>
+          {`
+            .ReportHeaderVideo > video {
+              width: -moz-available;
+              width: -webkit-available;
+              object-fit: cover;
+              min-height: 100vh;
+              padding: 0px 24px;
+            }
+            .ReportHeaderVideo {
+              box-sizing: border-box;
+              mix-blend-mode: multiply;
+              opacity: 1;
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: calc(0% + 1rem);
+              overflow: hidden;
+              padding: 0;
+              z-index: -1;
+            }
+            .ReportHeader {
+              diplay: flex;
+              height: 100vh;
+              max-height: 60rem;
+              min-height: 36rem;
+              flex-grow: 0;
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-end;
+              align-items: flex-start;
+              gap: 0px;
+              padding: 0px 24px;
+              background-color: #a0a0a0;
+              overflow: hidden;
+            }
+            @media (max-width: 768px) {
+              .ReportHeader {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                min-height: auto;
+                max-height: 300px;
+                padding: 16px;
+              }
+              .ReportHeaderVideo > video {
+                width: auto;
+              }
+            }
+          `}
+        </style>
+      </div>
+    </>
+  );
+};
+
+ReportHeader.propTypes = {
+  primary: propTypes.bool,
+};
+
+ReportHeader.defaultProps = {
+  primary: true,
+};
+
+
+
+================================================
+FILE: web/components/Report/ReportHeader.stories.js
+================================================
+import { ReportHeaderText } from './ReportHeaderText';
+import { ReportHeader } from './ReportHeader';
+
+export default {
+  title: 'Report/Header',
+  component: ReportHeader,
+}
+
+export const Primary = (args) => (
+  <>
+    <ReportHeader {...args}>
+      <ReportHeaderText />
+    </ReportHeader>
+  </>
+);
+
+
+
+================================================
+FILE: web/components/Report/ReportHeaderDetails.js
+================================================
+import propTypes from "prop-types";
+
+export const ReportHeaderDetails = ({ primary, authors, date }) => {
+  return (
+    <div className="ReportHeaderDetails">
+      <span className="HeaderLabelAuthors">
+        <caption>author(s)</caption>
+      </span>
+      <span className="HeaderTextAuthors">
+        <a>{authors}</a>
+      </span>
+      <span className="HeaderLabelDate">
+        <caption>date</caption>
+      </span>
+      <span className="HeaderTextDate">{date}</span>
+      <style jsx>
+        {`
+          .ReportHeaderDetails {
+            position: relative;
+            padding: 0px;
+            margin: 0px;
+            width: auto;
+            display: grid;
+            grid:
+              "label_authors label_date" auto
+              "header_authors header_date" 32px
+              / auto auto;
+            gap: 0 auto;
+            justify-content: start;
+            align-content: start;
+            grid-auto-flow: column;
+            font-family: WorkSans;
+            font-size: 17.66px;
+          }
+          .ReportHeaderDetails caption {
+            text-transform: uppercase;
+          }
+          .ReportHeaderDetails span {
+            text-transform: capitalize;
+          }
+          .HeaderLabelAuthors {
+            grid-area: label_authors;
+          }
+          .HeaderLabelAuthors {
+            grid-area: header_authors;
+            width: 24ch;
+          }
+          .HeaderLabelDate {
+            grid-area: label_date;
+          }
+          .HeaderLabelDate {
+            grid-area: header_date;
+          }
+          @media (max-width: 414px) {
+            .ReportHeaderDetails h1 {
+              font-size: 32px;
+            }
+            .ReportHeaderDetails {
+              display: grid;
+              width: auto;
+              grid:
+                "label_authors" auto
+                "header_authors" auto
+                "label_date" auto
+                "header_date" auto
+                / auto;
+              gap: 16px 0px;
+              grid-auto-flow: column;
+            }
+          }
+          @media (min-width: 320px) {
+            .ReportHeaderDetails span {
+              font-size: 14.1px;
+            }
+          }
+        `}
+      </style>
+    </div>
+  );
+};
+
+ReportHeaderDetails.propTypes = {
+  primary: propTypes.bool,
+  authors: propTypes.string,
+  date: propTypes.string,
+};
+
+ReportHeaderDetails.defaultProps = {
+  primary: false,
+  authors: "Firstname Lastname",
+  date: "00 Jan 2022",
+};
+
+
+
+================================================
+FILE: web/components/Report/ReportHeaderDetails.stories.js
+================================================
+import { ReportHeaderDetails } from './ReportHeaderDetails';
+
+export default {
+  title: 'Report/Header/Text/Details',
+  component: ReportHeaderDetails,
+}
+
+export const Primary = () => <ReportHeaderDetails primary></ReportHeaderDetails>
+
+
+================================================
+FILE: web/components/Report/ReportHeaderText.js
+================================================
+import propTypes from 'prop-types';
+import { ReportHeaderTitle } from "./ReportHeaderTitle";
+import { ReportHeaderDetails } from "./ReportHeaderDetails";
+
+export const ReportHeaderText = ({ primary }) => {
+  return (
+    <>
+      <div className="ReportHeaderText">
+        <ReportHeaderTitle />
+        <ReportHeaderDetails />
+        <style jsx>
+          {`
+          .ReportHeaderText {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 0px;
+            margin: 0px;
+          }
+          `}
+        </style>
+      </div>
+    </>
+  );
+};
+
+
+ReportHeaderText.propTypes = {
+  primary: propTypes.bool,
+};
+
+ReportHeaderText.defaultProps = {
+  primary: false,
+};
+
+
+================================================
+FILE: web/components/Report/ReportHeaderText.stories.js
+================================================
+import { ReportHeaderText } from "./ReportHeaderText";
+import { ReportHeaderTitle } from "./ReportHeaderTitle";
+import { ReportHeaderDetails } from "./ReportHeaderDetails";
+
+export default {
+  title: 'Report/Header/Text',
+  component: ReportHeaderText,
+};
+
+export const Primary = (args) => (
+  <>
+    <ReportHeaderText {...args}>
+      <ReportHeaderTitle />
+      <ReportHeaderDetails />
+    </ReportHeaderText>
+  </>
+);
+
+
+
+================================================
+FILE: web/components/Report/ReportHeaderTitle.js
+================================================
+import propTypes from "prop-types";
+
+export const ReportHeaderTitle = ({ primary, title }) => {
+  return (
+    <div className="ReportHeaderTitle">
+      <h1>{title}</h1>
+      <style jsx>{`
+        .ReportHeaderTitle {
+          width: auto;
+          max-width: calc(100vw/2);
+        }
+        .ReportHeaderTitle h1 {
+          padding: 0px;
+          margin-top: 0px;
+          margin-bottom: 0px;
+          font-size: 64px;
+        }
+        @media (max-width: 768px) {
+          .ReportHeaderTitle h1 {
+            font-size: 64px;
+            max-width: 14ch;
+          }
+        @media (min-width: 414px) {
+          .ReportHeaderTitle h1 {
+            font-size: 40px;
+            max-width: 8ch;
+          }
+        }
+      `}</style>
+    </div>
+  );
+};
+
+ReportHeaderTitle.propTypes = {
+  primary: propTypes.bool,
+  title: propTypes.string,
+};
+
+ReportHeaderTitle.defaultProps = {
+  primary: false,
+  title: "The Publication Title",
+};
+
+
+
+================================================
+FILE: web/components/Report/ReportHeaderTitle.stories.js
+================================================
+import { ReportHeaderTitle } from './ReportHeaderTitle';
+
+export default {
+  title: 'Report/Header/Text/Title',
+  component: ReportHeaderTitle,
+}
+
+export const Primary = () => <ReportHeaderTitle primary></ReportHeaderTitle>
+
+
+================================================
+FILE: web/components/Report/ReportNote.js
+================================================
+import propTypes from "prop-types";
+import { NoteCover, NoteCoverLarge } from "./NoteCover";
+import { NoteText } from "./NoteText";
+
+export const ReportNoteOnly = ({ primary }) => {
+  return (
+    <div className='ReportNoteOnly'>
+      <NoteText primary={true} />
+      <style jsx>{`
+        .ReportNoteOnly {
+          width: 280px;
+          height: 253px;
+          flex-grow: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 8px;
+          padding: 8px;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export const ReportNote = ({ secondary }) => {
+  return (
+    <div className='ReportNote'>
+      <NoteCover />
+      <NoteText
+        primary={true}
+        title='The Title'
+        author='Firstname Lastname, Random House'
+        date='00 Jan 2022'
+        content={null}
+      />
+      <style jsx>{`
+        .ReportNote {
+          width: 280px;
+          height: 139px;
+          flex-grow: 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: flex-start;
+          gap: 16px;
+          padding: 8px;
+        }
+      `}</style>
+    </div>
+  );
+};
+
+export const ReportNoteLarge = ({ tertiary }) => {
+  return (
+    <div className='ReportNoteLarge'>
+      <NoteCoverLarge />
+      <NoteText
+        primary={true}
+        title='The Title'
+        author='Firstname Lastname, Random House'
+        date='00 Jan 2022'
+        content={null}
+      />
+      <style jsx>
+        {`
+          .ReportNoteLarge {
+            width: 280px;
+            height: 253px;
+            flex-grow: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 8px;
+            border: solid 1px var(--black);
+            background-color: #fff;
+          }
+        `}
+      </style>
+    </div>
+  );
+};
+
+ReportNoteOnly.propTypes = {
+  primary: propTypes.bool,
+};
+ReportNoteOnly.defaultProps = {
+  primary: false,
+};
+
+ReportNote.propTypes = {
+  secondary: propTypes.bool,
+};
+ReportNote.defaultProps = {
+  secondary: false,
+};
+
+ReportNoteLarge.propTypes = {
+  tertiary: propTypes.bool,
+};
+ReportNoteLarge.defaultProps = {
+  tertiary: false,
+};
+
+
+
+================================================
+FILE: web/components/Report/ReportNote.stories.js
+================================================
+import { ReportNoteOnly, ReportNote, ReportNoteLarge } from "./ReportNote";
+import { NoteCover, NoteCoverLarge } from "./NoteCover";
+import { NoteText } from "./NoteText";
+
+export default {
+  title: "Report/Note",
+  component: ReportNote,
+  subcomponents: { NoteCover, NoteCoverLarge, NoteText },
+};
+
+const ContentOnly = (args) => <ReportNoteOnly {...args} />;
+export const Primary = ContentOnly.bind({});
+ContentOnly.args = {
+  primary: true,
+};
+
+const Regular = (args) => <ReportNote {...args} />;
+export const Secondary = Regular.bind({});
+Regular.args = {
+  secondary: true,
+};
+
+const Large = (args) => <ReportNoteLarge {...args} />;
+export const Tertiary = Large.bind({});
+Large.args = {
+  tertiary: true,
+};
+
+
+
+================================================
+FILE: web/components/Report/ReportRow.js
+================================================
+import propTypes from "prop-types";
+import { ReportBlock } from "./ReportBlock";
+import { NoteText } from "./NoteText";
+
+export const ReportRow = ({ content }) => {
+  return (
+    <>
+      <div className="ReportRow">
+        <ReportBlock content={content} />
+        <NoteText />
+        <style jsx>
+            {`
+            .ReportRow {
+                display: flex;
+                flex-direction: row;
+                gap: 119px;
+                margin-top: 24px;
+                }
+
+                @media (max-width: 414px) {
+                  .ReportRow {
+                    gap: 64px;
+                  }
+                }
+            `}
+        </style>
+      </div>
+    </>
+  );
+};
+
+ReportRow.propTypes = {
+  primary: propTypes.bool,
+};
+
+ReportRow.defaultProps = {
+  primary: false,
+};
+
+
+
+================================================
+FILE: web/components/Report/ReportRow.stories.js
+================================================
+import { ReportBlock } from './ReportBlock';
+import { ReportRow } from './ReportRow';
+
+export default {
+  title: 'Report/Row',
+  component: ReportRow,
+};
+
+export const Primary = (args) => (
+    <ReportRow {...args}>
+      <ReportBlock />
+    </ReportRow>
+);
+
+
+
+================================================
+FILE: web/components/Report/ReportScreen.js
+================================================
+import { ReportHeader } from "./ReportHeader";
+import { ReportRow } from "./ReportRow";
+import { MenuBarFull } from "../MenuBar/MenuBar";
+import propTypes from "prop-types";
+
+export const ReportScreen = ({ primary, title }) => {
+  return (
+    <>
+      <main className='Main'>
+        <div className='Menu'>
+          <MenuBarFull />
+        </div>
+        <div className='Content'>
+          <ReportHeader />
+          <br />
+          <ReportRow />
+          <ReportRow />
+        </div>
+        <style jsx>
+          {`
+            .Main {
+              position: relative;
+              height: 100vh;
+              width: calc(100vw - 44px);
+              overflow-x: hidden;
+            }
+            .Menu {
+              grid-area: Navigation;
+              position: fixed;
+              top: 0px;
+              right: 0px;
+              z-index: 100;
+              padding: 0px;
+              max-width: 44px;
+              height: 100vh;
+              background-color: white;
+              border-left: 1px solid black;
+            }
+            .Content {
+              grid-area: Main;
+              display: flex;
+              flex-direction: column;
+              margin: 0px 24px;
+            }
+          `}
+        </style>
+      </main>
+    </>
+  );
+};
+
+
+ReportScreen.propTypes = {
+  primary: propTypes.bool,
+}
+ReportScreen.defaultProps = {
+  primary: false,
+}
+
+
+================================================
+FILE: web/components/Report/ReportScreen.stories.js
+================================================
+import { ReportScreen } from "./ReportScreen";
+
+export default {
+  title: "Report/Screen",
+  component: ReportScreen,
+};
+
+export const Primary = () => <ReportScreen primary></ReportScreen>;
+
+
+
+================================================
+FILE: web/lib/api.js
+================================================
+import client from "./sanity";
+import imageUrlBuilder from "@sanity/image-url";
+
+//simplifies variables for objection projection fetched by getReportWithSlug
+const reportFields = `
+_id,
+title,
+subtitle,
+date,
+tagline,
+tags,
+'footnote': footnote->name,
+'slug': slug.current,
+'coverImage': coverImage.asset->url,
+editor,
+`;
+
+//to simplify urlFor below
+const builder = imageUrlBuilder(client);
+
+export function urlFor() {
+  return builder.image(source);
+}
+
+// fetches all reports ordered by
+export async function getAllReports({ offset } = { offset: 0 }) {
+  const results = await client.fetch(
+    `*[_type == "report"] | order(date desc){${reportFields}}[${offset}...${
+      offset + 5
+    }]`
+  );
+  return results;
+}
+
+export async function getReportWithSlug(slug) {
+  const results = await client
+    .fetch(
+      `*[_type == "report" && slug.current == $slug] {
+      ${reportFields}
+      content[]{..., "asset": asset->}
+    }`,
+      { slug }
+    )
+    .then((res) => res?.[0]);
+
+  return results;
+}
+
+
+
+================================================
+FILE: web/lib/ReportContent.js
+================================================
+//parses content block from Sanity to display as html
+import BlockContent from "@sanity/block-content-to-react";
+import { urlFor } from "../lib/api";
+
+const serializers = {
+  types: {
+    image: ({node: {asset, alt}}) => {
+        return (
+            <div>
+                <img src={urlFor(asset).height(300).fit('max').url()} />
+                <div>{alt}</div>
+            </div>
+        )
+    }
+  },
+};
+
+const ReportContent = ({content}) => (
+  <BlockContent
+    serializers={serializers}
+    blocks={content}
+  />
+);
+
+export default ReportContent;
+
+
+
+================================================
+FILE: web/lib/sanity.js
+================================================
+import sanityClient from '@sanity/client';
+
+const options = {
+    dataset: process.env.SANITY_DATASET_NAME,
+    projectId: process.env.SANITY_PROJECT_ID,
+    useCdn: process.env.NODE_ENV === 'production',
+    apiVersion: '2022-07-18',
+    // useCdn === true gives fast response using cached data
+    // useCdn === false, gives you a slower response with latest data
+}
+
+export default sanityClient(options);
+
+
+================================================
+FILE: web/pages/_app.js
+================================================
+import '../styles/globals.css';
+import '../styles/minireset.min.css';
+
+function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />
+}
+
+export default MyApp
+
+
+
+================================================
+FILE: web/pages/_document.js
+================================================
+import { Html, Head, Main, NextScript } from 'next/document'
+
+export default function Document() {
+  return (
+    <Html>
+      <Head />
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  )
+}
+
+
+
+================================================
+FILE: web/pages/about.js
+================================================
+[Empty file]
+
+
+================================================
+FILE: web/pages/ethics.js
+================================================
+[Empty file]
+
+
+================================================
+FILE: web/pages/index.js
+================================================
+import Head from "next/head";
+import propTypes from "prop-types";
+
+import { MenuBar } from "../components/MenuBar/MenuBar";
+import { Timeline } from "../components/Home/Timeline";
+import { HomeReport } from "../components/Home/HomeReport";
+
+import { getAllReports } from "../lib/api";
+
+export async function getStaticProps() {
+  console.log("Calling getStaticProps");
+  const reports = await getAllReports();
+  return {
+    props: {
+      reports,
+    },
+  };
+}
+
+export const Home = ({ reports, title }) => {
+  return (
+    <div>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <div className='Layout'>
+        <MenuBar />
+        <main className='Main'>
+          <Timeline reports={reports} />
+          <section className='Content'>
+            <div className='Highlights'>
+            {/* {JSON.stringify(reports)} */}
+              {reports?.map((report) => {
+                return (
+                  <div key={report?.slug}>
+                  <HomeReport
+                    title={report?.title}
+                    coverImage={report?.coverImage}
+                    category={report?.category}
+                    tagline={report?.tagline}
+                    slug={report?.slug}
+                  />
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        </main>
+        <style jsx>{`
+          .Content {
+            display: flex;
+            flex-direction: column;
+            overflow-y: scroll;
+          }
+          .Layout {
+            scrollbar-width: thin;
+            width: calc(100vw - 44px);
+            height: 100vh;
+          }
+          .Main {
+            grid-area: content;
+            display: grid;
+            width: calc(100vw - 44px);
+            position: relative;
+            margin-right: 44px;
+            grid-template: 100% / calc((100vw / 3) - 44px) auto;
+            grid-gap: 0;
+            height: 100vh;
+          }
+          .Highlights {
+            grid-template-columns: repeat(
+              auto-fill,
+              minmax(calc((100vw / 3) - 44px), 1fr)
+            );
+            grid-auto-rows: minmax(calc(33vw - 44px), 40vh);
+            grid-gap: 0;
+            height: 100vh;
+          }
+        `}</style>
+      </div>
+    </div>
+  );
+};
+
+Home.propTypes = {
+  title: propTypes.string.isRequired,
+};
+
+Home.defaultProps = {
+  title: "The Title",
+};
+
+export default Home;
+
+
+
+================================================
+FILE: web/pages/api/hello.js
+================================================
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+
+export default function handler(req, res) {
+  res.status(200).json({ name: 'John Doe' })
+}
+
+
+
+================================================
+FILE: web/pages/api/reports.js
+================================================
+import { getAllReports } from "../../lib/api";
+
+export default async function getReports(req, res) {
+  const data = await getAllReports();
+  res.status(200).json(data);
+}
+
+// export default async function getPages(req, res) {
+//   const data = await getAllPages();
+//   res.status(200).json(data);
+
+
+================================================
+FILE: web/pages/reports/[slug].js
+================================================
+import Head from "next/head";
+import propTypes from "prop-types";
+
+import { MenuBarFull } from "../../components/MenuBar/MenuBar";
+import { ReportHeader } from "../../components/Report/ReportHeader";
+import { ReportRow } from "../../components/Report/ReportRow";
+
+import { getReportWithSlug, getAllReports } from "../../lib/api";
+import ReportContent from "../../lib/ReportContent";
+
+// // const ReportDetail = ({ report: initialReport }) => {
+// //   return (
+// //     <>
+// //       <h1>Hello Detail Test Page - {report?.slug}</h1>
+// //       <ReportContent content={report.content} />
+// //     </>
+// //   );
+// // };
+
+const ReportDetail = ({ report }) => {
+  return (
+    <div>
+      <Head>
+        <title>{report?.title}</title>
+      </Head>
+      <main className='Main'>
+          <MenuBarFull />
+        <section className='Content'>
+          <h1>Hello Detail page - {report?.slug}</h1>
+          <h2>{report?.title}</h2>
+          <img src={report.coverImage} height={100} width={100} />
+          <div>
+            {report.content && <ReportContent content={report.content} />}
+          </div>
+        </section>
+        <style jsx>{`
+          .Main {
+            scrollbar-width: thin;
+            width: calc(100vw - 44px);
+            height: 100vh;
+          }
+          .Content {
+            grid-area: content;
+            display: grid;
+            width: calc(100vw - 44px);
+            position: relative;
+            margin-right: 44px;
+            grid-template: 100% / calc((100vw / 3) - 44px) auto;
+            grid-template-rows: 100%;
+            grid-template-columns: calc(33.3333vw - 44px) auto;
+            grid-template-areas: none;
+            grid-gap: 0;
+            height: 100vh;
+          }
+          .MenuBar {
+            grid-area: menubar;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 44px;
+            height: 100vh;
+            z-index: 99;
+            overflow: hidden;
+          }
+        `}</style>
+      </main>
+    </div>
+  );
+};
+
+//1. builds static page at build time
+export async function getStaticProps({ params }) {
+  const report = await getReportWithSlug(params.slug);
+  return {
+    props: { report },
+  };
+}
+
+//2. generates paths for each static page
+export async function getStaticPaths() {
+  const reports = await getAllReports();
+  return {
+    paths: reports?.map((r) => ({
+      params: { slug: r.slug },
+    })),
+    fallback: false,
+  };
+}
+
+export default ReportDetail;
+
+
+
+================================================
+FILE: web/pages/reports/report.js
+================================================
+import Head from "next/head";
+import { ReportScreen } from "../../components/Report/ReportScreen";
+
+export default function Report() {
+  return (
+    <>
+      <Head />
+      <ReportScreen />
+    </>
+  );
+}
+
+
+
+================================================
+FILE: web/styles/globals.css
+================================================
+@font-face {
+  font-family: WorkSans;
+  src: local(WorkSans-Light),
+    url(../public/t/WorkSans-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: WorkSans;
+  src: local(WorkSans-Regular),
+    url(../public/t/WorkSans-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: WorkSans;
+  src: local(WorkSans-Bold),
+    url(../public/t/WorkSans-Bold.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+body {
+  background-color: #f0f2f5;
+}
+
+button {
+  border: 0px;
+  background-color:#f0f2f5;
+  color: #000;
+}
+
+svg:hover {
+  fill: #f0f2f5;
+}
+
+button:hover {
+  background-color: #000;
+  color: #f0f2f5;
+}
+
+path:hover {
+  stroke: #f0f2f5;
+  fill: #f0f2f5;
+}
+
+h1 {
+  font-family: WorkSans;
+  font-size: 64px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+h2 {
+  font-family: WorkSans;
+  font-size: 53.9px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+h3 {
+  font-family: WorkSans;
+  font-size: 43.1px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+h4 {
+  font-family: WorkSans;
+  font-size: 34.5px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+h5 {
+  font-family: WorkSans;
+  font-size: 27.6px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+h6 {
+  font-family: WorkSans;
+  font-size: 22.1px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+body {
+  font-family: WorkSans;
+  font-size: 17.7px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  overflow: hidden;
+}
+
+small {
+  font-family: WorkSans;
+  font-size: 14.1px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+.note-text {
+  font-family: WorkSans;
+  font-size: 12.7px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+caption {
+  font-family: WorkSans;
+  font-size: 11.3px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
+
+.micro {
+  font-family: WorkSans;
+  font-size: 10.4px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.31px;
+}
+
+
+
+================================================
+FILE: web/styles/Home.module.css
+================================================
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  padding: 2rem 0;
+  border-top: 1px solid #eaeaea;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+.card h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+
+
+================================================
+FILE: web/.storybook/main.js
+================================================
+module.exports = {
+  stories: [
+    "../components/**/*.stories.mdx",
+    "../components/**/*.stories.@(js|jsx|ts|tsx)",
+  ],
+  addons: [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-interactions",
+    "@storybook/addon-storysource",
+    "storybook-addon-next",
+    "@storybook/addon-measure",
+    "storybook-addon-pseudo-states",
+  ],
+  framework: "@storybook/react",
+  core: {
+    builder: "@storybook/builder-webpack5",
+  },
+};
+
+
+
+================================================
+FILE: web/.storybook/preview.js
+================================================
+import "../styles/globals.css";
+
+
+export const parameters = {
+  layout: 'centered',
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+  },
+}
+
+
+================================================
+FILE: web/.zeplin/components.json
+================================================
+{
+    "projects": [
+        "62bd63a47c6c5b3067a313a3"
+    ],
+    "styleguides": [],
+    "components": [
+        {
+            "path": "components/Report/ReportHeaderText.jsx",
+            "zeplinIds": [
+                "62c0c013eebbee1b6c562db0"
+            ]
+        },
+        {
+            "path": "components/Report/ReportHeader.jsx",
+            "zeplinIds": [
+                "62c0c013567c351725977036"
+            ]
+        }
+    ]
+}
+
+
