@@ -1,0 +1,242 @@
+🌓
+Reset Tech | Project Mayday
+Status paused
+Funder/Organization/Partner Reset Tech
+Project Dates (Start/End) Per SOW
+@September 1, 2021 → October 1, 2022
+Project PM/Grant Contact Georgia Bullen
+Core Project Team Georgia Bullen Katie Wilson Phil Drummond Eriol Fox
+Project Contributors Ame Elliott Cade D
+Parent Project Reset Tech | Tech Projects
+Output Mayday Community Website
+Important Links & Documents
+DRIVE
+Shared notes (Reset + Reality Team + Throneless)
+@August 16, 2022
+Mayday Experiments Meeting
+Yael Notes in Reset:
+YouChoose.ai (Marc & Claudio)
+Output Ideas:
+Research Paper (sounds like it’d be something public / research publication)
+Visualization of the recommendation graph (maybe?)
+Something explorable or comparable from some different people’s examples + the objective model
+Deb’s note re: potential model for wikipedian-type models for sharing data
+e.g. https://www.openhumans.org/
+Injecting something into the YT experience
+Reality Team / Deb
+Reaching Passive Information Consumers (PICs)
+“NULL zone” researched by Pew and Knight Foundation
+Presentation
+Targeting
+Randomization — just using birth month to be able to sub group and do some randomization
+Looking at nulls (e.g. no news engagement, race = null, etc)
+exclusion targeting criteria is cheaper - accidentally finding
+Ideas
+Languages & geographies
+Media Literacy, Advocacy, Journalism are well funded (meh)
+But not targeting of specific populations
+Reset Tech | Project Mayday 1
+Outputs
+Media clips
+Charts
+Report
+Meta notes:
+overlap potential with sponsored content questions on different platforms
+Public or not eventually
+public outputs — yes, academic papers
+parallel in a lab
+qualtrix cannot find this audience
+Related data sets or panel opportunities…
+Rally, Junkipedia, etc
+Brain dump for Susan
+Mayday is umbrella term (Mayday superpac - exists to counter the existence of PACS)
+houses initiatives that shed light on the probelms with the systems
+Echt Wahr + Facebook harms - using surveillance capitalism machine to illuminate problems with the surveillance
+capitalism machine
+Leveraging Mayday as a brand + liability agency (so no one component is harmed)
+top priority: report from Echt Wahr is out the door - existing on the mayday site, not connected in brand or name to
+any of us
+interesting opportunity to be reflective about the ouputs (how to leverage our community + audiences) - we can
+talk to our own audiences about the work from our perspective
+facebook harms
+narratives
+mayday strategy - ad campaign driving parents to the site to engage policy making
+Engage team at AP tomorrow:
+there is a 30 page document in progress; we’ve been talking about ‘how I experience the web today’ site as a
+model
+https://docs.google.com/document/d/12SjS12SqiQ-SV3U1I_60y8wrsBUZsRtgYsyljDH1kBE/edit?pli=1#
+@July 20, 2021
+Mayday Check-in
+Agenda
+High Level Overview
+Map out how things work (inputs, outputs, goals, etc)
+Answer Questions
+What is consistent across elections/events?
+What is localized?
+What are best practices for results?
+What standards exist for any of these categories?!
+@July 2, 2021
+Reality + Reset + SimSec + Throneless
+Spotfakenews = testing out nudge theory
+Reset Tech | Project Mayday 2
+"standard marketing campaign" that's focused on ideas, trying to reroute people from disinformation and
+ultimately teach people how to spot fake news and thus avoid and stop spreading it
+current partner isn't ideologically aligned long-term
+looking for a partner that can replicate the work and be more politically aligned for an ultimate advocacy horizon
+advocacy/policy =
+reset: larger scale policy shifts that change how companies can access peoples data (?)
+more ethical, controlled way for it to be true that everyone's data is exposed (that ship has sailed) —
+there are better ways than what we deal with now. be part of the transformation of your field
+debra: requires an updated understanding of what "identity"means, because there are aspects that
+are outside of our physical person now, and our current conceptions aren't ready to take that into
+account
+simsec interested in pushing industry to rethink how they practice
+public education and resource development
+cultural shift opportunity from public awareness
+reality:
+blown away by how little people know about the surveillance they're subjected to, their willingness to
+give data away, etc
+building awareness of that is very important first step
+deradicalization is a different process than preventing radicalization
+understanding where people are on these big sites, and then there's the signal and telegram stuff
+that's trying to hide.
+theory of change is different trying to get to those two populations
+what do we do about harder-to-identify communities? send people in
+who to focus on? some people are too far gone to be able to get with the approaches we're talking
+about
+goals:
+Reality
+short: ways to use these tools and replicate and combine campaigns to continue feed the beast even further ⟶
+model a shift to a better, more ethical way
+medium: fun experiments (signal's ig ad campaign). this is a group of people that could figure that out
+long: we start winning on policy and advocacy based on the insights of the previous phases, and how to be
+move into developing new paradigms
+basic goals: deradicalization is preventing further radicalization
+primary audience = people who read very little news, but get a lot of disinformation in their feeds, and
+believe it bc it's what's in front of them (passive info consumers)
+strategy is adding low-intervention, competing information to drown out and draw them away from the
+disinformation memes
+spotfakenews is further down the funnel (getting the people who are already there, looking at
+disinformation) ⟶ the content that reality team makes could be what the people nudged from spotfakenews
+could receive next. follow up campaign targeting the people that did engage with SFN and bring people
+back to the middle
+Reset Tech | Project Mayday 3
+marketing funnel that goes in the opposite direction. multiple testing points
+phase zero and 1 is replicating this nudge theory with people the platform has already tagged as
+engaging
+reality has an in-house people buying the ads, getting really good engagement.
+in terms of creating thoughtful, "reality's marketing team"
+building a marketing funnel going the other way
+reality can have managing ad campaigns covered in a fairly cost-effective way
+pushed out games, etc — bc getting even a second of someone's attention can introduce ideas and "help
+focus their skepticism"
+anxiety is often around who to trust
+mini-lessons based on propaganda research, but plants a seed
+ Mind Games
+ultimately trying to solve a problem
+not competing with anyone, happy to collaborate and get learning
+not looking to make this a financially profitable endeavor beyond being self-sustaining for team members
+(not trying to build a kingdom)
+happy to iterate on SFN  use it to start to build this funnel (these are the people who aren't really engaged
+in radical information, but they're at risk bc theyre too disengaged to know the difference); these are the
+people who have clicked on the breitbart link — content to speak engagingly and compassionately to those
+people.
+adjacent opportunities: not just using CRM methods, but have real people go engage with them.
+one of the tools bad actors use is "love bombing" after someone engages with something (positive
+affirmations)
+opportunity to make those people feel that other people think theyre important and special, build a
+community of people who are disinfo detectors, and make them feel reallllly smart and good about
+that ("detect info, share credible info)
+hire someone to develop that, bc its such an effective thing that bad guys and commercial entities do
+that we're not even trying yet
+next steps:
+Develop the playbook: what tools do we already have?
+set up another, longer time to visionboard (miro) and map out the plan and resources needed
+Start riffing on and replicating a spotfakenews prototype
+Related Projects
+Reset Tech | Tech Projects
+🌓 Reset Tech | Project Mayday
+🤐 Reset Tech | Mayday: Echt Wahr (was Spot Fake News)
+☂ Reset Tech | .de Campaign(s)
+Superbloom Website Content
+Reset Tech | Project Mayday 4
+This table contains the information the project manager needs to complete once a project is finished. The information will
+then be added to the website. You will see some of the columns are a roll-up from the Project card. If you need to edit the
+data in these properties, please edit the Project properties.
+Website Content Database
+Title:
+Project
+Name
+Project
+Project
+Mayda
+y
+🌓
+Reset
+Tech |
+Project
+Mayda
+y
+Project
+Description
+(Internal
+Use)
+Project
+Mayday is
+a
+campaign
+designed
+to
+discourage
+people
+from
+engaging
+with
+content
+published
+by known
+purveyors
+of
+disinformat
+ion.
+SOW
+Project
+Dates
+Funder(s)
+Slug
+(for
+SBD
+www)
+Output:
+Project
+URL
+Outputs Outputs:
+Other
+Project
+Status
+Project
+Tag(s)
+Related
+Blog
+Blog
+Slug
+Who to
+Check Data
+Septe
+mber
+1, 2021
+→
+Octob
+er 1,
+2022
+Reset
+Tech
+https://
+www.
+mayda
+y.com
+munity
+pause
+d
+Katie Wils
+Reset Tech | Project Mayday 5

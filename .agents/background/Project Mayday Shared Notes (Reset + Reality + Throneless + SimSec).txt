@@ -1,0 +1,167 @@
+Shared drive -- docs from Signal dumped in here 
+
+July 30, 2021 - Check-in and planning 
+Here: Ame, Georgia, Katie, Debra, Dan, Nick, Harum 
+
+Agenda: 
+Goals:
+Roles and responsibilities 
+Decide where to start
+Scratch doc: https://docs.google.com/document/d/1b6JQ9QvxW8MDO5tbX83Ws0wIDgwj0GjxDT13Fv6VQJM/edit# 
+Don’t feel beholden to this, Dan threw this together with the idea that the rest of us will engage with it as we will 
+Project: Election related Nudge Campaign to intervene in the spread of mis/disinfo
+Goals:
+Slow the spread
+Engage people in the fact that mis/disinfo exists
+Present alternatives
+Reality Team’s past work
+Case 1:
+Choose a topic, e.g. Vaccine disinfo
+Identify audiences that are particularly vulnerable in that realm
+Develop messaging to engage those audiences
+Case 2:
+Choose an audience (low voter turnout groups in Georgia)
+Find out why
+Engage them
+SFN
+Let’s figure out when someone is going to read something false, and distract them
+Paper in Nature re: reminding people to think about accuracy does work
+Promising things:
+Most people don’t intend to spread disinfo
+Reminding them, seems to work
+Notes:
+Effect wasn’t huge, but there are ways to increase it
+People going to the daily caller — relatively naive, and truly awful people who are going there for fun/profit/preference
+How do we want to define our groups? (e.g. “second quintile”) Who are we intended to move?
+“Personas” and “Buyer’s Journey” (both common terms for this, e.g. in design/tech or marketing; where people are in the Sales funnel)
+Research question
+Where are people on the spectrum and what is their propensity to be pulled in another direction
+The Vulnerable: Unable to discern the difference between truth and lies
+The Indoctrinated: Have decided and made it part of their identity to believe that stuff
+Idea: Industry language vs field language we want to cultivate (SimSec + Reality Team)
+To address the problem that funders and policy/advocacy space don’t understand and engage in the marketing terms
+https://disinformationindex.org/wp-content/uploads/2021/07/2021-07-23-Disrupting-Online-Harms-A-New-Approach.pdf
+Scholarship areas
+[Georgia missed something]
+Cults
+Radicalization
+Far right (Europe)
+Xenophobia re: Non-white terrorism (US)
+Communications interventions to shift behavior
+TODO: light lit review-ish
+Potential Academic Partners
+John Cook(e)? - professor of climate disinformation @ George Mason in the Science Communications
+Working with him to discuss Impact Assessment Framework
+Can we and in what way can we show changes in perceptions and behaviors as a result of our efforts
+Do the share/consume more/less disinfo
+Do their beliefs shift at all
+Ajay Kumar https://ruralhuman.com/
+Idea: Academic Advisory Board for this project
+What’s happening right now for SFN?
+SimSec (Rina) + Reset (Susana) have team members who are working on the messages
+Deliver those messages to the Ad Manager
+Ad Manager implements and delivers some “reporting” (See PDF Dan shared)
+TT/Combonet is managing the website where people get referred to by the ads (Github + Forestry)
+Tech Needs
+Could use a 1password account?
+techops@reset.tech
+Who ever needs to receive verification emails
+Someone needs to share with nickb
+Throneless can set stuff up using the shared techops accounts
+Goal: Accounts that don’t have bus factor of being tied to individuals
+Campaign - Where to start?
+French election?
+Need:
+Native french language skills
+Insight into the political/social dynamics in France
+Can source via Reality Team or SimSec
+Replicate German Campaign
+Reality Team — Spec out what is needed to replicate German campaign
+Analysis of content & campaign (e.g. Facebook)
+German nuance & content — SimSec can help
+
+Roles & Responsibilities
+
+Action Items
+Pull together all of the docs that have been shared into the Google Drive Folder
+Reality Team — Go sketch at what the campaign looks like & tell us what you need
+Started a Campaign Sketch
+
+
+Jul 20, 2021 - Follow-up meeting 
+Here: Deb, Nick, Rae, Harum, Josh, Georgia, Ame, Blah, Katie
+Miro board
+
+​​Agenda
+High Level Overview
+Tldr: Nudge campaign away from extremist content towards an intervention website, challenging folks to identify the content
+What we’re doing here: Syncing around the ways in which Reset/SFNs is currently using nudge tactics to steer people away from disinformation. Hoping to bring Reality Team in to replace the existing ad management partner (who is not politically/ideologically aligned). Long term, using the status quo in the hopes of ultimately dismantling the system. The tactical endeavor is superficial to the ultimate goal of developing understanding and deep critique in order to develop alternate means. 
+Band-aid approach; temporary solution while developing methodology for longer-term solutions 
+Map out how things work (inputs, outputs, goals, etc) [Notes from miro board]
+Each line is a hypothesis
+Can’t target specific people, unless you build a custom audience
+Targeting is done more in aggregate
+Results are harder to track/measure, e.g. if they continue to share fake news
+E.g. Facebook will give you the last 3 days of engagement inside Facebook
+Can’t get this programmatically
+BUT you can get an email report that you could then do something with
+Nick: This depends on what link you are dealing with, e.g. your link or something else
+DL: One way of doing this is to create a control
+E.g. focus on specific common factors, e.g. location & demographics
+GB: This is where Rally & Citizen Browser could come in also
+Reduction in ability to re-targeting things
+We could also make more specific websites about the truthful narratives
+Transparency about the process itself
+What did we spend
+What success did we have
+DL: Monthly/Quarterly could work without messing up the study itself
+Website - what’s happening / how does it setup?
+What are we measuring, e.g. bounce rates
+We have Google Analytics
+Lots of “Do Not Track” and not consenting
+Not delivering the persistent tracker,
+Legal review determined that we can still use some GA tracking as essential tracker even without consent because the site isn’t reselling ads
+Static sites — not doing anything important
+DM: interested in getting smart if we can in some way, e.g. if this then that on the site
+E.g. turn it into more of an app
+Content - developed & localized by Rina & Susana
+Design is intentionally bad / 90s - SFN
+DL: Platforms for cross channel ad optimization
+Not at the moment, maybe on SPN/Eric’s side
+Creating their own dashboard leveraging the facebook email report
+We don’t have the report, but Dan found some resources
+Questions
+How do we measure?
+Does it affect elections?
+Is it just a money pit?
+What is consistent across elections/events?
+What is localized?
+What are best practices for results?
+What standards exist for any of these categories?!
+Ideas Going Forward
+Article on the difference between band-aid and long term vision
+Discussion / writing on consent
+SFN/Echtwahr: how do we move beyond basic display ads to something more multiplatform/multimedia (beyond FB/Google ads) 
+Narrate it/talk about it so that people can develop a more informed critique 
+Evolving what happened in the Netherlands -- measuring whether those efforts actually affected democratic outcomes 
+MVP = develop how to use these processes/products and see if we can get to a longer term value proposition 
+Pilot project timeline over the next few months
+Next steps
+More time to dig into Reality Team’s process
+Dan share FB report How To — DONE
+Note - we already have a pretty sophisticated dashboard of ad metrics. Need to understand what else you’re hoping to get - we do have a wishlist item ourselves.
+Dan - contract to fund Reality Team
+Josh - lab environment - with  both inoculation messages and oppo messages to discern if inoculation works in that setting.
+Grow Progress - low cost lab environment may be interesting to do.  Ulrich Echkert  
+
+Acronym - found boosting news helped.
+
+Majority of their experiments 
+Lookalike audiences
+Interest based
+Self generated custom audiences based on surveys.
+
+Which of FB mechanisms is valid?
+In practice, “derived” interests are bad. 
+Replaced with “demographic affinity”- which is inaccurate, garbage
+Second order 
