@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__serena__list_dir",
+      "mcp__serena__find_file",
+      "Bash(cat:*)",
+      "Bash(kill:*)",
+      "Bash(curl:*)",
+      "Bash(python3:*)",
+      "Bash(lms ps:*)",
+      "Bash(lms unload:*)",
+      "Bash(pgrep:*)",
+      "Bash(lsof:*)",
+      "Bash(/Users/phil/.cache/lm-studio/bin/lms ps:*)",
+      "Bash(ssh:*)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(git clone:*)",
+      "Bash(pip install ocrmac pillow \"mcp[cli]>=1.7.1\")",
+      "mcp__serena__check_onboarding_performed",
+      "mcp__serena__onboarding",
+      "mcp__serena__initial_instructions",
+      "mcp__serena__think_about_task_adherence",
+      "mcp__serena__write_memory",
+      "mcp__serena__read_memory",
+      "Bash(test:*)",
+      "SlashCommand(/bmad:bmm:workflows:architecture)",
+      "SlashCommand(/bmad:bmm:workflows:workflow-init)",
+      "Bash(git add:*)",
+      "Bash(git reset HEAD)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd project analysis and documentation agents\n\nInitial setup of AI agents for project analysis, architecture, and documentation generation including:\n- Project brief, PRD, and research documentation\n- Architecture patterns and technical specifications  \n- Background research materials and references\n- User context and project structure documentation\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd BMad framework and workflow system\n\nComplete BMad (Business Method and Development) framework implementation including:\n- Core configuration and manifest files\n- BMM (Business Method and Modeling) agents, workflows, and documentation\n- Test architecture knowledge base and workflows\n- Multi-platform agent configurations (Claude, Crush, Gemini, Qwen)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(npm view astro@latest version)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd Claude Code agent configurations\n\nMulti-platform Claude Code agent configurations for BMad framework including:\n- Analysis agents (API documenter, codebase analyzer, data analyst, pattern detector)\n- Planning agents (dependency mapper, epic optimizer, requirements analyst, etc.)\n- Research agents (market researcher, tech debt auditor)\n- Review agents (document reviewer, technical evaluator, test coverage analyzer)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
